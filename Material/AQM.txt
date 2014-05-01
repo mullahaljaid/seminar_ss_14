@@ -1,0 +1,16 @@
+http://www.hjp.at/doc/rfc/rfc2309.html: 	Recommendations on Queue Management and Congestion Avoidance in the Internet, 1998
+http://dl.acm.org/citation.cfm?id=581869: BLUE algorithm
+http://ieeexplore.ieee.org/xpl/login.jsp?tp=&arnumber=832541&url=http%3A%2F%2Fieeexplore.ieee.org%2Fxpls%2Fabs_all.jsp%3Farnumber%3D832541: RED
+http://dl.acm.org/citation.cfm?id=863986: Effects of AQM in web performance
+http://dl.acm.org/citation.cfm?id=1015499: sizing router buffers
+http://citeseerx.ist.psu.edu/viewdoc/summary;jsessionid=B49C19E79C434ED029C48CFBF41803AF?doi=10.1.1.420.1181: on packet switches with infinite storage
+http://dl.acm.org/citation.cfm?id=75248: analysis of a fair queeing algorithm
+http://ieeexplore.ieee.org/xpl/login.jsp?tp=&arnumber=832269&url=http%3A%2F%2Fieeexplore.ieee.org%2Fxpls%2Fabs_all.jsp%3Farnumber%3D832269: CHOKe
+http://ieeexplore.ieee.org/xpl/login.jsp?tp=&arnumber=923940&url=http%3A%2F%2Fieeexplore.ieee.org%2Fxpls%2Fabs_all.jsp%3Farnumber%3D923940: REM algorithm
+http://www.icsi.berkeley.edu/pubs/networking/adaptivered01.pdf: adaptive RED algo
+http://dl.acm.org/citation.cfm?id=383069: AVQ algo
+http://ieeexplore.ieee.org/xpl/login.jsp?tp=&arnumber=916670&url=http%3A%2F%2Fieeexplore.ieee.org%2Fxpls%2Fabs_all.jsp%3Farnumber%3D916670: PI controller algo
+Computernetzwerke, Tannenbaum: Grundlagen über Vermittlungsschicht oÄ
+http://www.hjp.at/doc/rfc/rfc3168.html: ECN
+http://ieeexplore.ieee.org/xpl/login.jsp?tp=&arnumber=251892&url=http%3A%2F%2Fieeexplore.ieee.org%2Fxpls%2Fabs_all.jsp%3Farnumber%3D251892: original RED 
+http://www.sciencedirect.com/science/article/pii/0169755296000128: other congestion control mechanisms
