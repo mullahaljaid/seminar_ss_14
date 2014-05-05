@@ -13,8 +13,8 @@ AQM wird benötigt:
 															ECN-Explicit Congestion Notification															http://www.hjp.at/doc/rfc/rfc3168.html
 															Recommendations on Queue Management and Congestion Avoidance in the Internet					http://www.hjp.at/doc/rfc/rfc2309.html
 	congestion collapse										Congestion Control in IP/TCP Internetworks														http://www.hjp.at/doc/rfc/rfc896.html
-															Congestion control in computer networks: issues and trends										http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.122.4570
-															Congestion control and traffic management in ATM networks: Recent advances and a survey			http://www.sciencedirect.com/science/article/pii/0169755296000128
+															Congestion control in computer networks: issues and trends										http://ieeexplore.ieee.org/xpl/login.jsp?tp=&arnumber=56532&url=http%3A%2F%2Fieeexplore.ieee.org%2Fxpls%2Fabs_all.jsp%3Farnumber%3D56532
+															Congestion control and traffic management in ATM networks: Recent advances and a survey			http://dl.acm.org/citation.cfm?id=244120
 															Efficient Active Queue Management for Internet Routers											http://www.researchgate.net/publication/2621818_Efficient_Active_Queue_Management_for_Internet_Routers
 															Router Mechanisms to Support End-to-End Congestion Control										http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.39.7772
 	TCP wird mit immer mehr Flüssen immer schlechter		TCP behavior with many flows																	http://dl.acm.org/citation.cfm?id=852431&CFID=330551302&CFTOKEN=30669788
