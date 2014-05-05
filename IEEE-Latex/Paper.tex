@@ -1,0 +1,84 @@
+\documentclass[9pt,technote]{IEEEtran}
+\usepackage[latin1]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{graphicx}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{algorithmic}
+\usepackage{placeins}
+\usepackage{hyperref}
+
+\begin{document}
+
+\begin{titlepage}
+\begin{center}
+\vfill{{\Large Active Queue Management}}
+\end{center}
+
+\end{titlepage}
+
+\tableofcontents
+
+\newpage
+
+\section{Motivation}
+
+\section{Congestion Control in Network Traffic}
+
+Recommendations on Queue Management and Congestion Avoidance in the Internet					\url{http://www.hjp.at/doc/rfc/rfc2309.html}
+
+Congestion Control in IP/TCP Internetworks														\url{http://www.hjp.at/doc/rfc/rfc896.html}
+
+Congestion control in computer networks: issues and trends										\url{http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.122.4570}
+
+Congestion control and traffic management in ATM networks: Recent advances and a survey			\url{http://www.sciencedirect.com/science/article/pii/0169755296000128}
+
+TCP behavior with many flows																	\url{http://dl.acm.org/citation.cfm?id=852431&CFID=330551302&CFTOKEN=30669788}
+
+Design considerations for supporting TCP with per-flow queueing									\url{http://ieeexplore.ieee.org/xpl/login.jsp?tp=&arnumber=659666&url=http\%3A%2F%2Fieeexplore.ieee.org\%2Fxpls%2Fabs_all.jsp\%3Farnumber%3D659666}
+
+TCP and explicit congestion notification														\url{http://dl.acm.org/citation.cfm?id=205512&CFID=330551302&CFTOKEN=30669788}
+
+\section{Definition and usage of Active Queue Managment}
+
+Efficient Active Queue Management for Internet Routers											\url{http://www.researchgate.net/publication/2621818_Efficient_Active_Queue_Management_for_Internet_Routers}
+
+Router Mechanisms to Support End-to-End Congestion Control										\url{http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.39.7772}
+
+Sizing router buffers																			\url{http://dl.acm.org/citation.cfm?id=1015499}
+
+Stochastic Modeling and the Theory of Queues													\url{http://www.gbv.de/dms/ilmenau/toc/018830102.PDF}
+
+Analysis and simulation of a fair queueing algorithm											\url{http://dl.acm.org/citation.cfm?id=75248}
+
+\section{Algorithms for Active Queue Management}
+
+\subsection{Passive Techniques}
+\subsubsection{CHOKe}
+CHOKe - a stateless active queue management scheme for approximating fair bandwidth allocation	\url{http://ieeexplore.ieee.org/xpl/login.jsp?tp=&arnumber=832269&url=http\%3A%2F%2Fieeexplore.ieee.or0\%2Fxpls%2Fabs_all.jsp\%3Farnumber%3D832269}
+\subsubsection{ECN}
+ECN-Explicit Congestion Notification															http://www.hjp.at/doc/rfc/rfc3168.html
+\subsection{Random Early Detection}
+RED														Random early detection gateways for congestion avoidance										\url{http://ieeexplore.ieee.org/xpl/articleDetails.jsp?arnumber=251892&navigation=1}
+	RED + Vorschläge für Architektur etc.					A study of active queue management for congestion control 										\url{http://ieeexplore.ieee.org/xpl/login.jsp?tp=&arnumber=832541&url=http\%3A\%2F\%2Fieeexplore.ieee.org\%2Fxpls\%2Fabs_all.jsp\%3Farnumber\%3D832541}
+
+RED + Vorschläge für Architektur etc.					A study of active queue management for congestion control 										\url{http://ieeexplore.ieee.org/xpl/login.jsp?tp=&arnumber=832541&url=http\%3A%2F%2Fieeexplore.ieee.org\%2Fxpls%2Fabs_all.jsp\%3Farnumber%3D832541}
+
+\subsection{Alternatives to RED}
+
+\subsubsection{PI Controller}
+
+PI														On designing improved controllers for AQM routers supporting TCP flows 							\url{http://ieeexplore.ieee.org/xpl/login.jsp?tp=&arnumber=916670&url=http\%3A%2F%2Fieeexplore.ieee.org\%2Fxpls%2Fabs_all.jsp\%3Farnumber%3D916670}
+
+Vergleich RED, ARED, PI									The effects of active queue management on web performance										\url{http://dl.acm.org/citation.cfm?id=863986}
+
+\subsubsection{Adaptive Virutal Queue}
+Adaptive virtual Queue + (Vergleich zu RED, REM, PI)	Analysis and design of an adaptive virtual queue (AVQ) algorithm for active queue management	\url{http://dl.acm.org/citation.cfm?id=383069}
+
+\subsubsection{BLUE}
+BLUE													The BLUE active queue management algorithms														\url{http://dl.acm.org/citation.cfm?id=581869}
+
+\section{Conclusion and Future Work} 
+
+\end{document}
