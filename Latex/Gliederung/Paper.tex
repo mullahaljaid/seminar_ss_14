@@ -1,5 +1,6 @@
-\documentclass[10pt,article]{IEEEtran}
+\documentclass[10pt]{IEEEtran}
 \usepackage{hyperref}
+\usepackage[latin1]{inputenc}
 
 \title{Active Queue Management}
 \author{Thomas Fischer, Dominik Billing}
@@ -7,25 +8,34 @@
 \begin{document}
 \maketitle
 
-\section{Motivation}
+\section{Einführung und Motivation}
+\subsection{Problem}
+Das Internet hat mittlerweile eine Größe erreicht, bei der man sich nicht mehr komplett auf End-To-End Staukontrolle verlassen kann \cite{Floyd1997}.
 
-\section{Congestion Control in Network Traffic}
+\subsection{Problemstellung}
+Die mittlere Pufferauslastung soll gering gehalten werden \cite{Le2003}.
 
-Recommendations on Queue Management and Congestion Avoidance in the Internet					\url{http://www.hjp.at/doc/rfc/rfc2309.html}
+\section{Staukontrolle in Netzwerken}
 
-Congestion Control in IP/TCP Internetworks														\url{http://www.hjp.at/doc/rfc/rfc896.html}
+\subsection{Vorschläge zur Staukontrolle}
+Vorschläge zur Gewährleistung und Verbesserung der Internetperformance \cite{Braden1998}.
 
-Congestion control in computer networks: issues and trends										\url{http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.122.4570}
+\subsection{congestion collapse}
+Congestion collapse und wie man es dazu führt \cite{Nagle1984}.
 
-Congestion control and traffic management in ATM networks: Recent advances and a survey			\url{http://www.sciencedirect.com/science/article/pii/0169755296000128}
+\subsection{Warum ist das Problem so schwer zu identifizieren}
+Was sind die Gründe für das Problem \cite{Jain1990}?
 
-TCP behavior with many flows																	\url{http://dl.acm.org/citation.cfm?id=852431&CFID=330551302&CFTOKEN=30669788}
+\subsection{Mechanismen zur Staukontrolle in ATM Netzwerken}
+Auswahlkriterien zwischen den beiden Ansätzen rate-based und credit-based \cite{Jain1996}.
 
-Design considerations for supporting TCP with per-flow queueing									\url{http://ieeexplore.ieee.org/xpl/login.jsp?tp=&arnumber=659666&url=http\%3A%2F%2Fieeexplore.ieee.org\%2Fxpls%2Fabs_all.jsp\%3Farnumber%3D659666}
+\subsection{Standard TCP Verhalten bei Staus}
+Warum ist es keine gute Idee TCP die Staukontrolle selbst zu machen \cite{Morris1997}? Gleichbehandlung aller Datenströme \cite{Suter1998}.
 
-TCP and explicit congestion notification														\url{http://dl.acm.org/citation.cfm?id=205512&CFID=330551302&CFTOKEN=30669788}
+\subsection{Explicit Congestion Notification}
+Vor- und Nachteile von ECN bei TCP \cite{Floyd1994}
 
-\section{Definition and usage of Active Queue Managment}
+\section{Definition und Anwendung von Active Queue Management}
 
 Efficient Active Queue Management for Internet Routers											\url{http://www.researchgate.net/publication/2621818_Efficient_Active_Queue_Management_for_Internet_Routers}
 
@@ -65,5 +75,9 @@ Adaptive virtual Queue + (Vergleich zu RED, REM, PI)	Analysis and design of an a
 BLUE													The BLUE active queue management algorithms														\url{http://dl.acm.org/citation.cfm?id=581869}
 
 \section{Conclusion and Future Work} 
+\nocite{*}
+
+\bibliographystyle{IEEEtran}
+\bibliography{IEEEabrv,bibliothek}
 
 \end{document}

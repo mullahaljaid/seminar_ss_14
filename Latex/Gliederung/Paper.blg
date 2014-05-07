@@ -1,15 +1,17 @@
 This is BibTeX, Version 0.99dThe top-level auxiliary file: Paper.aux
 The style file: IEEEtran.bst
-I couldn't open database file bibliothek.bib.bib
----line 19 of file Paper.aux
- : \bibdata{bibliothek.bib
- :                        }
-I'm skipping whatever remains of this command
-I found no database files---while reading file Paper.aux
-Warning--I didn't find a database entry for "Feng2002"
+Database file #1: IEEEabrv.bib
+Database file #2: bibliothek.bib
+I was expecting a `,' or a `}'---line 104 of file bibliothek.bib
+ :   title                    = "On designing improved controllers for AQM routers supporting "
+ :                                                                                             TCP} flows",
+I'm skipping whatever remains of this entry
 -- IEEEtran.bst version 1.13 (2008/09/30) by Michael Shell.
 -- http://www.michaelshell.org/tex/ieeetran/bibtex/
 -- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
+Warning--empty author in Hollot2001
+Warning--empty booktitle in Hollot2001
+Warning--empty year in Hollot2001
 
 Done.
-(There were 2 error messages)
+(There was 1 error message)
