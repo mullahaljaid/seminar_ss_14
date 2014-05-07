@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.5.7)  7 MAY 2014 22:23
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.5.7)  7 MAY 2014 22:51
 entering extended mode
 **Paper.tex
 ("D:\Eigene Dateien\GitHub\seminar_ss_14\Latex\Gliederung\Paper.tex"
@@ -258,145 +258,58 @@ LaTeX Info: Redefining \nameref on input line 8.
 ("D:\Eigene Dateien\GitHub\seminar_ss_14\Latex\Gliederung\Paper.out")
 ("D:\Eigene Dateien\GitHub\seminar_ss_14\Latex\Gliederung\Paper.out")
 \@outlinefile=\write3
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 40.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 40.
 
-Underfull \hbox (badness 10000) in paragraph at lines 40--41
-[]$\OT1/ptm/m/n/10 http : / / www . researchgate . net / publication / 2621818[
-]Ecient[]$
- []
-
-
-Underfull \hbox (badness 7522) in paragraph at lines 44--45
-[]\OT1/ptm/m/n/10 Sizing router buffers []$http : / / dl . acm . org / citation
- . cfm ? id =$
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 54--55
-\OT1/ptm/m/n/10 scheme for ap-prox-i-mat-ing fair band-width al-lo-ca-tion
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 54--55
-[]$\OT1/ptm/m/n/10 http : / / ieeexplore . ieee . org / xpl / login . jsp ? tp 
-= &arnumber =$
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 54--55
-$\OT1/ptm/m/n/10 832269 & url = http % 3A % 2F % 2Fieeexplore . ieee . or0 % 2F
-xpls %$
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 56--57
- \OT1/ptm/m/it/10 2) ECN: [][][] \OT1/ptm/m/n/10 ECN-Explicit Con-ges-tion No-t
-i-fi-ca-tion
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 58--60
-\OT1/ptm/m/n/10 avoid-ance []$http : / / ieeexplore . ieee . org / xpl / articl
-eDetails . jsp ?$
- []
-
-
-Underfull \hbox (badness 4995) in paragraph at lines 58--60
-$\OT1/ptm/m/n/10 arnumber = 251892 & navigation = 1$[] RED + Vorschl[]age f[]ur
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 58--60
-$\OT1/ptm/m/n/10 &arnumber = 832541 & url = http % 3A % 2F % 2Fieeexplore . iee
-e .$
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 61--62
-[]\OT1/ptm/m/n/10 RED + Vorschl[]age f[]ur Ar-chitek-tur etc. A study
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 61--62
-\OT1/ptm/m/n/10 of ac-tive queue man-age-ment for con-ges-tion con-trol
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 61--62
-[]$\OT1/ptm/m/n/10 http : / / ieeexplore . ieee . org / xpl / login . jsp ? tp 
-= &arnumber =$
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 61--62
-$\OT1/ptm/m/n/10 832541 & url = http % 3A % 2F % 2Fieeexplore . ieee . org % 2F
-xpls %$
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 67--68
- \OT1/ptm/m/it/10 1) PI Con-troller: [][][] \OT1/ptm/m/n/10 PI On de-sign-ing i
-m-proved
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 67--68
-\OT1/ptm/m/n/10 con-trollers for AQM routers sup-port-ing TCP flows
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 67--68
-[]$\OT1/ptm/m/n/10 http : / / ieeexplore . ieee . org / xpl / login . jsp ? tp 
-= &arnumber =$
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 67--68
-$\OT1/ptm/m/n/10 916670 & url = http % 3A % 2F % 2Fieeexplore . ieee . org % 2F
-xpls %$
- []
-
-("D:\Eigene Dateien\GitHub\seminar_ss_14\Latex\Gliederung\Paper.bbl" [1{C:/Prog
-ramData/MiKTeX/2.9/pdftex/config/pdftex.map}
-
-
-]
+("D:\Eigene Dateien\GitHub\seminar_ss_14\Latex\Gliederung\Paper.bbl"
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <8> on input line 46.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 46.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 46.
+ [1{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}
+
+
+]
+
+! LaTeX Error: Command \textcurrency unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.141   Universitä
+                   t Darmstadt, Tech. Rep., 2007.
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
 )
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 83.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 74.
  [2
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 83.
-
-("D:\Eigene Dateien\GitHub\seminar_ss_14\Latex\Gliederung\Paper.aux")
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 83.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 83.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 74.
+ ("D:\Eigene Dateien\GitHub\seminar_ss_14\Latex\Gliederung\Paper.aux")
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 74.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 74.
 Package rerunfilecheck Info: File `Paper.out' has not changed.
-(rerunfilecheck)             Checksum: 500C94396D6374C42C617FFECCBD7355;1593.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 83.
+(rerunfilecheck)             Checksum: 39CE1E8A49FE65AD323E2DB0A623FBB5;2379.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 74.
  ) 
 Here is how much of TeX's memory you used:
- 5060 strings out of 493921
- 79871 string characters out of 3147286
- 165095 words of memory out of 3000000
- 8312 multiletter control sequences out of 15000+200000
+ 5076 strings out of 493921
+ 80144 string characters out of 3147286
+ 161128 words of memory out of 3000000
+ 8319 multiletter control sequences out of 15000+200000
  34841 words of font info for 68 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 29i,5n,28p,293b,454s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 29i,5n,28p,248b,458s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Program File
 s/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files/MiKTeX 2.9/font
 s/type1/urw/times/utmri8a.pfb>
-Output written on Paper.pdf (2 pages, 70080 bytes).
+Output written on Paper.pdf (2 pages, 67740 bytes).
 PDF statistics:
- 185 PDF objects out of 1000 (max. 8388607)
- 47 named destinations out of 1000 (max. 500000)
- 177 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 209 PDF objects out of 1000 (max. 8388607)
+ 56 named destinations out of 1000 (max. 500000)
+ 241 words of extra memory for PDF output out of 10000 (max. 10000000)
 
