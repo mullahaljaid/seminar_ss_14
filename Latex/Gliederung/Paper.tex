@@ -2,70 +2,92 @@
 \usepackage{hyperref}
 \usepackage[latin1]{inputenc}
 
-\title{Active Queue Management}
+\title{Staukontrolle durch Active Queue Management}
 \author{Thomas Fischer, Dominik Billing}
 
 \begin{document}
 \maketitle
 
-\section{Einführung und Motivation}
-\subsection{Problem}
-Das Internet hat mittlerweile eine Größe erreicht, bei der man sich nicht mehr komplett auf End-To-End Staukontrolle verlassen kann \cite{Floyd1997}.
-\subsection{Problemstellung}
-Die mittlere Pufferauslastung soll gering gehalten werden \cite{Le2003}.
 
-\section{Staukontrolle in Netzwerken}
-\subsection{Vorschläge zur Staukontrolle}
-Vorschläge zur Gewährleistung und Verbesserung der Internetperformance \cite{Braden1998}.
-\subsection{congestion collapse}
-Congestion collapse und wie man es dazu führt \cite{Nagle1984}.
-\subsection{Warum ist das Problem so schwer zu identifizieren}
+
+\section{Einführung und Motivation}
+\begin{itemize}
+\item Problem
+
+Das Internet hat mittlerweile eine Größe erreicht, bei der man sich nicht mehr komplett auf Ende-zu-Ende Staukontrolle verlassen kann \cite{Floyd1997}. Sehr viele Router stellen aufgrund der sternförmigen Struktur des Internets Flaschenhälse dar.
+\item Problemstellung
+
+Die mittlere Pufferauslastung soll gering gehalten werden, um E2E Staukontrolle zu ermöglich \cite{Le2003}.
+\end{itemize}
+
+
+
+\section{Staukontrolle in Netzen}
+\begin{itemize}
+\item Vorschläge zur Staukontrolle
+
+Vorschläge zur Gewährleistung und Verbesserung der Internetperformance \cite{Braden1998}
+\item congestion collapse
+
+Congestion collapse und wie es dazu führt \cite{Nagle1984}.
+\item Warum ist das Problem so schwer zu identifizieren
+
 Was sind die Gründe für das Problem \cite{Jain1990}?
-\subsection{Mechanismen zur Staukontrolle in ATM Netzwerken}
+\item Mechanismen zur Staukontrolle in ATM Netzwerken
+
 Auswahlkriterien zwischen den beiden Ansätzen rate-based und credit-based \cite{Jain1996}.
-\subsection{Standard TCP Verhalten bei Staus}
+\item Standard TCP Verhalten bei Staus
+
 Warum ist es keine gute Idee TCP die Staukontrolle selbst zu machen \cite{Morris1997}? Gleichbehandlung aller Datenströme \cite{Suter1998}.
-\subsection{Explicit Congestion Notification}
+\item Explicit Congestion Notification
+
 Vor- und Nachteile von ECN bei TCP \cite{Floyd1994}
+\item Router Mechanismen zur Staukontrolle
+
+Vor- und Nachteile von normaler Staukontrolle in Routern \cite{Floyd1997}
+\item Überleitung zu Active Queue Management
+
+Active Queue Management ist eine Lösungsansatz zur Staukontrolle \cite{Graffi2007}
+\end{itemize}
+
+
 
 \section{Definition und Anwendung von Active Queue Management}
-\subsection{Effizientes Active Queue Management in Internet Routern}
-\cite{Suter1998a}
-\subsection{Router Mechanismen zur Staukontrolle}
-\cite{Floyd1997}
-\subsection{Dimensionierung von Router Puffern}
-\cite{Appenzeller2004}
-\subsection{Stochastische Modellierung und die Theorie von Queues}
-\cite{Wolff1998}
-\subsection{Analyse und Simulation eines gleichbehandelnden Queue Algorithmus}
-\cite{Demers1989}
+\begin{itemize}
+\item Effizientes Active Queue Management in Internet Routern \cite{Suter1998a}
+\item Dimensionierung von Router Puffern \cite{Appenzeller2004}
+\item Stochastische Modellierung und die Theorie von Queues \cite{Wolff1998}
+\item Analyse und Simulation eines gleichbehandelnden Queue Algorithmus \cite{Demers1989}
+\end{itemize}
 
-\section{Active Queue Management Algorithmen}
-\subsection{Passive Techniques}
-\subsubsection{CHOKe}
-\cite{Pan2000}
-\subsubsection{ECN}
-\cite{Ramakrishnan2001}
-\subsection{Random Early Detection}
-\cite{Floyd1993}
-\cite{Firoiu2000}
-Adaptive RED \cite{Floyd2001}
-\subsection{Alternativen zu RED}
-\subsubsection{PI Controller}
-\cite{Hollot2001}
-\subsubsection{Vergleich RED, ARED, PI}
-\cite{Le2003}
-\subsubsection{REM}
-\cite{Athuraliya2001}
-\subsubsection{Adaptive Virutal Queue + Vergleich zu RED, REM, PI}
-\cite{Kunniyur2001}
-\subsubsection{BLUE}
-\cite{Feng2002}
-\subsubsection{Vergleich RED, BLUE, ARED, PI, ECN, REM}
-\cite{Graffi2007}
 
-\section{Ausblick und zukünftige Arbeiten}
-Ein wirklich optimaler Algorithmus muss noch gefunden werden \cite{Graffi2007}.
+
+\section{Die gängigsten Active Queue Management Algorithmen}
+\begin{itemize}
+\item RED (Random Early Detection) \cite{Floyd1993} \cite{Firoiu2000}
+
+Adaptive RED\cite{Floyd2001}
+\item BLUE \cite{Feng2002}
+\item ECN \cite{Ramakrishnan2001}
+\item PI Controller \cite{Hollot2001}
+\end{itemize}
+
+
+
+\section{Vergleich der vorgestellten Algorithmen}
+\begin{itemize}
+\item Vergleich RED, ARED, PI \cite{Le2003}
+\item Vergleich RED, PI \cite{Kunniyur2001}
+\item Vergleich RED, BLUE, ARED, ECN, PI \cite{Graffi2007}
+\end{itemize}
+
+
+
+\section{Ausblick und andere Ansätze}
+\begin{itemize}
+\item Ein wirklich optimaler Algorithmus muss noch gefunden werden \cite{Graffi2007}
+\item Statt Staukontrolle andere Wege suchen (CHOKe) \cite{Pan2000}
+\end{itemize}
 
 \nocite{*}
 \bibliographystyle{IEEEtran}
