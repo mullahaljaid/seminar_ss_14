@@ -10,7 +10,9 @@
 \maketitle
 
 \begin{abstract}
+Dieser Artikel beschreibt die Problematik im Internet, die durch den Einsatz von konventioneller Staukontrolle in Routern und die Struktur des Internets hervorgerufen wird. Die Problematik konventioneller Staukontrolle liegt darin, dass Pakete wahllos fallen gelassen werden und es auf diese Art zu großem Overhead kommt, der durch Flaschenhälse im Internet noch verstärkt wird.
 
+Wir werden als Lösung für das Problem der Staukontrolle im Internet Active Queue Management herausarbeiten. Hierbei werden Pakete nicht wahllos fallen gelassen, sondern im Gegensatz alle Flüsse gleich behandelt und nachfolgende Router mittels markierter Pakete darüber informiert, dass es zu Staus kommen kann. Active Queue Management ist der Überbegriff von Methoden, um die mittlere Pufferauslastung der Router möglichst gering zu halten. Anschließend werden wir die Active Queue Management Methoden RED, BLUE, PI und ECN vorstellen und miteinander vergleichen.
 \end{abstract}
 
 \section{Einführung und Motivation}
