@@ -23,7 +23,7 @@ Nach Floyd \cite{Floyd1997} sind Ende-zu-Ende (E2E) Staukontrollmechanismen von 
 
 Graffi \cite{Graffi2007} beschreibt, dass Bandbreite aktuell die knappste Ressource in Netzwerken ist. Die eingehenden und ausgehenden Bandbreiten normaler ADSL Verbindungen sind unterschiedlich. Typischerweise ist die ausgehende Bandbreite deutlich kleiner als die eingehende. Das bedeutet, dass nicht alle eingehenden Daten verarbeitet und weitergesandt werden können. Staus sind also Probleme, die hier auftreten können, wenn keine angemessenen Mechanismen angewendet werden. Das TCP-Protokoll sieht vor, Pakete nach dem "First in First out" Prinzip fallenzulassen, wenn die Puffer voll laufen.
 
-Die Problemstellung hier ist es also Mechanismen zu finden, Staus in E2E Verbindungen zu kontrollieren. Nach \cite{Le2003} soll die durchschnittliche Pufferausnutzung klein gehalten werden, damit E2E Staukontrolle ermöglicht wird.
+Die Problemstellung hier ist es also Mechanismen zu finden, Staus in E2E Verbindungen zu kontrollieren. Nach Le \cite{Le2003} soll die durchschnittliche Pufferausnutzung klein gehalten werden, damit E2E Staukontrolle ermöglicht wird.
 
 Das folgende Kapitel (Kapitel \ref{sec:Staukontrolle}) beschreibt die generellen Konzepte der Staukontrolle in Netzen. In Kapitel \ref{sec:AQM} wird Active Queue Management definiert und einige Anwendungsfälle davon präsentiert. Die Active Queue Management Algorithmen RED, BLUE, ECN und PI werden in Kapitel \ref{sec:Algorithmen} vorgestellt und in Kapitel \ref{sec:Vergleich} miteinander verglichen. Ein Ausblick zu zukünftigen Entwicklungen und Forschungen sowie andere Ansätze zur Staukontrolle zusammen mit den zusammengefassten Ergebnissen erfolgt in Kapitel \ref{sec:Ausblick}.
 
