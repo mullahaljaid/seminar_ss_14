@@ -1,0 +1,104 @@
+\documentclass{IEEEtran}
+\usepackage{hyperref}
+\usepackage[latin1]{inputenc}
+\usepackage[ngerman]{babel}
+
+\title{Staukontrolle durch Active Queue Management}
+\author{Thomas Fischer, Dominik Billing}
+\specialpapernotice{Masterseminar Kommunikationssysteme\\
+Lehr- und Forschungseinheit für Kommunikationssysteme und Systemprogrammierung\\
+Ludwig-Maximilians-Universität München}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Dieser Artikel beschreibt die Problematik im Internet, die durch den Einsatz von konventioneller Staukontrolle in Routern und die Struktur des Internets hervorgerufen wird. Die Problematik konventioneller Staukontrolle liegt darin, dass Pakete wahllos fallen gelassen werden und es auf diese Art zu großem Overhead kommt, der durch Flaschenhälse im Internet noch verstärkt wird.
+
+Wir werden als Lösung für das Problem der Staukontrolle im Internet Active Queue Management herausarbeiten. Hierbei werden Pakete nicht wahllos fallen gelassen, sondern im Gegensatz alle Flüsse gleich behandelt und nachfolgende Router mittels markierter Pakete darüber informiert, dass es zu Staus kommen kann. Active Queue Management ist der Überbegriff von Methoden, um die mittlere Pufferauslastung der Router möglichst gering zu halten. Anschließend werden wir die Active Queue Management Methoden RED, BLUE, PI und ECN vorstellen und miteinander vergleichen.
+\end{abstract}
+
+\section{Einführung und Motivation}\label{sec:Motivation}
+Nach Floyd \cite{Floyd1997} sind Ende-zu-Ende (E2E) Staukontrollmechanismen von TCP mittlerweile ein kritischer Faktor in der Robustheit des Internets. Das Internet wächst unaufhaltsam weiter, es gibt keine eng verknüpfte Netzgemeinschaft mehr und nicht jeder Endknoten verwendet die E2E Staukontrolle für bestmöglichen Datenfluss. Entwickler kümmern sich nicht länger darum, E2E Staukontrolle in ihre Internet-Anwendungen zu integrieren. Die Konsequenz davon ist, dass das Netzwerk selbst seine Resourcennutzung kontrolliert.
+
+Graffi \cite{Graffi2007} beschreibt, dass Bandbreite aktuell die knappste Ressource in Netzwerken ist. Die eingehenden und ausgehenden Bandbreiten normaler ADSL Verbindungen sind unterschiedlich. Typischerweise ist die ausgehende Bandbreite deutlich kleiner als die eingehende. Das bedeutet, dass nicht alle eingehenden Daten verarbeitet und weitergesandt werden können. Staus sind also Probleme, die hier auftreten können, wenn keine angemessenen Mechanismen angewendet werden. Das TCP-Protokoll sieht vor, Pakete nach dem "First in First out" Prinzip fallenzulassen, wenn die Puffer voll laufen.
+
+Die Problemstellung hier ist es also Mechanismen zu finden, Staus in E2E Verbindungen zu kontrollieren. Nach \cite{Le2003} soll die durchschnittliche Pufferausnutzung klein gehalten werden, damit E2E Staukontrolle ermöglicht wird.
+
+Das folgende Kapitel (Kapitel \ref{sec:Staukontrolle}) beschreibt die generellen Konzepte der Staukontrolle in Netzen. In Kapitel \ref{sec:AQM} wird Active Queue Management definiert und einige Anwendungsfälle davon präsentiert. Die Active Queue Management Algorithmen RED, BLUE, ECN und PI werden in Kapitel \ref{sec:Algorithmen} vorgestellt und in Kapitel \ref{sec:Vergleich} miteinander verglichen. Ein Ausblick zu zukünftigen Entwicklungen und Forschungen sowie andere Ansätze zur Staukontrolle zusammen mit den zusammengefassten Ergebnissen erfolgt in Kapitel \ref{sec:Ausblick}.
+
+\section{Staukontrolle in Netzen}\label{sec:Staukontrolle}
+
+
+
+\begin{itemize}
+\item Vorschläge zur Staukontrolle
+
+Vorschläge zur Gewährleistung und Verbesserung der Internetperformance \cite{Braden1998}
+\item congestion collapse
+
+Congestion collapse und wie es dazu führt \cite{Nagle1984}.
+\item Warum ist das Problem so schwer zu identifizieren
+
+Was sind die Gründe für das Problem \cite{Jain1990}?
+\item Mechanismen zur Staukontrolle in ATM Netzwerken
+
+Auswahlkriterien zwischen den beiden Ansätzen rate-based und credit-based \cite{Jain1996}.
+\item Standard TCP Verhalten bei Staus
+
+Warum ist es keine gute Idee TCP die Staukontrolle selbst zu machen \cite{Morris1997}? Gleichbehandlung aller Datenströme \cite{Suter1998}.
+\item Explicit Congestion Notification
+
+Vor- und Nachteile von ECN bei TCP \cite{Floyd1994}
+\item Router Mechanismen zur Staukontrolle
+
+Vor- und Nachteile von normaler Staukontrolle in Routern \cite{Floyd1997}
+\item Überleitung zu Active Queue Management
+
+Active Queue Management ist eine Lösungsansatz zur Staukontrolle \cite{Graffi2007}
+\end{itemize}
+
+
+
+\section{Definition und Anwendung von Active Queue Management}\label{sec:AQM}
+\begin{itemize}
+\item Effizientes Active Queue Management in Internet Routern \cite{Suter1998a}
+\item Dimensionierung von Router Puffern \cite{Appenzeller2004}
+\item Stochastische Modellierung und die Theorie von Queues \cite{Wolff1998}
+\item Analyse und Simulation eines gleichbehandelnden Queue Algorithmus \cite{Demers1989}
+\end{itemize}
+
+
+
+\section{Die gängigsten Active Queue Management Algorithmen}\label{sec:Algorithmen}
+\begin{itemize}
+\item RED (Random Early Detection) \cite{Floyd1993} \cite{Firoiu2000}
+
+Adaptive RED\cite{Floyd2001}
+\item BLUE \cite{Feng2002}
+\item ECN \cite{Ramakrishnan2001}
+\item PI Controller \cite{Hollot2001}
+\end{itemize}
+
+
+
+\section{Vergleich der vorgestellten Algorithmen}\label{sec:Vergleich}
+\begin{itemize}
+\item Vergleich RED, ARED, PI \cite{Le2003}
+\item Vergleich RED, PI \cite{Kunniyur2001}
+\item Vergleich RED, BLUE, ARED, ECN, PI \cite{Graffi2007}
+\end{itemize}
+
+
+
+\section{Ausblick und andere Ansätze}\label{sec:Ausblick}
+\begin{itemize}
+\item Ein wirklich optimaler Algorithmus muss noch gefunden werden \cite{Graffi2007}
+\item Statt Staukontrolle andere Wege suchen (CHOKe) \cite{Pan2000}
+\end{itemize}
+
+\nocite{*}
+\bibliographystyle{IEEEtran_de}
+\bibliography{IEEEabrv,bibliothek}
+
+\end{document}
