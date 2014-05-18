@@ -51,6 +51,10 @@ J.~Nagle, ``Congestion control in ip/tcp internetworks,'' \emph{SIGCOMM Comput.
   \url{http://doi.acm.org/10.1145/1024908.1024910}
 \BIBentrySTDinterwordspacing
 
+\bibitem{Stevens1997}
+W.~Stevens, ``Tcp slow start, congestion avoidance, fast retransmit, and fast
+  recovery algorithms,'' United States, 1997.
+
 \bibitem{Jain1990}
 R.~Jain, ``Congestion control in computer networks: issues and trends,''
   \emph{Network, IEEE}, vol.~4, Nr.~3, pp. 24--30, Mai 1990.
