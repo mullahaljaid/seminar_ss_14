@@ -38,6 +38,17 @@ L.~Le, J.~Aikat, K.~Jeffay, und F.~Smith, ``The effects of active queue
   Communications}, Ser. SIGCOMM '03.\hskip 1em plus 0.5em minus 0.4em\relax
   ACM, 2003.
 
+\bibitem{Morris1997}
+R.~Morris, ``Tcp behavior with many flows,'' in \emph{Proceedings of the 1997
+  International Conference on Network Protocols (ICNP '97)}, Ser. ICNP
+  '97.\hskip 1em plus 0.5em minus 0.4em\relax IEEE Computer Society, 1997.
+
+\bibitem{Suter1998}
+B.~Suter, T.~Lakshman, D.~Stiliadis, und A.~Choudhury, ``Design considerations
+  for supporting tcp with per-flow queueing,'' in \emph{INFOCOM '98.
+  Seventeenth Annual Joint Conference of the IEEE Computer and Communications
+  Societies. Proceedings. IEEE}, vol.~1, Mär. 1998, pp. 299--306vol.1.
+
 \bibitem{Braden1998}
 B.~Braden, D.~Clark, J.~Crowcroft, B.~Davie, S.~Deering, D.~Estrin, S.~Floyd,
   V.~Jacobson, G.~Minshall, C.~Partridge, L.~Peterson, K.~Ramakrishnan,
@@ -59,28 +70,17 @@ W.~Stevens, ``Tcp slow start, congestion avoidance, fast retransmit, and fast
 R.~Jain, ``Congestion control in computer networks: issues and trends,''
   \emph{Network, IEEE}, vol.~4, Nr.~3, pp. 24--30, Mai 1990.
 
+\bibitem{Floyd1994}
+S.~Floyd, ``Tcp and explicit congestion notification,'' \emph{SIGCOMM Comput.
+  Commun. Rev.}, vol.~24, Nr.~5, pp. 8--23, Okt. 1994.
+
 \bibitem{Jain1996}
 \BIBentryALTinterwordspacing
-------, ``Congestion control and traffic management in atm networks: Recent
+R.~Jain, ``Congestion control and traffic management in atm networks: Recent
   advances and a survey,'' \emph{Comput. Netw. ISDN Syst.}, vol.~28, Nr.~13,
   pp. 1723--1738, Okt. 1996. [Online]. Available:
   \url{http://dx.doi.org/10.1016/0169-7552(96)00012-8}
 \BIBentrySTDinterwordspacing
-
-\bibitem{Morris1997}
-R.~Morris, ``Tcp behavior with many flows,'' in \emph{Proceedings of the 1997
-  International Conference on Network Protocols (ICNP '97)}, Ser. ICNP
-  '97.\hskip 1em plus 0.5em minus 0.4em\relax IEEE Computer Society, 1997.
-
-\bibitem{Suter1998}
-B.~Suter, T.~Lakshman, D.~Stiliadis, und A.~Choudhury, ``Design considerations
-  for supporting tcp with per-flow queueing,'' in \emph{INFOCOM '98.
-  Seventeenth Annual Joint Conference of the IEEE Computer and Communications
-  Societies. Proceedings. IEEE}, vol.~1, Mär. 1998, pp. 299--306vol.1.
-
-\bibitem{Floyd1994}
-S.~Floyd, ``Tcp and explicit congestion notification,'' \emph{SIGCOMM Comput.
-  Commun. Rev.}, vol.~24, Nr.~5, pp. 8--23, Okt. 1994.
 
 \bibitem{Suter1998a}
 B.~Suter, T.~Lakshman, D.~Stiliadis, und A.~Choudhury, ``Efficient active queue
