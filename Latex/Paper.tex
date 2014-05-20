@@ -13,9 +13,11 @@ Ludwig-Maximilians-Universität München}
 \maketitle
 
 \begin{abstract}
-Dieser Artikel beschreibt die Problematik im Internet, die durch den Einsatz von konventioneller Staukontrolle in Routern und die Struktur des Internets hervorgerufen wird. Die Problematik konventioneller Staukontrolle liegt darin, dass Pakete wahllos fallen gelassen werden und es auf diese Art zu großem Overhead kommt, der durch Flaschenhälse im Internet noch verstärkt wird.
+Dieser Artikel beschreibt die Problematik im Internet, die durch den Einsatz von konventioneller Staukontrolle in Routern und der Struktur des Internets hervorgerufen wird. Diese liegt darin, dass Pakete nicht gleichmäßig fallen gelassen werden und es auf diese Art zu großem Overhead kommt, der durch Flaschenhälse im Internet noch verstärkt wird. Zusätzlich können besonders bandbreitenhungrige Datenströme nicht sinnvoll begrenzt werden.
 
-Wir werden als Lösung für das Problem der Staukontrolle im Internet Active Queue Management herausarbeiten. Hierbei werden Pakete nicht wahllos fallen gelassen, sondern im Gegensatz alle Flüsse gleich behandelt und nachfolgende Router mittels markierter Pakete darüber informiert, dass es zu Staus kommen kann. Active Queue Management ist der Überbegriff von Methoden, um die mittlere Pufferauslastung der Router möglichst gering zu halten. Anschließend werden wir die Active Queue Management Methoden RED, BLUE, PI und ECN vorstellen und miteinander vergleichen.
+Wir werden als Lösung für das Problem der Staukontrolle im Internet Active Queue Management herausarbeiten. Active Queue Management versucht Staus frühzeitig und zuverlässig zu erkennen und durch Fallenlassen oder Markieren von Paketen Staus zu verhindern. Zusätzlich werden alle Datenströme gleich behandelt. Dies wird von AQM-Algorithmen erreicht, indem die mittlere Pufferauslastung von Routern möglichst gering gehalten wird.
+
+Um einen Überblick über aktuelle AQM-Algorithmen zu erhalten, werden wir die AQM-Methoden RED, BLUE und PI vorstellen und mit untereinander und mit ECN vergleichen.
 \end{abstract}
 
 \section{Einführung und Motivation}\label{sec:Motivation}
