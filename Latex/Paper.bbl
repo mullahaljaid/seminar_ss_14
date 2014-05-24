@@ -100,41 +100,10 @@ A.~Demers, S.~Keshav, und S.~Shenker, ``Analysis and simulation of a fair
   queueing algorithm,'' \emph{SIGCOMM Comput. Commun. Rev.}, vol.~19, Nr.~4,
   pp. 1--12, Aug. 1989.
 
-\bibitem{Floyd1993}
-S.~Floyd und V.~Jacobson, ``Random early detection gateways for congestion
-  avoidance,'' \emph{Networking, IEEE/ACM Transactions on}, vol.~1, Nr.~4, pp.
-  397--413, Aug. 1993.
-
-\bibitem{Firoiu2000}
-V.~Firoiu und M.~Borden, ``A study of active queue management for congestion
-  control,'' in \emph{INFOCOM 2000. Nineteenth Annual Joint Conference of the
-  IEEE Computer and Communications Societies. Proceedings. IEEE}, vol.~3, Mär.
-  2000, pp. 1435--1444vol.3.
-
 \bibitem{Floyd2001}
 S.~Floyd, R.~Gummadi, und S.~Shenker, ``Adaptive red: An algorithm for
   increasing the robustness of red's active queue management,'' AT\&T Center
   for Internet Research at ICSI, Tech. Rep., 2001.
-
-\bibitem{Feng2002}
-W.~Feng, K.~Shin, D.~Kandlur, und D.~Saha, ``The blue active queue management
-  algorithms,'' \emph{IEEE/ACM Trans. Netw.}, vol.~10, Nr.~4, pp. 513--528,
-  Aug. 2002.
-
-\bibitem{Ramakrishnan2001}
-K.~Ramakrishnan, S.~Floyd, und D.~Black, ``The addition of explicit congestion
-  notification (ecn) to ip,'' United States, 2001.
-
-\bibitem{Hollot2001}
-C.~Hollot, V.~Misra, D.~Towsley, und W.-B. Gong, ``On designing improved
-  controllers for aqm routers supporting tcp flows,'' in \emph{INFOCOM 2001.
-  Twentieth Annual Joint Conference of the IEEE Computer and Communications
-  Societies. Proceedings. IEEE}, vol.~3, 2001, pp. 1726--1734vol.3.
-
-\bibitem{Kunniyur2001}
-S.~Kunniyur und R.~Srikant, ``Analysis and design of an adaptive virtual queue
-  (avq) algorithm for active queue management,'' \emph{SIGCOMM Comput. Commun.
-  Rev.}, vol.~31, Nr.~4, pp. 123--134, Aug. 2001.
 
 \bibitem{Pan2000}
 R.~Pan, B.~Prabhakar, und K.~Psounis, ``Choke - a stateless active queue
@@ -143,8 +112,46 @@ R.~Pan, B.~Prabhakar, und K.~Psounis, ``Choke - a stateless active queue
   and Communications Societies. Proceedings. IEEE}, vol.~2, 2000, pp.
   942--951vol.2.
 
+\bibitem{Floyd1993}
+S.~Floyd und V.~Jacobson, ``Random early detection gateways for congestion
+  avoidance,'' \emph{Networking, IEEE/ACM Transactions on}, vol.~1, Nr.~4, pp.
+  397--413, Aug. 1993.
+
+\bibitem{BLUE1999}
+\BIBentryALTinterwordspacing
+W.~Feng, K.~Shin, D.~Kandlur, und D.~Saha, ``Blue: A new class of active queue
+  management algorithms,'' 1999. [Online]. Available:
+  \url{http://www.eecs.umich.edu/techreports/cse/99/CSE-TR-387-99.pdf}
+\BIBentrySTDinterwordspacing
+
+\bibitem{Kunniyur2001}
+S.~Kunniyur und R.~Srikant, ``Analysis and design of an adaptive virtual queue
+  (avq) algorithm for active queue management,'' \emph{SIGCOMM Comput. Commun.
+  Rev.}, vol.~31, Nr.~4, pp. 123--134, Aug. 2001.
+
 \bibitem{Athuraliya2001}
 S.~Athuraliya, S.~Low, V.~Li, und Q.~Yin, ``Rem: active queue management,''
   \emph{Network, IEEE}, vol.~15, Nr.~3, pp. 48--53, Mai 2001.
+
+\bibitem{Feng2002}
+W.~Feng, K.~Shin, D.~Kandlur, und D.~Saha, ``The blue active queue management
+  algorithms,'' \emph{IEEE/ACM Trans. Netw.}, vol.~10, Nr.~4, pp. 513--528,
+  Aug. 2002.
+
+\bibitem{Firoiu2000}
+V.~Firoiu und M.~Borden, ``A study of active queue management for congestion
+  control,'' in \emph{INFOCOM 2000. Nineteenth Annual Joint Conference of the
+  IEEE Computer and Communications Societies. Proceedings. IEEE}, vol.~3, Mär.
+  2000, pp. 1435--1444vol.3.
+
+\bibitem{Hollot2001}
+C.~Hollot, V.~Misra, D.~Towsley, und W.-B. Gong, ``On designing improved
+  controllers for aqm routers supporting tcp flows,'' in \emph{INFOCOM 2001.
+  Twentieth Annual Joint Conference of the IEEE Computer and Communications
+  Societies. Proceedings. IEEE}, vol.~3, 2001, pp. 1726--1734vol.3.
+
+\bibitem{Ramakrishnan2001}
+K.~Ramakrishnan, S.~Floyd, und D.~Black, ``The addition of explicit congestion
+  notification (ecn) to ip,'' United States, 2001.
 
 \end{thebibliography}
