@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2012.9.24)  24 MAY 2014 15:03
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2012.9.24)  29 MAY 2014 14:56
 entering extended mode
 **G:/LMU/Seminar*AQM/seminar_ss_14/Latex/Paper.tex
 ("G:/LMU/Seminar AQM/seminar_ss_14/Latex/Paper.tex"
@@ -303,31 +303,54 @@ $\OML/cmm/m/it/10 if\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 Verbindung frei \OMS/cmsy
 t/10 last[]update >$
  []
 
-[3] ("G:\LMU\Seminar AQM\seminar_ss_14\Latex\Paper.bbl"
+[3]
+Underfull \hbox (badness 1603) in paragraph at lines 116--117
+[]\OT1/ptm/m/n/10 Die be-schrie-be-nen Ve-ruschen wur-den mit dem Si-mu-
+ []
+
+
+LaTeX Warning: Citation `RFC2481' on page 4 undefined on input line 124.
+
+[4]
+
+LaTeX Warning: Citation `Tannenbaum2012' on page 5 undefined on input line 130.
+
+
+
+LaTeX Warning: Citation `Tannenbaum2012' on page 5 undefined on input line 132.
+
+
+("G:\LMU\Seminar AQM\seminar_ss_14\Latex\Paper.bbl"
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <8> on input line 62.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 62.
-)
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 124.
- [4]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 124.
+ [5])
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 141.
+ [6
+
+]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 141.
 
 ("G:\LMU\Seminar AQM\seminar_ss_14\Latex\Paper.aux")
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 124.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 124.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 141.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 141.
 Package rerunfilecheck Info: File `Paper.out' has not changed.
-(rerunfilecheck)             Checksum: 17789F5F3258457E5C295C1A179E2FD7;696.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 124.
+(rerunfilecheck)             Checksum: 24B50FAF8E5199E793329D3520CCD0A6;907.
+
+
+LaTeX Warning: There were undefined references.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 141.
  ) 
 Here is how much of TeX's memory you used:
- 5276 strings out of 494045
- 82110 string characters out of 3145966
- 180608 words of memory out of 3000000
- 8520 multiletter control sequences out of 15000+200000
- 39276 words of font info for 72 fonts, out of 3000000 for 9000
+ 5289 strings out of 494045
+ 82254 string characters out of 3145966
+ 184608 words of memory out of 3000000
+ 8526 multiletter control sequences out of 15000+200000
+ 40383 words of font info for 73 fonts, out of 3000000 for 9000
  715 hyphenation exceptions out of 8191
- 29i,6n,28p,1427b,374s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 29i,6n,28p,1427b,468s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Progra
 m Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program 
 Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Program Fil
@@ -340,9 +363,9 @@ TeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files (x86)/MiKTeX
 type1/urw/times/utmbi8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/
 times/utmr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmri
 8a.pfb>
-Output written on Paper.pdf (4 pages, 172799 bytes).
+Output written on Paper.pdf (6 pages, 184871 bytes).
 PDF statistics:
- 186 PDF objects out of 1000 (max. 8388607)
- 40 named destinations out of 1000 (max. 500000)
- 81 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 208 PDF objects out of 1000 (max. 8388607)
+ 46 named destinations out of 1000 (max. 500000)
+ 105 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -129,6 +129,12 @@ S.~Kunniyur und R.~Srikant, ``Analysis and design of an adaptive virtual queue
   (avq) algorithm for active queue management,'' \emph{SIGCOMM Comput. Commun.
   Rev.}, vol.~31, Nr.~4, pp. 123--134, Aug. 2001.
 
+\bibitem{ns}
+\BIBentryALTinterwordspacing
+S.~McCanne, S.~Floayd, und K.~Fall, ``ns version 1 - lbnl network simulator.''
+  [Online]. Available: \url{http://ee.lbl.gov/ns/}
+\BIBentrySTDinterwordspacing
+
 \bibitem{Athuraliya2001}
 S.~Athuraliya, S.~Low, V.~Li, und Q.~Yin, ``Rem: active queue management,''
   \emph{Network, IEEE}, vol.~15, Nr.~3, pp. 48--53, Mai 2001.

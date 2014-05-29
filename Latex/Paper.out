@@ -6,5 +6,8 @@
 \BOOKMARK [2][-]{subsection.4.2}{BLUE}{section.4}% 6
 \BOOKMARK [2][-]{subsection.4.3}{AVQ: Adaptive Virtual Queue}{section.4}% 7
 \BOOKMARK [1][-]{section.5}{Vergleich der vorgestellten Algorithmen}{}% 8
-\BOOKMARK [1][-]{section.6}{Ausblick und andere Ans\344tze}{}% 9
-\BOOKMARK [1][-]{section*.1}{Literatur}{}% 10
+\BOOKMARK [2][-]{subsection.5.1}{Vergleich BLUE und RED}{section.5}% 9
+\BOOKMARK [2][-]{subsection.5.2}{Vergleich AVQ und RED}{section.5}% 10
+\BOOKMARK [2][-]{subsection.5.3}{Zusammenfassung}{section.5}% 11
+\BOOKMARK [1][-]{section.6}{Ausblick und andere Ans\344tze}{}% 12
+\BOOKMARK [1][-]{section*.1}{Literatur}{}% 13
