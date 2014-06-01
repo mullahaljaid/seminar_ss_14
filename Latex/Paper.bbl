@@ -135,6 +135,14 @@ S.~McCanne, S.~Floayd, und K.~Fall, ``ns version 1 - lbnl network simulator.''
   [Online]. Available: \url{http://ee.lbl.gov/ns/}
 \BIBentrySTDinterwordspacing
 
+\bibitem{RFC2481}
+K.~Ramakrishnan, A.~L. Research, und S.~Floyd, ``A proposal to add explicit
+  congestion notification (ecn) to ip,'' United States, 1999.
+
+\bibitem{Tannenbaum2012}
+A.~Tannenbaum und D.~Wetherall, \emph{Computernetzwerke}.\hskip 1em plus 0.5em
+  minus 0.4em\relax Pearson Deutschland GmbH, 2012.
+
 \bibitem{Athuraliya2001}
 S.~Athuraliya, S.~Low, V.~Li, und Q.~Yin, ``Rem: active queue management,''
   \emph{Network, IEEE}, vol.~15, Nr.~3, pp. 48--53, Mai 2001.
