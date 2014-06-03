@@ -82,18 +82,28 @@ R.~Jain, ``Congestion control and traffic management in atm networks: Recent
   \url{http://dx.doi.org/10.1016/0169-7552(96)00012-8}
 \BIBentrySTDinterwordspacing
 
+\bibitem{Oldak2006}
+\BIBentryALTinterwordspacing
+S.~Oldak, W.~Gong, C.~Hollot, D.~Towsley, V.~Misra, und Y.~Chait, ``Active
+  queue management for differentiated services,'' August 2006. [Online].
+  Available: \url{http://www.freepatentsonline.com/7085236.html}
+\BIBentrySTDinterwordspacing
+
 \bibitem{Suter1998a}
 B.~Suter, T.~Lakshman, D.~Stiliadis, und A.~Choudhury, ``Efficient active queue
   management for internet routers,'' in \emph{Proceedings of INTEROP,
   Engineering Conference}, 1998.
 
+\bibitem{Pan2008}
+\BIBentryALTinterwordspacing
+R.~Pan, B.~Prabhakar, und K.~Psounis, ``Active queue management toward fair
+  bandwidth allocation,'' Januar 2008. [Online]. Available:
+  \url{http://www.google.de/patents/US7324442}
+\BIBentrySTDinterwordspacing
+
 \bibitem{Appenzeller2004}
 G.~Appenzeller, I.~Keslassy, und N.~McKeown, ``Sizing router buffers,''
   \emph{SIGCOMM Comput. Commun. Rev.}, vol.~34, Nr.~4, pp. 281--292, Aug. 2004.
-
-\bibitem{Wolff1998}
-R.~Wolff, \emph{Stochastic modeling and the theory of queues}.\hskip 1em plus
-  0.5em minus 0.4em\relax Prentice Hall, 1998.
 
 \bibitem{Demers1989}
 A.~Demers, S.~Keshav, und S.~Shenker, ``Analysis and simulation of a fair
@@ -117,7 +127,7 @@ S.~Floyd und V.~Jacobson, ``Random early detection gateways for congestion
   avoidance,'' \emph{Networking, IEEE/ACM Transactions on}, vol.~1, Nr.~4, pp.
   397--413, Aug. 1993.
 
-\bibitem{BLUE1999}
+\bibitem{Feng1999}
 \BIBentryALTinterwordspacing
 W.~Feng, K.~Shin, D.~Kandlur, und D.~Saha, ``Blue: A new class of active queue
   management algorithms,'' 1999. [Online]. Available:
@@ -129,13 +139,13 @@ S.~Kunniyur und R.~Srikant, ``Analysis and design of an adaptive virtual queue
   (avq) algorithm for active queue management,'' \emph{SIGCOMM Comput. Commun.
   Rev.}, vol.~31, Nr.~4, pp. 123--134, Aug. 2001.
 
-\bibitem{ns}
+\bibitem{McCanne}
 \BIBentryALTinterwordspacing
 S.~McCanne, S.~Floayd, und K.~Fall, ``ns version 1 - lbnl network simulator.''
   [Online]. Available: \url{http://ee.lbl.gov/ns/}
 \BIBentrySTDinterwordspacing
 
-\bibitem{RFC2481}
+\bibitem{Ramakrishnan1999}
 K.~Ramakrishnan, A.~L. Research, und S.~Floyd, ``A proposal to add explicit
   congestion notification (ecn) to ip,'' United States, 1999.
 
@@ -167,5 +177,9 @@ C.~Hollot, V.~Misra, D.~Towsley, und W.-B. Gong, ``On designing improved
 \bibitem{Ramakrishnan2001}
 K.~Ramakrishnan, S.~Floyd, und D.~Black, ``The addition of explicit congestion
   notification (ecn) to ip,'' United States, 2001.
+
+\bibitem{Wolff1998}
+R.~Wolff, \emph{Stochastic modeling and the theory of queues}.\hskip 1em plus
+  0.5em minus 0.4em\relax Prentice Hall, 1998.
 
 \end{thebibliography}
