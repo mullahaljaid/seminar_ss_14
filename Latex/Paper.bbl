@@ -82,6 +82,10 @@ R.~Jain, ``Congestion control and traffic management in atm networks: Recent
   \url{http://dx.doi.org/10.1016/0169-7552(96)00012-8}
 \BIBentrySTDinterwordspacing
 
+\bibitem{Ramakrishnan2001}
+K.~Ramakrishnan, S.~Floyd, und D.~Black, ``The addition of explicit congestion
+  notification (ecn) to ip,'' United States, 2001.
+
 \bibitem{Oldak2006}
 \BIBentryALTinterwordspacing
 S.~Oldak, W.~Gong, C.~Hollot, D.~Towsley, V.~Misra, und Y.~Chait, ``Active
@@ -173,10 +177,6 @@ C.~Hollot, V.~Misra, D.~Towsley, und W.-B. Gong, ``On designing improved
   controllers for aqm routers supporting tcp flows,'' in \emph{INFOCOM 2001.
   Twentieth Annual Joint Conference of the IEEE Computer and Communications
   Societies. Proceedings. IEEE}, vol.~3, 2001, pp. 1726--1734vol.3.
-
-\bibitem{Ramakrishnan2001}
-K.~Ramakrishnan, S.~Floyd, und D.~Black, ``The addition of explicit congestion
-  notification (ecn) to ip,'' United States, 2001.
 
 \bibitem{Wolff1998}
 R.~Wolff, \emph{Stochastic modeling and the theory of queues}.\hskip 1em plus
