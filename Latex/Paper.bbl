@@ -38,6 +38,10 @@ L.~Le, J.~Aikat, K.~Jeffay, und F.~Smith, ``The effects of active queue
   Communications}, Ser. SIGCOMM '03.\hskip 1em plus 0.5em minus 0.4em\relax
   ACM, 2003.
 
+\bibitem{Ramakrishnan2001}
+K.~Ramakrishnan, S.~Floyd, und D.~Black, ``The addition of explicit congestion
+  notification (ecn) to ip,'' United States, 2001.
+
 \bibitem{Morris1997}
 R.~Morris, ``Tcp behavior with many flows,'' in \emph{Proceedings of the 1997
   International Conference on Network Protocols (ICNP '97)}, Ser. ICNP
@@ -82,10 +86,6 @@ R.~Jain, ``Congestion control and traffic management in atm networks: Recent
   \url{http://dx.doi.org/10.1016/0169-7552(96)00012-8}
 \BIBentrySTDinterwordspacing
 
-\bibitem{Ramakrishnan2001}
-K.~Ramakrishnan, S.~Floyd, und D.~Black, ``The addition of explicit congestion
-  notification (ecn) to ip,'' United States, 2001.
-
 \bibitem{Oldak2006}
 \BIBentryALTinterwordspacing
 S.~Oldak, W.~Gong, C.~Hollot, D.~Towsley, V.~Misra, und Y.~Chait, ``Active
@@ -113,6 +113,18 @@ G.~Appenzeller, I.~Keslassy, und N.~McKeown, ``Sizing router buffers,''
 A.~Demers, S.~Keshav, und S.~Shenker, ``Analysis and simulation of a fair
   queueing algorithm,'' \emph{SIGCOMM Comput. Commun. Rev.}, vol.~19, Nr.~4,
   pp. 1--12, Aug. 1989.
+
+\bibitem{Hollot2001}
+C.~Hollot, V.~Misra, D.~Towsley, und W.-B. Gong, ``On designing improved
+  controllers for aqm routers supporting tcp flows,'' in \emph{INFOCOM 2001.
+  Twentieth Annual Joint Conference of the IEEE Computer and Communications
+  Societies. Proceedings. IEEE}, vol.~3, 2001, pp. 1726--1734vol.3.
+
+\bibitem{Firoiu2000}
+V.~Firoiu und M.~Borden, ``A study of active queue management for congestion
+  control,'' in \emph{INFOCOM 2000. Nineteenth Annual Joint Conference of the
+  IEEE Computer and Communications Societies. Proceedings. IEEE}, vol.~3, Mär.
+  2000, pp. 1435--1444vol.3.
 
 \bibitem{Floyd2001}
 S.~Floyd, R.~Gummadi, und S.~Shenker, ``Adaptive red: An algorithm for
@@ -165,18 +177,6 @@ S.~Athuraliya, S.~Low, V.~Li, und Q.~Yin, ``Rem: active queue management,''
 W.~Feng, K.~Shin, D.~Kandlur, und D.~Saha, ``The blue active queue management
   algorithms,'' \emph{IEEE/ACM Trans. Netw.}, vol.~10, Nr.~4, pp. 513--528,
   Aug. 2002.
-
-\bibitem{Firoiu2000}
-V.~Firoiu und M.~Borden, ``A study of active queue management for congestion
-  control,'' in \emph{INFOCOM 2000. Nineteenth Annual Joint Conference of the
-  IEEE Computer and Communications Societies. Proceedings. IEEE}, vol.~3, Mär.
-  2000, pp. 1435--1444vol.3.
-
-\bibitem{Hollot2001}
-C.~Hollot, V.~Misra, D.~Towsley, und W.-B. Gong, ``On designing improved
-  controllers for aqm routers supporting tcp flows,'' in \emph{INFOCOM 2001.
-  Twentieth Annual Joint Conference of the IEEE Computer and Communications
-  Societies. Proceedings. IEEE}, vol.~3, 2001, pp. 1726--1734vol.3.
 
 \bibitem{Wolff1998}
 R.~Wolff, \emph{Stochastic modeling and the theory of queues}.\hskip 1em plus
