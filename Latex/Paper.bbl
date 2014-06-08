@@ -93,6 +93,10 @@ S.~Oldak, W.~Gong, C.~Hollot, D.~Towsley, V.~Misra, und Y.~Chait, ``Active
   Available: \url{http://www.freepatentsonline.com/7085236.html}
 \BIBentrySTDinterwordspacing
 
+\bibitem{Appenzeller2004}
+G.~Appenzeller, I.~Keslassy, und N.~McKeown, ``Sizing router buffers,''
+  \emph{SIGCOMM Comput. Commun. Rev.}, vol.~34, Nr.~4, pp. 281--292, Aug. 2004.
+
 \bibitem{Suter1998a}
 B.~Suter, T.~Lakshman, D.~Stiliadis, und A.~Choudhury, ``Efficient active queue
   management for internet routers,'' in \emph{Proceedings of INTEROP,
@@ -104,10 +108,6 @@ R.~Pan, B.~Prabhakar, und K.~Psounis, ``Active queue management toward fair
   bandwidth allocation,'' Januar 2008. [Online]. Available:
   \url{http://www.google.de/patents/US7324442}
 \BIBentrySTDinterwordspacing
-
-\bibitem{Appenzeller2004}
-G.~Appenzeller, I.~Keslassy, und N.~McKeown, ``Sizing router buffers,''
-  \emph{SIGCOMM Comput. Commun. Rev.}, vol.~34, Nr.~4, pp. 281--292, Aug. 2004.
 
 \bibitem{Demers1989}
 A.~Demers, S.~Keshav, und S.~Shenker, ``Analysis and simulation of a fair
@@ -168,18 +168,5 @@ K.~Ramakrishnan, A.~L. Research, und S.~Floyd, ``A proposal to add explicit
 \bibitem{Tannenbaum2012}
 A.~Tannenbaum und D.~Wetherall, \emph{Computernetzwerke}.\hskip 1em plus 0.5em
   minus 0.4em\relax Pearson Deutschland GmbH, 2012.
-
-\bibitem{Athuraliya2001}
-S.~Athuraliya, S.~Low, V.~Li, und Q.~Yin, ``Rem: active queue management,''
-  \emph{Network, IEEE}, vol.~15, Nr.~3, pp. 48--53, Mai 2001.
-
-\bibitem{Feng2002}
-W.~Feng, K.~Shin, D.~Kandlur, und D.~Saha, ``The blue active queue management
-  algorithms,'' \emph{IEEE/ACM Trans. Netw.}, vol.~10, Nr.~4, pp. 513--528,
-  Aug. 2002.
-
-\bibitem{Wolff1998}
-R.~Wolff, \emph{Stochastic modeling and the theory of queues}.\hskip 1em plus
-  0.5em minus 0.4em\relax Prentice Hall, 1998.
 
 \end{thebibliography}
