@@ -17,7 +17,9 @@ Dieser Artikel beschreibt die Problematik im Internet, die durch den Einsatz von
 
 Wir werden als Lösung für das Problem der Staukontrolle im Internet Active Queue Management herausarbeiten. Active Queue Management versucht Staus frühzeitig und zuverlässig zu erkennen und durch Fallenlassen oder Markieren von Paketen (ECN -- Explicit Congestion Notification) Staus zu verhindern. Zusätzlich wird versucht alle Datenströme gleich zu behandeln. Dies wird von AQM-Algorithmen erreicht, indem die mittlere Pufferauslastung von Routern möglichst gering gehalten wird.
 
-Um einen Überblick über aktuelle AQM-Algorithmen zu erhalten, werden wir die AQM-Methoden RED (Random Early Detection), BLUE und AVQ (Adaptive Virtual Queue) vorstellen und untereinander vergleichen.
+Um einen Überblick über aktuelle AQM-Algorithmen zu erhalten, werden wir die AQM-Methoden RED (Random Early Detection), BLUE und AVQ (Adaptive Virtual Queue) vorstellen und untereinander vergleichen. Das Prinzip von RED ist, Pakete bereits vor dem Überlaufen der Queue mit einer bestimmten Wahrscheinlichkeit fallen zu lassen, um Staus vor dem Entstehen zu verhindern. Die Wahrscheinlichkeiten berechnen sich dabei mittels der aktuellen Queue Auslastung. Bei BLUE werden die ankommenden Pakete auch mit einer Wahrscheinlichkeit schon vorher fallen gelassen, diese berechnet sich mittels der verlorenen Pakete. Bei AVQ wird die Kapazität einer virtuellen Queue als Entscheidung für das Fallenlassen herangezogen.
+
+Im Vergleich zeigen die jeweiligen Entwickler, dass sowohl BLUE als auch AVQ bessere Werte bezüglich der Auslastung und der Paketverlustrate als RED besitzen. Neben den vorgestellten Algorithmen gibt es noch viele weitere; AQM Verfahren sind ein aktuelles Thema der Forschung. Welcher Algorithmus auch ausgewählt wird, es wäre ein großer Fortschritt wenn alle Router einen implementieren würden.
 \end{abstract}
 
 \section{Einführung und Motivation}\label{sec:Motivation}
