@@ -1,0 +1,67 @@
+REVIEW FORM / GUTACHTENFORMULAR
+
+ #-------------------------------------------------------
+ # Hinweise
+ # 
+ # 
+ # Sie begutachten die Arbeiten anonym, in der Regel ist 
+ # den Autoren der Name des Gutachters also nicht bekannt. 
+ # Verfassen Sie Ihre Kritik also frei, aber vertretbar. 
+ # 
+ # Bitte nennen Sie die Datei mit dem Gutachten nach folgendem
+ # Schema in kleinbuchstaben
+ # <Themenkürzel>_<Nachname_des_Gutachters>-review.txt
+ #
+ # z.B. ein Gutachten von Meier eines Papiers zum Thema AQM:
+ # aqm_meier-review.txt
+ #
+ # Bitte senden Sie das vollständig ausgefüllte Formular 
+ # als angehängte Textdatei (UTF-8 oder Latin-1 Kodierung) an Ihre 
+ # Betreuer mit CC an seminar14@nm.ifi.lmu.de.!
+ #
+ # ======================================================
+
+
+* Titel der Ausarbeitung: 
+Einführung in IPv6
+* Autoren:
+Melanie Heller, Ivan Shterev
+* Gutachter:
+Dominik Billing
+
+1) Zusammenfassung des Inhalts. (Geben Sie einen kurzen Überblick über die Hauptaussagen der Ausarbeitung.)
+Es wird beschrieben, warum IPv6 nötig ist und wie es im Einzelnen funktioniert. Der nächste Abschnitt befasst sich mit Migrationsmöglichkeiten von IPv4 zu IPv6 und den möglichen Problemen. Hier wird speziell auf den groben Ablaufplan einer Migrations eingegangen und die folgenden Migrationsstrategien erläutert: Dual Stack (beide Protokolle existieren parallel auf Komponenten), Tunneling (Überbrückung von alter Hardware durch Paketierung von IPv6 Adressen in IPv4 Adressen), DSTM (Server vergibt temporär benötigte IPv4 Adressen, ansonsten läuft die Kommunikation über IPv6), Translation (Übersetzung einer IPv4 Adresse in eine IPv6 Adresse). Am Ende wird kurz auf Erfahrungswerte der kurzen Vergangenheit von IPv6 eingegangen und eine Empfehlung für IPv6 gegeben.
+
+2) Stärken und Schwächen der Ausarbeitung (nennen Sie bitte jeweils etwa zwei)
+pro:
+	- Die Erläuterungen zu IPv6 sind klar und verständlich.
+	- Viele Bilder und Beispiele verdeutlichen alle Sachverhalte.
+con:
+	- Das Abstract ist zu kurz und gibt eine zu oberflächliche Zusammenfassung des Themas, hier wäre es schöner, wenn auch auf die untersuchten Aspekte der Migration eingegangen würde.
+	- Vor allem Kapitel II (Migrationsmethoden) ist unübersichtlich gestaltet und nimmt alleine mehr als 5 Seiten des Papers in Anspruch.
+
+3) Form (Struktur, sprachliche Qualität, Bilder/Illustration der Konzepte)
+- Die Struktur des Papers ist ziemlich geradlinig und verständlich, hätte aber speziell wegen des unheimlich langen Kapitels II etwas anders aufgeteilt werden können. Man merkt, dass zum Ende hin der Platz von 8 Seiten ausgegangen ist. Das Kapitel Zusammenfassung ist eher eine Empfehlung und fasst die Themen nicht zusammen. Zwischen Abbildungen 14 und 15 ist ein ziemlich großer Leerraum, der wenig Sinn macht (Liegt aber wahrscheinlich an Latex).
+- Die Sprache ist sehr gut, abgesehen von sehr wenigen Rechtschreib- und Satzzeichenfehlern gibt es hier nichts zu kritisieren.
+- Die Konzepte werden durch sehr viele und gute Abbildungen illustriert und gut beschrieben. Es fehlt allerdings jedwede Bezugnahme im Text auf die guten Abbildungen.
+
+4) Umgang mit Quellen und Referenzen (sind die erforderlichen Quellenangaben vorhanden, sind sie vollständig, korrekt, etc)
+- Die Literaturauswahl deckt angesprochenen Themen ab.
+- Im Text und den Abbildungen findet sich keine einzige Quellenangabe, entsprechend sind sie weder vollständig noch korrekt noch in irgendeiner Form ausreichend.
+
+5) Kommentare und Vorschläge an die Autoren (Machen Sie bitte Vorschläge zur Verbesserung der Ausarbeitung.)
+Struktur:
+Die Struktur liese sich folgendermaßen anpassen, damit nicht einzelne Abschnitte irrsinnig groß werden:
+I	Einleitung
+II	Migration von IPv4 nach IPv6 (Problematik und Migrationsablauf)
+III	Dual Stack
+IV	Tunneling (zusammen mit DSTM, ist ja auch ein Tunnel) (vielleicht nicht alle Möglichkeiten ansprechen, oder )
+V	Translation
+VI	Zusammenfassung der Ergebnisse (neues Kapitel)
+VII	Erfahrungen und Empfehlung
+
+Zitate:
+Hier müsste an jeden Absatz und jede Abbildung die korrespondierenden Quellen angefügt werden (Anleitung: beispielsweise http://library.queensu.ca/book/export/html/5846 )
+
+Abbildungen:
+Damit eine Abbildung Sinn macht und einen Aspekt beleuchtet, muss sie im Text referenziert werden. Das fehlt hier komplett, auch wenn die Bilder den Sachverhalt sehr gut erläutern.
