@@ -1,0 +1,78 @@
+REVIEW FORM / GUTACHTENFORMULAR
+
+ #-------------------------------------------------------
+ # Hinweise
+ # 
+ # 
+ # Sie begutachten die Arbeiten anonym, in der Regel ist 
+ # den Autoren der Name des Gutachters also nicht bekannt. 
+ # Verfassen Sie Ihre Kritik also frei, aber vertretbar. 
+ # 
+ # Bitte nennen Sie die Datei mit dem Gutachten nach folgendem
+ # Schema in kleinbuchstaben
+ # <Themenkürzel>_<Nachname_des_Gutachters>-review.txt
+ #
+ # z.B. ein Gutachten von Meier eines Papiers zum Thema AQM:
+ # aqm_meier-review.txt
+ #
+ # Bitte senden Sie das vollständig ausgefüllte Formular 
+ # als angehängte Textdatei (UTF-8 oder Latin-1 Kodierung) an Ihre 
+ # Betreuer mit CC an seminar14@nm.ifi.lmu.de.!
+ #
+ # ======================================================
+
+
+* Titel der Ausarbeitung: 
+Multipath TCP und Socket Splicing
+* Autoren:
+Julia Vehns, Stina Schick
+* Gutachter:
+Dominik Billing
+
+1) Zusammenfassung des Inhalts. (Geben Sie einen kurzen Überblick über die Hauptaussagen der Ausarbeitung.)
+TCP stößt an seine Grenzen und ist speziell im Mobilfunk-Bereich nicht mehr state of the art. Es werden die beiden Schicht 4 Protokolle MPTCP und MSOCKS als Alternativen zu TCP vorgestellt und miteinander verglichen. MPTCP hat ein größeres Potenzial als MSOCKS obwohl es sich noch in der Entwicklung befindet, da für MSOCKS noch zusätzliche Bibliotheken benötigt werden, die für MPTCP nicht nötig sind. Anschließend werden Anwendungsbeispiele von MPTCP im Mobilfunk und Rechenzentren gegeben, wo es sehr sinnvoll eingesetzt werden kann. Es ist allerdings noch einiges an Forschung und Entwicklung nötig, um MPTCP flächendeckend einzusetzen, da in aktuellen Arbeiten auf Aspekte wie beispielsweise Sicherheit nur am Rande eingegangen wird.
+
+2) Stärken und Schwächen der Ausarbeitung (nennen Sie bitte jeweils etwa zwei)
+pro:
+	- Die Konzepte von MPTCP und MSOCKS sind klar und verständlich erklärt.
+	- Die Abbildungen unterstützen die Ausführungen anschaulich.
+con:
+	- Nach dem Konzept des Papers wird in den ersten vier Kapiteln erst eine Problemstellung nämlich Probleme mit TCP vorgestellt, dann MSOCKS und MPTCP als Lösungsansätze beschrieben und anschließen im Zwischenfazit MPTCP als besser herausgestellt. Hier ist schon im ersten Kapitel der rote Faden verloren gegangen, wo direkt schon MPTCP als Lösung angeboten wird. MSOCKS wird im Gegensatz zu MPTCP nur am Rande beschrieben.
+	- Ein Paper von 8 Seiten benötigt kein Inhaltsverzeichnis, das eine halbe Seite Platz einnimmt. Die Informationen, die man hieraus erhält, können einfacher im Abstract oder dem ersten Kapitel veranschaulicht werden.
+
+3) Form (Struktur, sprachliche Qualität, Bilder/Illustration der Konzepte)
+- Die Struktur des ersten Teils verliert sich schon in Kapitel I, wo eigentlich auf die Problemstellung eingegangen werden müsste. Hier wird direkt MPTCP als Lösung eines Problems präsentiert, obwohl "diese Erweiterungen wohl nie implementiert und angewendet" werden!? MSOCKS wird dann anschließend als mögliche Alternative genannt und Socket-Splicing angesprochen, was dann plötzlich auch von MPTCP im nächsten Kapitel verwendet wird. Im zweiten Teil der Ausarbeitung könnte Kapitel V in zwei Kapitel unterteilt werden, das würde die Struktur wieder etwas entzerren.
+- Die sprachliche Verständlichkeit ist hoch, allerdings gibt es sehr viele Rechtschreibfehler und Satzzeichenfehler.
+- Die Konzepte werden an den passenden Stellen mit Bildern illustriert.
+
+4) Umgang mit Quellen und Referenzen (sind die erforderlichen Quellenangaben vorhanden, sind sie vollständig, korrekt, etc)
+- Die Literaturauswahl deckt die angesprochenen Themen ab.
+- Im Text fehlen sehr oft die Quellen, aus denen zitiert wurde, speziell im zweiten Teil der Ausarbeitung. Wenn Quellen im Text aufgeführt sind, dann oft an falscher Stelle.
+- Im Literaturverzeichnis sind keine zwei Quellen einheitlich formatiert. Einmal sind die Vornamen der Autoren ausgeschrieben, dann sind die Namen der Autoren nicht voneinander getrennt, dann ist der Titel der Quelle kursiv, ...
+
+5) Kommentare und Vorschläge an die Autoren (Machen Sie bitte Vorschläge zur Verbesserung der Ausarbeitung.)
+Struktur:
+I	Motivation
+	Hier sollte deutlich mehr über die Probleme mit TCP erzählt werden, was sind Schwachstellen und was muss man besser machen. Insbesondere sollte explizit noch nicht auf MPTCP eingegangen werden. Am Ende des Kapitels ein Ausblick auf die beiden folgenden Kapiteln mit den beiden Lösungsansätzen MPTCP und MSOCKS.
+II	TCP-Splicing und MSOCKS
+	Das Kapitel ist in Ordnung, sollte aber vielleicht auch so aufgebaut werden wie Kapitel III, damit auch die Unterschiede einfacher ablesbar sind.
+III	MPTCP
+	Das Kapitel ist in Ordnung.
+IV	Zwischenfazit
+	Auf die gerade ausgearbeiteten Unterschiede eingehen und MPTCP als bessere Option herausarbeiten.
+V	MPTCP im Mobilfunk
+	Den Inhalt von Kapitel V.A hier bringen.
+VI	MPTCP in Rechenzentren
+	Inhalt von Kapitel V.B hier.
+VII	Zusammenfassung und Ausblick
+	Vielleicht noch kurz auf MSOCKS eingehen (wurde ja auch bearbeitet) und andere Möglichkeiten erwähnen.
+
+Zitate:
+	An jedem Absatz muss die korrespondierden Quellen anfügen (Anleitung: beispielsweise http://library.queensu.ca/book/export/html/5846 )
+
+Abbildungen:
+	Die Beschriftungen der Bilder sollten das Bild alleinstehend erklären können. Da können auch mal 2 Zeilen stehen.
+	Was ist bei Abbildung 6 und Abbildung 8 passiert? Diese großen freien Flächen stören schon ziemlich den Lesefluss.
+	
+Abstract:
+	Versucht hier doch auch auf den zweiten Teil der Ausarbeitung genauer einzugehen. Da kann man auch gern einen zweiten Absatz machen, ist ja auch inhaltlich gut getrennt.

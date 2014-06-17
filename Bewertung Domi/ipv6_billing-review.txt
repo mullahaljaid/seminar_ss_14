@@ -43,7 +43,7 @@ con:
 3) Form (Struktur, sprachliche Qualität, Bilder/Illustration der Konzepte)
 - Die Struktur des Papers ist ziemlich geradlinig und verständlich, hätte aber speziell wegen des unheimlich langen Kapitels II etwas anders aufgeteilt werden können. Man merkt, dass zum Ende hin der Platz von 8 Seiten ausgegangen ist. Das Kapitel Zusammenfassung ist eher eine Empfehlung und fasst die Themen nicht zusammen. Zwischen Abbildungen 14 und 15 ist ein ziemlich großer Leerraum, der wenig Sinn macht (Liegt aber wahrscheinlich an Latex).
 - Die Sprache ist sehr gut, abgesehen von sehr wenigen Rechtschreib- und Satzzeichenfehlern gibt es hier nichts zu kritisieren.
-- Die Konzepte werden durch sehr viele und gute Abbildungen illustriert und gut beschrieben. Es fehlt allerdings jedwede Bezugnahme im Text auf die guten Abbildungen.
+- Die Konzepte werden durch sehr viele und gute Abbildungen illustriert und gut beschrieben. Es fehlt allerdings jedwede Bezugnahme im Text auf die Abbildungen und die Bildunterschriften erläutern die gezeigten Sachverhalte nur unzureichend (Beispiel: Abb 1 und 2 mit gleicher Bildunterschrift oder auch Abb 3 und 4....).
 
 4) Umgang mit Quellen und Referenzen (sind die erforderlichen Quellenangaben vorhanden, sind sie vollständig, korrekt, etc)
 - Die Literaturauswahl deckt angesprochenen Themen ab.
@@ -64,4 +64,7 @@ Zitate:
 Hier müsste an jeden Absatz und jede Abbildung die korrespondierenden Quellen angefügt werden (Anleitung: beispielsweise http://library.queensu.ca/book/export/html/5846 )
 
 Abbildungen:
-Damit eine Abbildung Sinn macht und einen Aspekt beleuchtet, muss sie im Text referenziert werden. Das fehlt hier komplett, auch wenn die Bilder den Sachverhalt sehr gut erläutern.
+Damit eine Abbildung Sinn macht und einen Aspekt beleuchtet, muss sie im Text referenziert werden. Das fehlt hier komplett, auch wenn die Bilder den Sachverhalt sehr gut erläutern. Mehrere Abbildungen zeigen das gleiche Phänomen und haben auch die selbe Beschriftung, das geht so nicht. Hier sollte der Unterschied der beiden Bilder gezeigt werden und wenn es keinen gibt, dann lässt man ein Bild weg und hat damit wieder mehr Platz für andere Aspekte, für die ganz eindeutig der Platz gefehlt hat.
+
+Abstract:
+vier Zeilen Abstract ist schon etwas lächerlich, wenn ein interessierter Leser das Paper lesen soll, dann sollte da drin stehen, auf welche Aspekte eingegangen wird, damit er entscheiden kann, ob er es lesen will oder nicht. Euer "Thema" ist übrigens eine "Ausarbeitung".
