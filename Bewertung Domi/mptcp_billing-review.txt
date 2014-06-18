@@ -41,7 +41,7 @@ con:
 	- Ein Paper von 8 Seiten benötigt kein Inhaltsverzeichnis, das eine halbe Seite Platz einnimmt. Die Informationen, die man hieraus erhält, können einfacher im Abstract oder dem ersten Kapitel veranschaulicht werden.
 
 3) Form (Struktur, sprachliche Qualität, Bilder/Illustration der Konzepte)
-- Die Struktur des ersten Teils verliert sich schon in Kapitel I, wo eigentlich auf die Problemstellung eingegangen werden müsste. Hier wird direkt MPTCP als Lösung eines Problems präsentiert, obwohl "diese Erweiterungen wohl nie implementiert und angewendet" werden!? MSOCKS wird dann anschließend als mögliche Alternative genannt und Socket-Splicing angesprochen, was dann plötzlich auch von MPTCP im nächsten Kapitel verwendet wird. Im zweiten Teil der Ausarbeitung könnte Kapitel V in zwei Kapitel unterteilt werden, das würde die Struktur wieder etwas entzerren.
+- Die Struktur des ersten Teils verliert sich schon in Kapitel I, wo eigentlich auf die Problemstellung eingegangen werden müsste. Hier wird direkt MPTCP als Lösung eines Problems präsentiert, obwohl "diese Erweiterungen wohl nie implementiert und angewendet" werden!? MSOCKS wird dann anschließend als mögliche Alternative genannt und Socket-Splicing angesprochen, was dann plötzlich auch von MPTCP im nächsten Kapitel verwendet wird. Im zweiten Teil der Ausarbeitung könnte Kapitel V in zwei Kapitel unterteilt werden, das würde die Struktur wieder etwas entzerren. Es fehlen Seitenzahlen in der Ausarbeitung.
 - Die sprachliche Verständlichkeit ist hoch, allerdings gibt es sehr viele Rechtschreibfehler und Satzzeichenfehler.
 - Die Konzepte werden an den passenden Stellen mit Bildern illustriert.
 
@@ -73,6 +73,8 @@ Zitate:
 Abbildungen:
 	Die Beschriftungen der Bilder sollten das Bild alleinstehend erklären können. Da können auch mal 2 Zeilen stehen.
 	Was ist bei Abbildung 6 und Abbildung 8 passiert? Diese großen freien Flächen stören schon ziemlich den Lesefluss.
-	
-Abstract:
-	Versucht hier doch auch auf den zweiten Teil der Ausarbeitung genauer einzugehen. Da kann man auch gern einen zweiten Absatz machen, ist ja auch inhaltlich gut getrennt.
+
+Inhalt:
+	Am Ende von Kapitel I beschreibt ihr, was in den anderen Kapiteln angesprochen wird. Warum erwähnt ihr erst Kapitel V und dann erst II, III und IV? Die Reihenfolge ist komisch.
+	Wo in Abbildung 5 endet der erste Teil?
+	Ihr habt im Fließtext viele Aufzählungen. Hier hätte auch ein enumerate gut getan.

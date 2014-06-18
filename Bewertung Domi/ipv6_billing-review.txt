@@ -41,8 +41,8 @@ con:
 	- Vor allem Kapitel II (Migrationsmethoden) ist unübersichtlich gestaltet und nimmt alleine mehr als 5 Seiten des Papers in Anspruch.
 
 3) Form (Struktur, sprachliche Qualität, Bilder/Illustration der Konzepte)
-- Die Struktur des Papers ist ziemlich geradlinig und verständlich, hätte aber speziell wegen des unheimlich langen Kapitels II etwas anders aufgeteilt werden können. Man merkt, dass zum Ende hin der Platz von 8 Seiten ausgegangen ist. Das Kapitel Zusammenfassung ist eher eine Empfehlung und fasst die Themen nicht zusammen. Zwischen Abbildungen 14 und 15 ist ein ziemlich großer Leerraum, der wenig Sinn macht (Liegt aber wahrscheinlich an Latex).
-- Die Sprache ist sehr gut, abgesehen von sehr wenigen Rechtschreib- und Satzzeichenfehlern gibt es hier nichts zu kritisieren.
+- Die Struktur des Papers ist ziemlich geradlinig und verständlich, hätte aber speziell wegen des unheimlich langen Kapitels II etwas anders aufgeteilt werden können. Man merkt, dass zum Ende hin der Platz von 8 Seiten ausgegangen ist. Das Kapitel Zusammenfassung ist eher eine Empfehlung und fasst die Themen nicht zusammen. Zwischen Abbildungen 14 und 15 ist ein ziemlich großer Leerraum, der wenig Sinn macht (Liegt aber wahrscheinlich an Latex). Es fehlen Seitenzahlen in der Ausarbeitung.
+- Die sprachliche Qualität ist OK, es gibt viele unnötige Füllworte und manche Sätze lassen sich nur mit viel Gefühl lesen. Oft wird auf eine sehr einfache Sprache zurückgegriffen (Billionen Billionen Billionen, merkwürdig, ...).
 - Die Konzepte werden durch sehr viele und gute Abbildungen illustriert und gut beschrieben. Es fehlt allerdings jedwede Bezugnahme im Text auf die Abbildungen und die Bildunterschriften erläutern die gezeigten Sachverhalte nur unzureichend (Beispiel: Abb 1 und 2 mit gleicher Bildunterschrift oder auch Abb 3 und 4....).
 
 4) Umgang mit Quellen und Referenzen (sind die erforderlichen Quellenangaben vorhanden, sind sie vollständig, korrekt, etc)
@@ -66,5 +66,16 @@ Hier müsste an jeden Absatz und jede Abbildung die korrespondierenden Quellen an
 Abbildungen:
 Damit eine Abbildung Sinn macht und einen Aspekt beleuchtet, muss sie im Text referenziert werden. Das fehlt hier komplett, auch wenn die Bilder den Sachverhalt sehr gut erläutern. Mehrere Abbildungen zeigen das gleiche Phänomen und haben auch die selbe Beschriftung, das geht so nicht. Hier sollte der Unterschied der beiden Bilder gezeigt werden und wenn es keinen gibt, dann lässt man ein Bild weg und hat damit wieder mehr Platz für andere Aspekte, für die ganz eindeutig der Platz gefehlt hat.
 
-Abstract:
-vier Zeilen Abstract ist schon etwas lächerlich, wenn ein interessierter Leser das Paper lesen soll, dann sollte da drin stehen, auf welche Aspekte eingegangen wird, damit er entscheiden kann, ob er es lesen will oder nicht. Euer "Thema" ist übrigens eine "Ausarbeitung".
+Sprache:
+Silbentrennung funktioniert nicht immer (Gruppenmit- glieder, )
+Einige Sätze sind grammatikalisch falsch (Sowie am Satzanfang, um diese ... Einschränkung umzugehen, ...)
+Einige seltsame Formulierungen: darf mindestens (eher muss mindestens)
+
+Inhalt:
+Das Internet bekommt auch mit 340 Billionen Billionen Billionen IP-Adressen nicht unendlich viele und nicht nahezu unbegrenzt viele neue IP-Adressen mit IPv6.
+Es wird nirgends anschaulich gezeigt wie IPv4 genau aufgebaut ist.
+Dass IPv6 Adressen 128 Bit lang sind, erwähnt ihr mehrmals an unterschiedlichen Stellen.
+Fachbegriffe und Abkürzungen müssten erklärt werden: CIDR, AAAA
+Ich verstehe nicht wie 2000::/3 (2000... bis 3fff...) sein kann. Sollte es nicht 2000... bis 200f... sein?
+Ihr sprecht schon bevor ihr die einzelnen Migrationsmethoden erklärt unterschiedliche davon an. Hier könntet ihr auf das entsprechende Kapitel verweisen, um zu zeigen, wo ihr das beschreibt.
+Der IPv6 Präfix ist ab Vista, Server 2008 und XP/Server 2003 2001::/32 (Windows XP und Server 2003 verwendeten als Präfix 3ffe:831f::/32)? Soll das heißen, dass ab Vista dieser und davon der andere verwendet wurde? Dann deutlicher machen.
