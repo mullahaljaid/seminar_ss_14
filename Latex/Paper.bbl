@@ -42,6 +42,14 @@ L.~Le, J.~Aikat, K.~Jeffay, und F.~Smith, ``The effects of active queue
 K.~Ramakrishnan, S.~Floyd, und D.~Black, ``The addition of explicit congestion
   notification (ecn) to ip,'' United States, 2001.
 
+\bibitem{Crowcroft1998}
+\BIBentryALTinterwordspacing
+J.~Crowcroft und P.~Oechslin, ``Differentiated end-to-end internet services
+  using a weighted proportional fair sharing tcp,'' \emph{SIGCOMM Comput.
+  Commun. Rev.}, vol.~28, Nr.~3, pp. 53--69, Jul. 1998. [Online]. Available:
+  \url{http://doi.acm.org/10.1145/293927.293930}
+\BIBentrySTDinterwordspacing
+
 \bibitem{Morris1997}
 R.~Morris, ``Tcp behavior with many flows,'' in \emph{Proceedings of the 1997
   International Conference on Network Protocols (ICNP '97)}, Ser. ICNP
