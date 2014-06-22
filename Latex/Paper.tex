@@ -2,6 +2,7 @@
 \usepackage[latin1]{inputenc}
 \usepackage{graphicx}
 \usepackage{enumitem}
+\usepackage[german]{algorithm2e}
 \usepackage[ngerman]{babel}
 \usepackage{hyperref}
 
@@ -123,61 +124,81 @@ Floyd und Van Jacobson haben RED 1993 vorgestellt \cite{Floyd1993}. In ihrer Arb
 Das Prinzip von RED ist es Pakete mit einer Wahrscheinlichkeit zu markieren, die sich proportional zum Anteil der Übertragungsrate verhält, den diese Verbindung belegt. Auf diese Weise versucht der Algorithmus die Ressourcenzuteilung fair zu machen. 
 
 Als Messgröße wird die durchschnittliche Queue Länge benutzt. Die durchschnittliche Länge $Q_{avq}$ wird für jedes eintreffende Paket mittels der aktuellen Länge der Queue $q$ und dem Gewicht der Queue $w_{q}$ folgendermaßen neu berechnet: 
+
 \begin{displaymath}
 Q_{avg} = (1 - w_q) Q_{avg} + w_q q
 \end{displaymath}
+
 Dieser Wert wird mit zwei Parametern verglichen, der minimalen Queuelänge $Q_{min}$ und der maximalen Queuelänge $Q_{max}$. Ist \(Q_{min} > Q_{avg}\), so wird nichts unternommen. Wird aber \(Q_{min} < Q_{avg} < Q_{max}\), so wird das Paket mit einer Markierungswahrscheinlichkeit $p_a$ markiert, und sobald \(Q_{avg} > Q_{max}\) wird jedes Paket markiert.
 
 Für die Berechnung der finalen Markierungswahrscheinlichkeit $p_{a}$ wird die Markierungswahrscheinlichkeit $p_{b}$ benötigt. Diese berechnet sich wie folgt aus der minimalen und maximalen Queuelänge $Q_{min}$ und $Q_{max}$, der Durchschnittslänge $Q_{avg}$ und dem Maximum für $p_{b}$, $max_{b}$, wie folgt: 
+
 \begin{displaymath}
 p_b = max_p \frac{Q_{avg} - Q_{min}}{Q_{max} - Q_{min}}
 \end{displaymath}
+
 $p_{b}$ steigt folglich linear von 0 bis zum Wert $max_{b}$ an. Die finale Markierungswahrscheinlichkeit wird mittels $p_{b}$ und eines Zählers $z$ berechnet:
+
 \begin{displaymath}
 p_a = \frac{p_b}{1-z p_b}
 \end{displaymath}
-Der Zähler wird für jedes einkommende Paket inkrementiert. Ein Paket wird mit der Wahrscheinlichkeit $p_{a}$ markiert. Ist dies der Fall, so wird der Zähler $z$ auf 0 gesetzt. Mithilfe des Zählers steigt die Wahrscheinlichkeit somit für jedes weitere Paket an.
 
-Neben der Queuelänge in Paketen könnte RED auch die Bytelänge und somit die Anzahl an Bytes eines Pakets zur Bewertung heranziehen. Diese Information wird dann in die Markierungswahrscheinlichkeit $p_b$ mit einbezogen. Nach der Berechnung ändert sich der Wert dann in 
+Der Zähler wird für jedes einkommende Paket inkrementiert. Ein Paket wird mit der Wahrscheinlichkeit $p_{a}$ markiert. Ist dies der Fall, so wird der Zähler $z$ auf 0 gesetzt. Mithilfe des Zählers steigt die Wahrscheinlichkeit somit für jedes weitere Paket an. 
+
+TODO!!!!!! "Ist dies der Fall" macht keinen Sinn
+
+Neben der Queuelänge in Paketen könnte RED auch die Bytelänge und somit die Anzahl an Bytes eines Pakets zur Bewertung heranziehen. Diese Information wird dann in die Markierungswahrscheinlichkeit $p_b$ mit einbezogen. Nach der Berechnung ändert sich der Wert dann in
+
 \begin{displaymath}
 p_b = p_b \frac{Paketbytes}{maximale~Paketbytes}
 \end{displaymath}
-Dadurch werden große Pakete mit einer höheren Wahrscheinlichkeit markiert als kleine Pakete. An der Beschreibung des Algorithmus wird ersichtlich, dass RED viele Parameter benötigt, die vorab festgelegt werden müssen. Damit RED gut läuft, müssen für jeden Router die richtigen Werte gefunden werden, was ein nicht zu vernachlässigendes Problem des Algorithmus darstellt. Mehr dazu in \autoref{sec:Vergleich}.
+
+Dadurch werden große Pakete mit einer höheren Wahrscheinlichkeit markiert als kleine Pakete. An der Beschreibung des Algorithmus wird ersichtlich, dass RED viele Parameter benötigt, die vorab festgelegt werden müssen. Für jede Situation müssen die richtigen Werte gefunden werden, damit RED gute Ergebnisse liefert. Das stellt ein nicht zu vernachlässigendes Problem des Algorithmus dar. Mehr dazu in \autoref{sec:Vergleich}.
 
 \subsection{BLUE}
 
-Der BLUE Algorithmus wurde 1999 von Feng et.al. an der University of Michigan in Zusammenarbeit mit IBM vorgestellt \cite{Feng1999}. BLUE wurde entwickelt, um einige Schwachstellen von RED zu verbessern, ist aber ein völlig neuer Ansatz. Wie bereits erläutert verlässt sich RED auf die Queuelänge, um Staus anzuzeigen, und benötigt viele Parameter, die konfiguriert werden müssen. Die Autoren von BLUE argumentieren, dass RED nur wenn diese richtig konfiguriert sind und wenn ausreichend Pufferplatz zur Verfügung steht optimal läuft. BLUE dagegen verlässt sich auf den Paketverlust und die Verbindungsauslastung um seine Markierungswahrscheinlichkeit zu berechnen. Genauso wie RED kann BLUE dann entweder Pakete fallen lassen oder mittels ECN markieren.
+Der BLUE Algorithmus wurde 1999 von Feng et.al. an der University of Michigan in Zusammenarbeit mit IBM vorgestellt \cite{Feng1999}. BLUE wurde entwickelt, um einige Schwachstellen von RED zu verbessern, ist aber ein völlig neuer Ansatz. RED verlässt sich auf die Queuelänge, um Staus zu erkennen, und benötigt viele Parameter, die konfiguriert werden müssen. Die Autoren von BLUE argumentieren, dass RED nur wenn diese richtig konfiguriert sind und wenn ausreichend Pufferplatz zur Verfügung steht optimal läuft. BLUE dagegen verlässt sich auf den Paketverlust und die Verbindungsauslastung um seine Markierungswahrscheinlichkeit zu berechnen. Genauso wie RED kann BLUE dann entweder Pakete fallen lassen oder mittels ECN markieren.
 
-Der BLUE Algorithmus kennt nur eine Markierungswahrscheinlichkeit $p_m$; jedes einzureihende Paket wird mit dieser Wahrscheinlichkeit markiert. Die Entscheidung für die Erhöhung oder Erniedrigung dieser Wahrscheinlichkeit wird auf Basis der verlorenen Pakete beziehungsweise auf Basis der ungenutzten Verbindungen getroffen: Erhält der Router die Information, dass ein Paket verloren gegangen ist, wird $p_m$ um den Wert $d_1$ erhöht. Erkennt er eine ungenutzte Verbindung, wird $p_m$ um $d_2$ reduziert. Ein weiterer Parameter ist hierbei noch wichtig: die \textit{freeze\_time}. Damit das Netz und die Sender Zeit haben, auf die Aktion des Routers zu reagieren, muss mindestens dieses Zeitintervall vergangen sein, bis die Markierungswahrscheinlichkeit wieder geändert wird. Formal läuft der Algorithmus folgendermaßen ab:
-\newline \(if(Paketverlust \wedge (now - last\_update) > freeze\_time)~then\)
-\newline \indent \(p_m = p_m + d_1\)
-\newline \indent \(last\_update = now\)
-\newline \(if(Verbindung~frei \wedge (now - last\_update > freeze\_time))~then\)
-\newline \indent \(p_m = p_m - d_2\)
-\newline \indent \(last\_update = now\)
+Der BLUE Algorithmus kennt nur eine Markierungswahrscheinlichkeit $p_m$; jedes einzureihende Paket wird mit dieser Wahrscheinlichkeit markiert. Die Entscheidung für die Erhöhung oder Erniedrigung dieser Wahrscheinlichkeit wird auf Basis der verlorenen Pakete beziehungsweise auf Basis der ungenutzten Verbindungen getroffen: Erhält der Router die Information, dass ein Paket verloren gegangen ist, wird $p_m$ um den Wert $d_1$ erhöht. Erkennt er eine ungenutzte Verbindung, wird $p_m$ um $d_2$ reduziert. Ein weiterer Parameter ist hierbei noch wichtig: die \textit{freeze\_time}. Damit das Netz und die Sender Zeit haben, auf die Aktion des Routers zu reagieren, muss mindestens dieses Zeitintervall vergangen sein, bis die Markierungswahrscheinlichkeit wieder geändert wird. Formal läuft ein Schritt des Algorithmus folgendermaßen ab:
 
-Die beiden Parameter $d_1$ und $d_2$ geben an, um wie viel $p_m$ zu erhöhen beziehungsweise zu reduzieren ist. $d_1$ sollte deutlich größer sein als $d_2$, da BLUE somit auf Staus sehr viel schneller reagieren kann. Die Autoren geben weiterhin an, dass in ihren Experimenten die minimale Zeitspanne zwischen Änderungen an $p_m$, die \textit{freeze\_time}, konstant gehalten wurde. Sie sagen aber auch, dass in einem Netz dieser Parameter zufällig für jeden Router gewählt werden sollte, um globale Synchronisation zu vermeiden. Dieser Algorithmus passt sich somit selbstständig an den aktuellen Bedarf des Netzes an und benötigt keine Router-abhängigen Parameter zur Konfiguration.
+\begin{algorithm}
+	\If{ Paketverlust $\wedge$ (now - last\_update) $<$ freeze\_time}{
+		$p_m = p_m + d_1$ \;
+		$last\_update = now$ \;}
+	\If{Verbindung frei $\wedge$ (now - last\_update) $<$ freeze\_time}{
+		$p_m = p_m - d_2$ \;
+		$last\_update = now$ \;}
+	\caption{BLUE} \label{alg:blue}
+\end{algorithm}
+
+Die beiden Parameter $d_1$ und $d_2$ geben an, um wie viel $p_m$ zu erhöhen beziehungsweise zu reduzieren ist. $d_1$ sollte deutlich größer sein als $d_2$, da BLUE somit auf Staus sehr viel schneller reagieren kann. Die Autoren geben weiterhin an, dass in ihren Experimenten die \textit{freeze\_time}, konstant gehalten wurde. Sie sagen aber auch, dass in einem Netz dieser Parameter zufällig für jeden Router gewählt werden sollte, um globale Synchronisation zu vermeiden. Dieser Algorithmus passt sich somit selbstständig an den aktuellen Bedarf des Netzes an und benötigt keine Router-abhängigen Parameter zur Konfiguration.
 
 \subsection{AVQ: Adaptive Virtual Queue}
 
-Ein weiterer AQM-Algorithmus, der eine andere Idee verfolgt, ist der Adaptive Virtual Queue (AVQ) Algorithmus. Er wurde 2001 von Kunniyur und Srikant vorgestellt \cite{Kunniyur2001}. Wie bereits der Name andeutet basiert der Algorithmus auf einer virtuellen Queue. Für die Markierung beziehungsweise das Fallenlassen von Paketen wird die Kapazität dieser virtuellen Queue und keine Markierungswahrscheinlichkeit zu Rate gezogen.
+Ein weiterer AQM-Algorithmus, der eine andere Idee verfolgt, ist der Adaptive Virtual Queue (AVQ) Algorithmus. Er wurde 2001 von Kunniyur und Srikant vorgestellt \cite{Kunniyur2001}. Wie bereits der Name andeutet, verwendet der Algorithmus auf einer virtuellen Queue. Für die Markierung beziehungsweise das Fallenlassen von Paketen wird die Kapazität dieser virtuellen Queue und keine Markierungswahrscheinlichkeit zu Rate gezogen.
 
-Bei AVQ verwaltet der Router neben der echten Queue eine virtuelle Queue mit der Kapazität \(C_v \le C\), wobei $C$ die Kapazität der Verbindung und $C_v$ die der virtuellen ist. Zu Beginn ist \(C_v = C\). Bei jedem ankommenden Paket wird überprüft, ob der Puffer der virtuellen Queue das Paket aufnehmen könnte. Ist dem so, wird das echte Paket in die tatsächliche Queue eingereiht, ansonsten wird es markiert oder fallen gelassen. Die Kapazität der virtuellen Queue wird ebenfalls bei jedem ankommenden Paket angepasst gemäß der Differentialgleichung 
+Bei AVQ verwaltet der Router neben der echten Queue eine virtuelle Queue mit der Kapazität \(C_v \le C\), wobei $C$ die Kapazität der Verbindung und $C_v$ die der virtuellen ist. Zu Beginn ist \(C_v = C\). Bei jedem ankommenden Paket wird überprüft, ob der Puffer der virtuellen Queue das Paket aufnehmen könnte. Ist dem so, wird das echte Paket in die tatsächliche Queue eingereiht, ansonsten wird es markiert oder fallen gelassen. Die Kapazität der virtuellen Queue wird ebenfalls bei jedem ankommenden Paket angepasst gemäß der Differentialgleichung
+
 \begin{displaymath}
 \dot{C_v} = \alpha(\gamma C - \lambda)
 \end{displaymath}
-, wobei $\alpha$ ein Glättungsparameter, $\gamma$ die angestrebte Auslastung der Verbindung und $\lambda$ die Ankunftsrate der Verbindung ist. Das Markieren passiert auf diese Weise aggressiver, also häufiger, wenn die Verbindung ihre gewünschte Übertragungsrate überschreitet und weniger aggressiv, wenn nicht.
 
-Es ist klar, dass in der virtuellen Queue keine Pakete eingereiht werden müssen, lediglich die Länge, also die Kapazität der virtuellen Queue muss ermittelt werden. Die Autoren geben in ihrer Arbeit auch an, wie dieses Verfahren als Algorithmus konkret implementiert werden kann:
-\newline Für jedes ankommende Paket DO
-\newline \(VQ = max(VQ - C_v(t-s),0)\)
-\newline \(if(VQ + b > B)~then\)
-\newline \indent Paket markieren
-\newline \textit{else}
-\newline \indent \(VQ = VQ + b\)
-\newline \(C_v = max(min(C_v + \alpha \cdot \gamma \cdot C(t-s),C)-\alpha \cdot b,0)\)
-\newline \(s = t\)
-\newline wobei $B$ die Puffergröße in Bytes, $s$ die Ankunftszeit des letzten Pakets, $t$ die aktuelle Zeit, $b$ die Paketgröße des aktuellen Pakets in Bytes und $VQ$ die Anzahl an Bytes, die aktuell in der virtuellen Queue sind, ist.
+Hierbei ist $\alpha$ ein Glättungsparameter, $\gamma$ die angestrebte Auslastung der Verbindung und $\lambda$ die Ankunftsrate der Verbindung. Das Markieren passiert auf diese Weise aggressiver, also häufiger, wenn die Verbindung ihre gewünschte Übertragungsrate überschreitet und weniger aggressiv, wenn nicht.
+
+Es ist klar, dass in der virtuellen Queue keine Pakete eingereiht werden müssen, lediglich die Länge, also die Kapazität der virtuellen Queue muss ermittelt werden. Die Autoren geben in ihrer Arbeit auch an, wie dieses Verfahren implementiert wird:
+
+\begin{algorithm}
+	\For{jedes ankommende Paket}{
+		\eIf{$VQ = max(VQ - C_v (t-s), 0)$}{
+			Paket markieren \;}{
+			$VQ = VQ + b$ \;}
+		$C_v = max(min(C_v + \alpha \cdot \gamma \cdot C(t-s), C) - \alpha \cdot b, 0)$ \;
+		$s = t$ \;
+		}
+	\caption{AVQ} \label{alq:AVQ}
+\end{algorithm}
+
+Hierbei ist $B$ die Puffergröße in Bytes, $s$ die Ankunftszeit des letzten Pakets, $t$ die aktuelle Zeit, $b$ die Paketgröße des aktuellen Pakets in Bytes und $VQ$ die Anzahl an Bytes, die aktuell in der virtuellen Queue sind.
 
 Die Autoren erläutern, dass die algorithmische Komplexität von AVQ in etwa der von RED entspricht. Anstelle der Länge der Queue wird bei AVQ jedoch die Ausnutzung der Queue als Entscheidungskriterium für das Markieren von Paketen verwendet. Für die Verwendung von AVQ müssen der Glättungsparameter $\alpha$ und die gewünschte Ausnutzung $\gamma$ vorab angegeben werden. Diese dienen der Stabilität des Verfahrens. Weiter geben die Autoren an, dass $\gamma$ es den ISP's erlaubt einen Ausgleich zwischen hoher Übertragungsratenausnutzung und kleinen Puffern vorzunehmen. Eine Regel, wie diese Parameter gesetzt werden sollten, befindet sich in der Originalarbeit in \cite{Kunniyur2001}.
 
