@@ -180,6 +180,12 @@ S.~McCanne, S.~Floayd, und K.~Fall, ``ns version 1 - lbnl network simulator.''
   [Online]. Available: \url{http://ee.lbl.gov/ns/}
 \BIBentrySTDinterwordspacing
 
+\bibitem{Floyd1997a}
+\BIBentryALTinterwordspacing
+S.~Floyd. (1997) Red: Discussions of setting parameters. [Online]. Available:
+  \url{http://www.aciri.org/floyd/REDparameters.txt}
+\BIBentrySTDinterwordspacing
+
 \bibitem{Ramakrishnan1999}
 K.~Ramakrishnan, A.~L. Research, und S.~Floyd, ``A proposal to add explicit
   congestion notification (ecn) to ip,'' United States, 1999.

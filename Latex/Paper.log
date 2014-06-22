@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.5.7)  22 JUN 2014 12:54
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.5.7)  22 JUN 2014 17:06
 entering extended mode
 **Paper.tex
 ("D:\Eigene Dateien\GitHub\seminar_ss_14\Latex\Paper.tex"
@@ -334,23 +334,23 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip61
 )
-** ATTENTION: \specialpapernotice is deprecated (line 13). Use \IEEEspecialpape
+** ATTENTION: \specialpapernotice is deprecated (line 14). Use \IEEEspecialpape
 rnotice instead.
 ("D:\Eigene Dateien\GitHub\seminar_ss_14\Latex\Paper.aux")
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
 
 ("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -367,7 +367,7 @@ LaTeX Font Info:    ... okay on input line 17.
 \everyMPtoPDFconversion=\toks20
 )
 \AtBeginShipoutBox=\box37
-Package hyperref Info: Link coloring OFF on input line 17.
+Package hyperref Info: Link coloring OFF on input line 18.
  ("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 
@@ -376,22 +376,22 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count115
 )
-LaTeX Info: Redefining \ref on input line 17.
-LaTeX Info: Redefining \pageref on input line 17.
-LaTeX Info: Redefining \nameref on input line 17.
+LaTeX Info: Redefining \ref on input line 18.
+LaTeX Info: Redefining \pageref on input line 18.
+LaTeX Info: Redefining \nameref on input line 18.
 
 ("D:\Eigene Dateien\GitHub\seminar_ss_14\Latex\Paper.out")
 ("D:\Eigene Dateien\GitHub\seminar_ss_14\Latex\Paper.out")
 \@outlinefile=\write3
 
-<figures/droptail.png, id=58, 3432.07219pt x 1011.02719pt>
+<figures/droptail.png, id=62, 3432.07219pt x 1011.02719pt>
 File: figures/droptail.png Graphic file (type png)
 
 <use figures/droptail.png>
-Package pdftex.def Info: figures/droptail.png used on input line 32.
+Package pdftex.def Info: figures/droptail.png used on input line 36.
 (pdftex.def)             Requested size: 258.0pt x 75.99345pt.
 
-Overfull \hbox (6.0pt too wide) in paragraph at lines 32--33
+Overfull \hbox (6.0pt too wide) in paragraph at lines 36--37
 [][] 
  []
 
@@ -400,51 +400,49 @@ Overfull \hbox (6.0pt too wide) in paragraph at lines 32--33
 
  <D:/Eigene Dateien/GitHub/seminar_ss_14/Latex/figures/droptail.png>]
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 47.
+(Font)              <7> on input line 51.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 47.
+(Font)              <5> on input line 51.
 
-Underfull \hbox (badness 4266) in paragraph at lines 49--50
+Underfull \hbox (badness 4266) in paragraph at lines 53--54
 []\OT1/ptm/m/n/10 Die zur Verf[]ugung ste-hen-de []Ubertragungsrate soll
  []
 
 
-Underfull \hbox (badness 2277) in paragraph at lines 49--50
+Underfull \hbox (badness 2277) in paragraph at lines 53--54
 \OT1/ptm/m/n/10 gleichm[]aig zwi-schen kon-kur-rie-ren-den Da-ten-str[]omen
  []
 
 
-Underfull \hbox (badness 4582) in paragraph at lines 63--64
+Underfull \hbox (badness 4582) in paragraph at lines 67--68
 []\OT1/ptm/m/n/10 Algorithmen le-gen fest, wel-che Pa-ke-te als
  []
 
 [2] [3] [4] [5] ("D:\Eigene Dateien\GitHub\seminar_ss_14\Latex\Paper.bbl"
+[6]
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <8> on input line 50.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 50.
-
-[6])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 241.
- [7
-
-]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 241.
+)
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 250.
+ [7]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 250.
  ("D:\Eigene Dateien\GitHub\seminar_ss_14\Latex\Paper.aux")
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 241.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 241.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 250.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 250.
 Package rerunfilecheck Info: File `Paper.out' has not changed.
-(rerunfilecheck)             Checksum: C8E9B088AF666B3FB38F065EFDC3296C;911.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 241.
+(rerunfilecheck)             Checksum: 3CC990B6C177B715AA17AAEC6967130E;984.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 250.
  ) 
 Here is how much of TeX's memory you used:
- 7792 strings out of 493921
- 117843 string characters out of 3147286
- 234357 words of memory out of 3000000
- 10968 multiletter control sequences out of 15000+200000
+ 7796 strings out of 493921
+ 117900 string characters out of 3147286
+ 235391 words of memory out of 3000000
+ 10970 multiletter control sequences out of 15000+200000
  39287 words of font info for 72 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 29i,12n,32p,1445b,474s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 29i,12n,32p,1445b,472s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Program File
 s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX
  2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX 2.9/font
@@ -455,9 +453,9 @@ cmsy7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Pro
 gram Files/MiKTeX 2.9/fonts/type1/urw/times/utmbi8a.pfb><C:/Program Files/MiKTe
 X 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1
 /urw/times/utmri8a.pfb>
-Output written on Paper.pdf (7 pages, 222388 bytes).
+Output written on Paper.pdf (7 pages, 225100 bytes).
 PDF statistics:
- 248 PDF objects out of 1000 (max. 8388607)
- 59 named destinations out of 1000 (max. 500000)
- 110 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 255 PDF objects out of 1000 (max. 8388607)
+ 61 named destinations out of 1000 (max. 500000)
+ 118 words of extra memory for PDF output out of 10000 (max. 10000000)
 
