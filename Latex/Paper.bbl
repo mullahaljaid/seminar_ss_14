@@ -43,12 +43,9 @@ K.~Ramakrishnan, S.~Floyd, und D.~Black, ``The addition of explicit congestion
   notification (ecn) to ip,'' United States, 2001.
 
 \bibitem{Crowcroft1998}
-\BIBentryALTinterwordspacing
 J.~Crowcroft und P.~Oechslin, ``Differentiated end-to-end internet services
   using a weighted proportional fair sharing tcp,'' \emph{SIGCOMM Comput.
-  Commun. Rev.}, vol.~28, Nr.~3, pp. 53--69, Jul. 1998. [Online]. Available:
-  \url{http://doi.acm.org/10.1145/293927.293930}
-\BIBentrySTDinterwordspacing
+  Commun. Rev.}, vol.~28, Nr.~3, 1998.
 
 \bibitem{Morris1997}
 R.~Morris, ``Tcp behavior with many flows,'' in \emph{Proceedings of the 1997
@@ -59,7 +56,7 @@ R.~Morris, ``Tcp behavior with many flows,'' in \emph{Proceedings of the 1997
 B.~Suter, T.~Lakshman, D.~Stiliadis, und A.~Choudhury, ``Design considerations
   for supporting tcp with per-flow queueing,'' in \emph{INFOCOM '98.
   Seventeenth Annual Joint Conference of the IEEE Computer and Communications
-  Societies. Proceedings. IEEE}, vol.~1, Mär. 1998, pp. 299--306vol.1.
+  Societies. Proceedings. IEEE}, vol.~1, 1998.
 
 \bibitem{Braden1998}
 B.~Braden, D.~Clark, J.~Crowcroft, B.~Davie, S.~Deering, D.~Estrin, S.~Floyd,
@@ -68,11 +65,8 @@ B.~Braden, D.~Clark, J.~Crowcroft, B.~Davie, S.~Deering, D.~Estrin, S.~Floyd,
   management and congestion avoidance in the internet,'' United States, 1998.
 
 \bibitem{Nagle1984}
-\BIBentryALTinterwordspacing
 J.~Nagle, ``Congestion control in ip/tcp internetworks,'' \emph{SIGCOMM Comput.
-  Commun. Rev.}, vol.~14, Nr.~4, pp. 11--17, Okt. 1984. [Online]. Available:
-  \url{http://doi.acm.org/10.1145/1024908.1024910}
-\BIBentrySTDinterwordspacing
+  Commun. Rev.}, vol.~14, Nr.~4, 1984.
 
 \bibitem{Stevens1997}
 W.~Stevens, ``Tcp slow start, congestion avoidance, fast retransmit, and fast
@@ -80,41 +74,32 @@ W.~Stevens, ``Tcp slow start, congestion avoidance, fast retransmit, and fast
 
 \bibitem{Jain1990}
 R.~Jain, ``Congestion control in computer networks: issues and trends,''
-  \emph{Network, IEEE}, vol.~4, Nr.~3, pp. 24--30, Mai 1990.
+  \emph{Network, IEEE}, vol.~4, Nr.~3, 1990.
 
 \bibitem{Floyd1994}
 S.~Floyd, ``Tcp and explicit congestion notification,'' \emph{SIGCOMM Comput.
-  Commun. Rev.}, vol.~24, Nr.~5, pp. 8--23, Okt. 1994.
+  Commun. Rev.}, vol.~24, Nr.~5, 1994.
 
 \bibitem{Jain1996}
-\BIBentryALTinterwordspacing
 R.~Jain, ``Congestion control and traffic management in atm networks: Recent
   advances and a survey,'' \emph{Comput. Netw. ISDN Syst.}, vol.~28, Nr.~13,
-  pp. 1723--1738, Okt. 1996. [Online]. Available:
-  \url{http://dx.doi.org/10.1016/0169-7552(96)00012-8}
-\BIBentrySTDinterwordspacing
+  1996.
 
 \bibitem{Tannenbaum2012}
 A.~Tannenbaum und D.~Wetherall, \emph{Computernetzwerke}.\hskip 1em plus 0.5em
   minus 0.4em\relax Pearson Deutschland GmbH, 2012.
 
 \bibitem{Socolofsky1991}
-\BIBentryALTinterwordspacing
-T.~Socolofsky und C.~Kale, ``{TCP/IP tutorial},'' RFC 1180 (Informational),
-  Internet Engineering Task Force, January 1991. [Online]. Available:
-  \url{http://www.ietf.org/rfc/rfc1180.txt}
-\BIBentrySTDinterwordspacing
+T.~Socolofsky und C.~Kale, ``Tcp/ip tutorial,'' RFC 1180 (Informational),
+  Internet Engineering Task Force, 1991.
 
 \bibitem{Oldak2006}
-\BIBentryALTinterwordspacing
 S.~Oldak, W.~Gong, C.~Hollot, D.~Towsley, V.~Misra, und Y.~Chait, ``Active
-  queue management for differentiated services,'' August 2006. [Online].
-  Available: \url{http://www.freepatentsonline.com/7085236.html}
-\BIBentrySTDinterwordspacing
+  queue management for differentiated services,'' 2006.
 
 \bibitem{Appenzeller2004}
 G.~Appenzeller, I.~Keslassy, und N.~McKeown, ``Sizing router buffers,''
-  \emph{SIGCOMM Comput. Commun. Rev.}, vol.~34, Nr.~4, pp. 281--292, Aug. 2004.
+  \emph{SIGCOMM Comput. Commun. Rev.}, vol.~34, Nr.~4, 2004.
 
 \bibitem{Suter1998a}
 B.~Suter, T.~Lakshman, D.~Stiliadis, und A.~Choudhury, ``Efficient active queue
@@ -122,28 +107,24 @@ B.~Suter, T.~Lakshman, D.~Stiliadis, und A.~Choudhury, ``Efficient active queue
   Engineering Conference}, 1998.
 
 \bibitem{Pan2008}
-\BIBentryALTinterwordspacing
 R.~Pan, B.~Prabhakar, und K.~Psounis, ``Active queue management toward fair
-  bandwidth allocation,'' Januar 2008. [Online]. Available:
-  \url{http://www.google.de/patents/US7324442}
-\BIBentrySTDinterwordspacing
+  bandwidth allocation,'' 2008.
 
 \bibitem{Demers1989}
 A.~Demers, S.~Keshav, und S.~Shenker, ``Analysis and simulation of a fair
   queueing algorithm,'' \emph{SIGCOMM Comput. Commun. Rev.}, vol.~19, Nr.~4,
-  pp. 1--12, Aug. 1989.
+  1989.
 
 \bibitem{Hollot2001}
 C.~Hollot, V.~Misra, D.~Towsley, und W.-B. Gong, ``On designing improved
   controllers for aqm routers supporting tcp flows,'' in \emph{INFOCOM 2001.
   Twentieth Annual Joint Conference of the IEEE Computer and Communications
-  Societies. Proceedings. IEEE}, vol.~3, 2001, pp. 1726--1734vol.3.
+  Societies. Proceedings. IEEE}, vol.~3, 2001.
 
 \bibitem{Firoiu2000}
 V.~Firoiu und M.~Borden, ``A study of active queue management for congestion
   control,'' in \emph{INFOCOM 2000. Nineteenth Annual Joint Conference of the
-  IEEE Computer and Communications Societies. Proceedings. IEEE}, vol.~3, Mär.
-  2000, pp. 1435--1444vol.3.
+  IEEE Computer and Communications Societies. Proceedings. IEEE}, vol.~3, 2000.
 
 \bibitem{Floyd2001}
 S.~Floyd, R.~Gummadi, und S.~Shenker, ``Adaptive red: An algorithm for
@@ -154,29 +135,25 @@ S.~Floyd, R.~Gummadi, und S.~Shenker, ``Adaptive red: An algorithm for
 R.~Pan, B.~Prabhakar, und K.~Psounis, ``Choke - a stateless active queue
   management scheme for approximating fair bandwidth allocation,'' in
   \emph{INFOCOM 2000. Nineteenth Annual Joint Conference of the IEEE Computer
-  and Communications Societies. Proceedings. IEEE}, vol.~2, 2000, pp.
-  942--951vol.2.
+  and Communications Societies. Proceedings. IEEE}, vol.~2, 2000.
 
 \bibitem{Floyd1993}
 S.~Floyd und V.~Jacobson, ``Random early detection gateways for congestion
-  avoidance,'' \emph{Networking, IEEE/ACM Transactions on}, vol.~1, Nr.~4, pp.
-  397--413, Aug. 1993.
+  avoidance,'' \emph{Networking, IEEE/ACM Transactions on}, vol.~1, Nr.~4,
+  1993.
 
 \bibitem{Feng1999}
-\BIBentryALTinterwordspacing
 W.~Feng, K.~Shin, D.~Kandlur, und D.~Saha, ``Blue: A new class of active queue
-  management algorithms,'' 1999. [Online]. Available:
-  \url{http://www.eecs.umich.edu/techreports/cse/99/CSE-TR-387-99.pdf}
-\BIBentrySTDinterwordspacing
+  management algorithms,'' 1999.
 
 \bibitem{Kunniyur2001}
 S.~Kunniyur und R.~Srikant, ``Analysis and design of an adaptive virtual queue
   (avq) algorithm for active queue management,'' \emph{SIGCOMM Comput. Commun.
-  Rev.}, vol.~31, Nr.~4, pp. 123--134, Aug. 2001.
+  Rev.}, vol.~31, Nr.~4, 2001.
 
 \bibitem{McCanne}
 \BIBentryALTinterwordspacing
-S.~McCanne, S.~Floayd, und K.~Fall, ``ns version 1 - lbnl network simulator.''
+S.~McCanne, S.~Floayd, und K.~Fall. ns version 1 - lbnl network simulator.
   [Online]. Available: \url{http://ee.lbl.gov/ns/}
 \BIBentrySTDinterwordspacing
 
