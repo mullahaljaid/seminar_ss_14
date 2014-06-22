@@ -94,6 +94,17 @@ R.~Jain, ``Congestion control and traffic management in atm networks: Recent
   \url{http://dx.doi.org/10.1016/0169-7552(96)00012-8}
 \BIBentrySTDinterwordspacing
 
+\bibitem{Tannenbaum2012}
+A.~Tannenbaum und D.~Wetherall, \emph{Computernetzwerke}.\hskip 1em plus 0.5em
+  minus 0.4em\relax Pearson Deutschland GmbH, 2012.
+
+\bibitem{Socolofsky1991}
+\BIBentryALTinterwordspacing
+T.~Socolofsky und C.~Kale, ``{TCP/IP tutorial},'' RFC 1180 (Informational),
+  Internet Engineering Task Force, January 1991. [Online]. Available:
+  \url{http://www.ietf.org/rfc/rfc1180.txt}
+\BIBentrySTDinterwordspacing
+
 \bibitem{Oldak2006}
 \BIBentryALTinterwordspacing
 S.~Oldak, W.~Gong, C.~Hollot, D.~Towsley, V.~Misra, und Y.~Chait, ``Active
@@ -172,9 +183,5 @@ S.~McCanne, S.~Floayd, und K.~Fall, ``ns version 1 - lbnl network simulator.''
 \bibitem{Ramakrishnan1999}
 K.~Ramakrishnan, A.~L. Research, und S.~Floyd, ``A proposal to add explicit
   congestion notification (ecn) to ip,'' United States, 1999.
-
-\bibitem{Tannenbaum2012}
-A.~Tannenbaum und D.~Wetherall, \emph{Computernetzwerke}.\hskip 1em plus 0.5em
-  minus 0.4em\relax Pearson Deutschland GmbH, 2012.
 
 \end{thebibliography}

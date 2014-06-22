@@ -1,7 +1,7 @@
 \BOOKMARK [1][-]{section.1}{Einf\374hrung und Motivation}{}% 1
 \BOOKMARK [1][-]{section.2}{Staukontrolle in Netzen}{}% 2
 \BOOKMARK [1][-]{section.3}{Definition und Anwendung von Active Queue Management}{}% 3
-\BOOKMARK [1][-]{section.4}{Die g\344ngigsten Active Queue Management Algorithmen}{}% 4
+\BOOKMARK [1][-]{section.4}{Drei Beispiele f\374r Active Queue Management Algorithmen}{}% 4
 \BOOKMARK [2][-]{subsection.4.1}{RED: Random Early Detection}{section.4}% 5
 \BOOKMARK [2][-]{subsection.4.2}{BLUE}{section.4}% 6
 \BOOKMARK [2][-]{subsection.4.3}{AVQ: Adaptive Virtual Queue}{section.4}% 7
