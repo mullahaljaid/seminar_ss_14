@@ -32,7 +32,7 @@ Die Ende-zu-Ende (E2E) Staukontrollmechanismen von TCP sind mittlerweile ein kri
 
 Mit der Entwicklung von immer leistungsfähigeren Prozessoren, Arbeitsspeichern und Festplatten ist die knappste Ressource in Netzen aktuell die Übertragungsrate. Das bedeutet, dass nicht alle eingehenden Daten verarbeitet und weiter versendet werden können. Wenn die Puffer eines Routers voll laufen, werden neu ankommende Pakete nach dem "`Drop Tail"' Prinzip direkt abgewiesen (siehe \autoref{fig:droptail}). Hier müssen in Situationen hohen Datenaufkommens Pakete mehrmals versandt werden, was zu Lasten der Netzgeschwindigkeit geht. Das Transportschicht Protokoll TCP (Transmission Control Protocol) erkennt genau dann einen Stau, wenn Pakete im Fluss fehlen, also vorher schon fallen gelassen wurden \cite{Graffi2007}.
 
-\begin{figure}
+\begin{figure}[h]
 	\includegraphics[width=0.5\textwidth]{figures/droptail.png}
 	\caption{Das Prinzip von "`Drop Tail"': Erreicht ein neues Paket in einem System mit vollem Puffer, wird es fallengelassen \cite{Graffi2007}.}
 	\label{fig:droptail}
@@ -147,9 +147,26 @@ $p_{b}$ steigt folglich linear von 0 bis zum Wert $max_{b}$ an. Die finale Marki
 p_a = \frac{p_b}{1-z p_b}
 \end{displaymath}
 
-Der Zähler wird für jedes einkommende Paket inkrementiert. Ein Paket wird mit der Wahrscheinlichkeit $p_{a}$ markiert. Ist dies der Fall, so wird der Zähler $z$ auf 0 gesetzt. Mithilfe des Zählers steigt die Wahrscheinlichkeit somit für jedes weitere Paket an. 
+Der Zähler wird für jedes einkommende Paket inkrementiert. Ein Paket wird mit der Wahrscheinlichkeit $p_{a}$ markiert. Ist dies der Fall, so wird der Zähler $z$ auf 0 gesetzt. Mithilfe des Zählers steigt die Wahrscheinlichkeit somit für jedes weitere Paket an.
 
 TODO!!!!!! "Ist dies der Fall" macht keinen Sinn
+
+Damit ergibt sich als Algorithmus für RED:
+
+\begin{algorithm}
+	\For{jedes ankommende Paket}{
+		Berechne $Q_avg$
+		\eIf{$Q_min < Q_avg < Q_max$}{
+			Berechne die Wahrscheinlichkeit $p_a = \frac{p_b}{1-z p_b}$ \;
+			Mit der Wahrscheinlichkeit $p_a$:
+			\Indp
+				Markiere das ankommende Paket \;}{
+			\If{$Q_max < Q_avg$}{
+				Markiere das ankommende Paket \;}
+			}
+		}
+	\caption{RED} \label{alg:red}
+\end{algorithm}
 
 Neben der Queuelänge in Paketen könnte RED auch die Bytelänge und somit die Anzahl an Bytes eines Pakets zur Bewertung heranziehen. Diese Information wird dann in die Markierungswahrscheinlichkeit $p_b$ mit einbezogen. Nach der Berechnung ändert sich der Wert dann in
 
@@ -166,12 +183,14 @@ Der BLUE Algorithmus wurde 1999 von Feng et.al. an der University of Michigan in
 Der BLUE Algorithmus kennt nur eine Markierungswahrscheinlichkeit $p_m$; jedes einzureihende Paket wird mit dieser Wahrscheinlichkeit markiert. Die Entscheidung für die Erhöhung oder Erniedrigung dieser Wahrscheinlichkeit wird auf Basis der verlorenen Pakete beziehungsweise auf Basis der ungenutzten Verbindungen getroffen: Erhält der Router die Information, dass ein Paket verloren gegangen ist, wird $p_m$ um den Wert $d_1$ erhöht. Erkennt er eine ungenutzte Verbindung, wird $p_m$ um $d_2$ reduziert. Ein weiterer Parameter ist hierbei noch wichtig: die \textit{freeze\_time}. Damit das Netz und die Sender Zeit haben, auf die Aktion des Routers zu reagieren, muss mindestens dieses Zeitintervall vergangen sein, bis die Markierungswahrscheinlichkeit wieder geändert wird. Formal läuft ein Schritt des Algorithmus folgendermaßen ab:
 
 \begin{algorithm}
-	\If{ Paketverlust $\wedge$ (now - last\_update) $<$ freeze\_time}{
+	\For{jedes ankommende Paket}{
+		\If{ Paketverlust $\wedge$ (now - last\_update) $<$ freeze\_time}{
 		$p_m = p_m + d_1$ \;
 		$last\_update = now$ \;}
-	\If{Verbindung frei $\wedge$ (now - last\_update) $<$ freeze\_time}{
-		$p_m = p_m - d_2$ \;
-		$last\_update = now$ \;}
+		\If{Verbindung frei $\wedge$ (now - last\_update) $<$ freeze\_time}{
+			$p_m = p_m - d_2$ \;
+			$last\_update = now$ \;}
+		}
 	\caption{BLUE} \label{alg:blue}
 \end{algorithm}
 
@@ -181,11 +200,17 @@ Die beiden Parameter $d_1$ und $d_2$ geben an, um wie viel $p_m$ zu erhöhen bezi
 
 Ein weiterer AQM-Algorithmus, der eine andere Idee verfolgt, ist der Adaptive Virtual Queue (AVQ) Algorithmus. Er wurde 2001 von Kunniyur und Srikant vorgestellt \cite{Kunniyur2001}. Wie bereits der Name andeutet, verwendet der Algorithmus auf einer virtuellen Queue. Für die Markierung beziehungsweise das Fallenlassen von Paketen wird die Kapazität dieser virtuellen Queue und keine Markierungswahrscheinlichkeit zu Rate gezogen.
 
-Bei AVQ verwaltet der Router neben der echten Queue eine virtuelle Queue mit der Kapazität \(C_v \le C\), wobei $C$ die Kapazität der Verbindung und $C_v$ die der virtuellen ist. Zu Beginn ist \(C_v = C\). Bei jedem ankommenden Paket wird überprüft, ob der Puffer der virtuellen Queue das Paket aufnehmen könnte. Ist dem so, wird das echte Paket in die tatsächliche Queue eingereiht, ansonsten wird es markiert oder fallen gelassen. Die Kapazität der virtuellen Queue wird ebenfalls bei jedem ankommenden Paket angepasst gemäß der Differentialgleichung
+Bei AVQ verwaltet der Router neben der echten Queue eine virtuelle Queue mit der Kapazität \(C_v \le C\), wobei $C$ die Kapazität der Verbindung und $C_v$ die der virtuellen ist. Zu Beginn ist \(C_v = C\). Bei jedem ankommenden Paket wird überprüft, ob der Puffer der virtuellen Queue das Paket aufnehmen könnte. Ist dem so, wird das echte Paket in die tatsächliche Queue eingereiht, ansonsten wird es markiert oder fallen gelassen. Die Kapazität der virtuellen Queue wird ebenfalls bei jedem ankommenden Paket angepasst gemäß der Differentialgleichung (siehe auch \autoref{fig:avq})
 
 \begin{displaymath}
 \dot{C_v} = \alpha(\gamma C - \lambda)
 \end{displaymath}
+
+\begin{figure}[h]
+	\includegraphics[width=0.5\textwidth]{figures/avq.png}
+	\caption{Das Prinzip von \textit{AVQ}: Die Größe der virtuellen Queue wird dynamisch angepasst, um bessere Leistungsgrenzen zu erhalten \cite{Graffi2007}.}
+	\label{fig:avq}
+\end{figure}
 
 Hierbei ist $\alpha$ ein Glättungsparameter, $\gamma$ die angestrebte Auslastung der Verbindung und $\lambda$ die Ankunftsrate der Verbindung. Das Markieren passiert auf diese Weise aggressiver, also häufiger, wenn die Verbindung ihre gewünschte Übertragungsrate überschreitet und weniger aggressiv, wenn nicht.
 
