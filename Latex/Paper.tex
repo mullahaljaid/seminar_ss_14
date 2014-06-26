@@ -34,7 +34,7 @@ Mit der Entwicklung von immer leistungsfähigeren Prozessoren, Arbeitsspeichern u
 
 \begin{figure}[h]
 	\includegraphics[width=0.5\textwidth]{figures/droptail.png}
-	\caption{Das Prinzip von "`Drop Tail"': Erreicht ein neues Paket in einem System mit vollem Puffer, wird es fallengelassen \cite{Graffi2007}.}
+	\caption{Das Prinzip von "`Drop Tail"': Erreicht ein neues Paket ein System mit vollem Puffer, wird es fallengelassen \cite{Graffi2007}.}
 	\label{fig:droptail}
 \end{figure}
 
@@ -42,11 +42,11 @@ Die Problemstellung ist es folglich Mechanismen zu finden, die Staus in E2E Verb
 
 Um eine möglichst gute E2E Staukontrolle zu erreichen, soll die durchschnittliche Pufferausnutzung klein gehalten werden \cite{Le2003}. Die Herausforderung besteht darin, dass an den Flaschenhälsen der potenzielle Stau erkannt wird und das komplette Netz darauf reagiert, indem beispielsweise die Sendegeschwindigkeit des Ursprungs eines Datenstroms reduziert wird \cite{Graffi2007}. Interaktive Datenströme wie beispielsweise telnet, Web-Browsen und der Transfer von Audio- und Video-Material können sehr anfällig für Paketverluste oder hohe Latenzen sein, die auftreten, wenn Pakete erneut verschickt werden müssen \cite{Ramakrishnan2001}.
 
-Das folgende \autoref{sec:Staukontrolle} analysiert das Problem der Staukontrolle in Netzen und präsentiert Active Queue Management als Lösungsansatz für das Problem. Zusätzlich wird mit Explicit Congestion Notification (ECN) eine Alternative zum einfachen Fallenlassen von Paketen vorgestellt. Anschließend für \autoref{sec:AQM} AQM ein und definiert Voraussetzungen eines funktionierenden Algorithmus. Die Active Queue Management Algorithmen RED, BLUE und AVQ werden in Kapitel \autoref{sec:Algorithmen} vorgestellt und in \autoref{sec:Vergleich} miteinander verglichen. Im abschließenden \autoref{sec:Ausblick} erfolgt eine Zusammenfassung der Ergebnisse zusammen mit einem Ausblick auf zukünftige Entwicklungen und Forschungen sowie andere Ansätze zur Staukontrolle.
+Das folgende \autoref{sec:Staukontrolle} analysiert das Problem der Staukontrolle in Netzen und präsentiert Active Queue Management als Lösungsansatz für das Problem. Zusätzlich wird mit Explicit Congestion Notification (ECN) eine Alternative zum einfachen Fallenlassen von Paketen vorgestellt. Anschließend führt \autoref{sec:AQM} AQM ein und definiert Voraussetzungen eines funktionierenden Algorithmus. Die Active Queue Management Algorithmen RED, BLUE und AVQ werden in \autoref{sec:Algorithmen} vorgestellt und in \autoref{sec:Vergleich} miteinander verglichen. Im abschließenden \autoref{sec:Ausblick} erfolgt eine Zusammenfassung der Ergebnisse zusammen mit einem Ausblick auf zukünftige Entwicklungen und Forschungen sowie andere Ansätze zur Staukontrolle.
 
 \section{Staukontrolle in Netzen}\label{sec:Staukontrolle} 
 
-Alle Staukontrollmechanismen müssen sich mit denen von TCP, als dem wichtigsten Transportschicht Protokoll im Internet, gemessen an den Datenflüssen, vergleichen \cite{Crowcroft1998}. Neben \cite{Floyd1997} wird auch von Morris \cite{Morris1997} postuliert, dass die Effektivität von TCP mit zunehmender Anzahl an konkurrierender Datenströme nachlässt. Diese Probleme sind auch im Internet spürbar und es zeigt sich, dass das Internet einen gravierenden Performanceverlust dadurch erfährt. Die einfachste Lösung für diese Probleme wäre die radikale Vergrößerung von Routerpuffern, zusammen mit einer Begrenzung der Anzahl der Pakete jedes einzelnen Datenstroms individuell. Da dies aber nicht ausführbar ist, müssen Staukontrollalgorithmen implementiert werden, mit den folgenden Hauptzielen \cite{Morris1997}: 
+Alle Staukontrollmechanismen müssen sich mit denen von TCP, als dem wichtigsten Transportschicht Protokoll im Internet, gemessen an den Datenflüssen, vergleichen \cite{Crowcroft1998}. Neben \cite{Floyd1997} wird auch von Morris  postuliert, dass die Effektivität von TCP mit zunehmender Anzahl an konkurrierender Datenströme nachlässt \cite{Morris1997}. Diese Probleme sind auch im Internet spürbar und es zeigt sich, dass das Internet einen gravierenden Performanceverlust dadurch erfährt. Die einfachste Lösung für diese Probleme wäre die radikale Vergrößerung von Routerpuffern, zusammen mit einer Begrenzung der Anzahl der Pakete jedes einzelnen Datenstroms individuell. Da dies aber nicht ausführbar ist, müssen Staukontrollalgorithmen implementiert werden, mit den folgenden Hauptzielen \cite{Morris1997}: 
 \begin{itemize}
 	\item Es soll eine hohe Ausnutzung von Flaschenhälsen wie Routern erreicht werden. 
 	\item Der Überlauf von Flaschenhälsen und damit eine zeitliche Verzögerung durch Staus sowie ein hoher Paketverlust soll verhindert werden. 
@@ -54,17 +54,17 @@ Alle Staukontrollmechanismen müssen sich mit denen von TCP, als dem wichtigsten 
 \end{itemize}
 Um diese gleichmäßige Verteilung zu erreichen, ist TCP standardmäßig mit dem "`Drop Tail"' Prinzip nicht geeignet. Deshalb müssen Methoden entwickelt werden, die Puffer in Routern anders abarbeiten und dennoch einfach zu verwenden sind \cite{Suter1998}.
 
-Die Internet Architektur basiert auf einem verbindungslosen Transportsystem, auf dem TCP als Transportschicht Protokoll aufsetzt. Diese Architektur hat vor allem aufgrund des verbindungslosen Designs, der Flexibilität und der Robustheit viele Vorteile, allerdings auch folgende Nachteile \cite{Braden1998}:
+Die Internet Architektur nutzt größtenteils ein verbindungsloses Transportsystem beschrieben durch das TCP Protokoll in der Transportschicht. Diese Architektur hat vor allem aufgrund des verbindungslosen Designs, der Flexibilität und der Robustheit viele Vorteile, allerdings auch folgende Nachteile \cite{Braden1998}:
 \begin{itemize}
 	\item Sorgfältiges Design ist von Nöten, um bei hoher Last einen guten Dienst zu leisten.
-	\item Mangelnde Aufmerksamkeit auf die Dynamik der Paketweiterleitung kann dazu führen, dass Dienste nicht mehr korrekt funktionieren und schlimmstenfalls zu einem sogenannten "`internet meltdown"'.
+	\item Mangelnde Aufmerksamkeit auf die Dynamik der Paketweiterleitung kann dazu führen, dass Dienste nicht mehr korrekt funktionieren und dass es schlimmstenfalls zu einem sogenannten "`internet meltdown"' kommt.
 \end{itemize}
 Das Phänomen eines solchen Internet-Zusammenbruchs wurde während der ersten Wachstumsphase des Internets in den 1980er Jahren festgestellt und wird "`congestion collapse"' \cite{Nagle1984} genannt. Bereits 1986 wurden von Jacobson entwickelte Stauverhinderungsmechanismen für Hosts entwickelt, die auch aktuell noch einen "`congestion collapse"' verhindern \cite{Braden1998}.
 
 Da das Internet seit dieser Zeit immer weiter wächst, wurde es offensichtlich, dass TCP Stauverhinderungsmechanismen \cite{Stevens1997} nicht unter allen Umständen ausreichend gute Dienste leisten. Das Hauptproblem liegt darin, dass von den Enden der Netze nur bedingt Kontrolle ausgeübt werden kann. Deshalb müssen auch in Routern Mechanismen angewendet werden, welche die Stauverhinderungsmechanismen der Endpunkte ergänzen. Hierbei muss man zwischen den folgenden zwei Klassen unterscheiden \cite{Braden1998}:
 \begin{description}
 	\item[Queue Management] Algorithmen verwalten die Länge von Paket-Puffern durch Fallenlassen von Paketen wenn nötig oder angemessen.
-	\item[Scheduling] Algorithmen legen fest, welche Pakete als nächstes gesendet werden sollen und können primär dafür genutzt werden, die Zuweisung von Übertragungsrate zwischen den Datenströmen zu verwalten.
+	\item[Scheduling] Algorithmen legen fest, welche Pakete als nächstes gesendet werden sollen und können primär dafür genutzt werden, die Zuweisung von Übertragungsraten zwischen den Datenströmen zu verwalten.
 \end{description}
 Ein guter Algorithmus vereint die Vorteile beider Arten in sich, dazu mehr in \autoref{sec:AQM}.
 
@@ -77,7 +77,7 @@ Nach Jain \cite{Jain1990} gibt es zwei Gründe, warum das Problem der Staukontrol
 	\item Es muss für alle Benutzer optimal sein.
 \end{itemize}
 
-Um E2E Staukontrolle in Routern zu betreiben, muss nicht nur jeder einzelne Router auf sich allein gestellt seinen Puffer überwachen, sondern auch an die nächsten Router Informationen weiterleiten. Für diese Benachrichtigung könnten zwei reservierte Bits im IP-Header genutzt werden \cite{Graffi2007}. Mittels "`Explicit Congestion Notification"' (ECN) sollen Pakete mit der Staubenachrichtigung weiterversandt werden im Gegensatz zum einfachen Fallenlassen der Pakete. Auf diese Art und Weise werden vorangehende Router darüber informiert, dass es zu einem Stau gekommen ist und möglicherweise einzelne Pakete doppelt versandt werden müssen oder die Geschwindigkeit gedrosselt werden sollte. Die Hauptaufgabe von Routern ist es Pakete anhand der Vermittlungsschicht (meist IP-Adresse) weiterzuleiten, im Gegensatz zu Switches, die anhand der Sicherungsschicht (beispielsweise MAC-Adresse) Pakete weiterleiten. In kleinen Netzen ist es prinzipiell kein Problem Pakete einfach fallen zu lassen. Da im heutigen Internet E2E Verbindungen über sehr viele Router gehen können, kann es hier schon problematisch werden. ECN ist ein zuverlässiger Mechanismus, beinhaltet allerdings keine Methoden zur Erkennung von Staus \cite{Floyd1994}. Da es nicht vorhersehbar ist, wie hoch der Datenverkehr zukünftig sein wird, besteht das wirkliche Problem also darin, Staus frühzeitig und zuverlässig zu erkennen \cite{Jain1996}.
+Um E2E Staukontrolle in Routern zu betreiben, muss nicht nur jeder einzelne Router auf sich allein gestellt seinen Puffer überwachen, sondern auch an die nächsten Router Informationen weiterleiten. Für diese Benachrichtigung könnten zwei reservierte Bits im IP-Header genutzt werden \cite{Graffi2007}. Mittels "`Explicit Congestion Notification"' (ECN) sollen Pakete mit der Staubenachrichtigung weiterversandt werden im Gegensatz zum einfachen Fallenlassen der Pakete. Auf diese Art und Weise werden vorangehende Router darüber informiert, dass es zu einem Stau gekommen ist und möglicherweise einzelne Pakete doppelt versandt werden müssen oder die Geschwindigkeit gedrosselt werden sollte. Router sind in der Vermittlungsschicht angesiedelt; es wird hier in der Regel das IP Protokoll verwendet, bei dem die IP-Adresse das Ziel eindeutig angibt. Im Gegensatz dazu befinden sich Switches in der Sicherungsschicht und leiten Pakete beispielsweise anhand der MAC-Adresse weiter. In kleinen Netzen ist es prinzipiell kein Problem Pakete einfach fallen zu lassen. Da im Internet E2E Verbindungen über sehr viele Router gehen können, kann das Fallenlassen von Paketen durchaus problematisch werden. ECN ist ein zuverlässiger Mechanismus, beinhaltet allerdings keine Methoden zur Erkennung von Staus \cite{Floyd1994}. Da es nicht vorhersehbar ist, wie hoch der Datenverkehr zukünftig sein wird, besteht das wirkliche Problem darin, Staus frühzeitig und zuverlässig zu erkennen \cite{Jain1996}.
 
 Als Lösung für das Problem der Staukontrolle gehen wir auf "`Active Queue Management"' (AQM) ein. AQM hat das Ziel Staus in Netzen rechtzeitig zu entdecken, bevor die Routerpuffer volllaufen. Um den Quellen von Datenströmen zu signalisieren, dass es zu Problemen gekommen ist oder kommen wird, gibt es im Prinzip die beiden Möglichkeiten Pakete fallen zu lassen oder diese zu markieren. Die erste Strategie erfordert es, dass die Endpunkte kooperieren und erzeugt durch erneuten Versandt der Pakete einen Overhead, der bezüglich der verbrauchten Übertragungsrate messbar ist. Andererseits müssen Router auf markierte Pakete reagieren, als wären diese fallengelassen worden. Es wird hier allerdings kein weiterer Overhead erzeugt, da die Pakete nicht erneut gesendet werden müssen. AQM-Algorithmen können zusätzlich die Übertragungsrate von besonders gierigen Datenströmen reduzieren, indem deren Pakete häufiger fallengelassen oder markiert werden als andere. Einen wirklichen Unterschied machen AQM-Algorithmen allerdings nur, wenn sie wirklich flächendeckend und der Situation entsprechend eingesetzt werden \cite{Graffi2007}.
 
@@ -90,9 +90,9 @@ TCP ist ein E2E Protokoll, das zusammen mit dem Internet Protokoll (IP) genutzt 
 	\item Das Window bis an das Ende des lückenlos bestätigten Bytestroms verschieben.
 	\item Wenn die Empfangsbestätigung eines Pakets nicht in einer angegebenen Zeit erfolgt, dann wird das Paket neu verschickt.
 \end{enumerate}
-TCP nimmt hier keine Rücksicht auf Staus im Netz. Wenn also kontinuierlich immer weiter Pakete an das Netz versandt werden, ohne dass diese vom Netz aufgenommen werden können, führt dies zu einem Stau, der sich eventuell immer weiter aufbaut. An genau dieser Stelle muss ein Active Queue Management Algorithmus ansetzen und die Staukontrolle übernehmen \cite{Oldak2006}.
+TCP nimmt hier keine Rücksicht auf Staus im Netz. Wenn kontinuierlich immer weiter Pakete an das Netz versandt werden, ohne dass diese vom Netz aufgenommen werden können, führt dies zu einem Stau, der sich eventuell immer weiter aufbaut. An genau dieser Stelle muss ein Active Queue Management Algorithmus ansetzen und die Staukontrolle übernehmen \cite{Oldak2006}.
 
-Alle Internetrouter besitzen Puffer, um auf Verzögerungen im Fluss kurzfristig reagieren zu können und Daten eine kurze Zeit vorzuhalten. Die Größe von Routerpuffern ist durch Hardware festgelegt orientiert sich allerdings an der Dynamik des Staukontrollalgorithmus von TCP. Genauer gesagt ist es das Ziel einen Puffer nie leer laufen zu lassen. Die Größe eines Puffers muss nach dieser Definition mit wachsender Verbindungsgeschwindigkeit ansteigen. Das Problem hierbei ist, dass auf diese Art große und langsame Speicher verwendet werden müssten. Durch die Anwendung von besseren Staukontrollalgorithmen wie AQM können diese kostspieligen Puffer klein bleiben \cite{Appenzeller2004}.
+Alle Internetrouter besitzen Puffer, um auf Verzögerungen im Fluss kurzfristig reagieren zu können und Daten eine kurze Zeit vorzuhalten. Die Größe von Routerpuffern ist durch Hardware festgelegt, orientiert sich allerdings an der Dynamik des Staukontrollalgorithmus von TCP. Genauer gesagt ist es das Ziel einen Puffer nie leer laufen zu lassen. Die Größe eines Puffers muss nach dieser Definition mit wachsender Verbindungsgeschwindigkeit ansteigen. Das Problem hierbei ist, dass auf diese Art große und langsame Speicher verwendet werden müssten. Durch die Anwendung von besseren Staukontrollalgorithmen wie AQM können diese kostspieligen Puffer klein bleiben \cite{Appenzeller2004}.
 
 Die Definition von Active Queue Management lautet wie folgt:
 \begin{description}
@@ -109,7 +109,7 @@ Damit sind AQM Algorithmen eine Mischung aus Scheduling und Queue Management Alg
 \end{itemize}
 Das ist nur möglich, wenn sich alle Datenquellen untereinander derart koordinieren, dass die Queue-Größe unter Kontrolle gehalten wird. Das Problem hierbei besteht darin, dass Übertragungsrate, Schnelligkeit und Pufferplatz unabhängig von einander zugeordnet werden müssen\cite{Demers1989}.
 
-Selbst wenn AQM Mechanismen verwendet werden, ist es oft sehr sinnvoll zusätzlich auch ECN zu verwenden, um einen unnötigen Overhead zu vermeiden. Bei ECN wird durch das Markieren eines Pakets, die Kommunikation zwischen einzelnen Routern im Netz ermöglicht. Zusammen haben AQM und ECN das Potenzial den Effekt von Verlusten in latenz-sensitiven Flüssen zu reduzieren \cite{Ramakrishnan2001}. Aus diesem Grund hängt der Erfolg jedes AQM Machanismus stark damit zusammen, ob er mit ECN verbunden werden kann und wie gut diese Verbindung erreicht wird \cite{Hollot2001}.
+Selbst wenn AQM Mechanismen verwendet werden, ist es oft sehr sinnvoll zusätzlich auch ECN zu verwenden, um einen unnötigen Overhead zu vermeiden. Bei ECN wird durch das Markieren eines Pakets die Kommunikation zwischen einzelnen Routern im Netz ermöglicht. Zusammen haben AQM und ECN das Potenzial den Effekt von Verlusten in latenz-sensitiven Flüssen zu reduzieren \cite{Ramakrishnan2001}. Aus diesem Grund hängt der Erfolg jedes AQM Machanismus stark damit zusammen, ob er mit ECN verbunden werden kann und wie gut diese Verbindung erreicht wird \cite{Hollot2001}.
 
 Im Laufe der Zeit ist sehr viel Aufwand in unterschiedliche AQM-Methoden und deren Feintuning gesteckt worden. Viele dieser Arbeiten basieren auf Heuristiken und Simulationen und nicht auf einem systematischen Ansatz. Ihr gemeinsames Problem ist, dass jede vorgeschlagene Konfiguration nur für ein spezielles Datenverkehrsaufkommen geeignet ist, aber nachteilige Effekte aufweist, wenn sie in einer anderen Umgebung angewendet wird. Entsprechend müssen AQM-Methoden entwickelt und ihre Parameter so eingestellt werden, dass sie in einer Vielzahl von unterschiedlichen Umgebungen einsetzbar sind und zumindest keine schlechteren Ergebnisse liefern als TCP selbst \cite{Firoiu2000}. Es existieren sehr viele unterschiedliche AQM-Methoden, die komplett unterschiedliche Ansätze verfolgen. Manche Algorithmen berechnen beispielsweise Wahrscheinlichkeiten, um Pakete fallen zu lassen, andere nutzen Verfahren aus der mathematischen Optimierung aus, um die bestmögliche Staukontrolle zu erreichen. Alle Algorithmen unterscheiden sich in der Anzahl an möglichen Einsatzgebieten, Komplexität und Qualität \cite{Hollot2001}.
 
@@ -135,7 +135,7 @@ Q_{avg} = (1 - w_q) Q_{avg} + w_q q
 
 Dieser Wert wird mit zwei Parametern verglichen, der minimalen Queuelänge $Q_{min}$ und der maximalen Queuelänge $Q_{max}$. Ist \(Q_{min} > Q_{avg}\), so wird nichts unternommen. Wird aber \(Q_{min} < Q_{avg} < Q_{max}\), so wird das Paket mit einer Markierungswahrscheinlichkeit $p_a$ markiert, und sobald \(Q_{avg} > Q_{max}\) wird jedes Paket markiert.
 
-Für die Berechnung der finalen Markierungswahrscheinlichkeit $p_{a}$ wird die Markierungswahrscheinlichkeit $p_{b}$ benötigt. Diese berechnet sich wie folgt aus der minimalen und maximalen Queuelänge $Q_{min}$ und $Q_{max}$, der Durchschnittslänge $Q_{avg}$ und dem Maximum für $p_{b}$, $max_{b}$, wie folgt: 
+Für die Berechnung der finalen Markierungswahrscheinlichkeit $p_{a}$ wird die Markierungswahrscheinlichkeit $p_{b}$ benötigt. Diese berechnet sich aus der minimalen und maximalen Queuelänge $Q_{min}$ und $Q_{max}$, der Durchschnittslänge $Q_{avg}$ und dem Maximum für $p_{b}$, $max_{b}$, wie folgt: 
 
 \begin{displaymath}
 p_b = max_p \frac{Q_{avg} - Q_{min}}{Q_{max} - Q_{min}}
@@ -147,21 +147,19 @@ $p_{b}$ steigt folglich linear von 0 bis zum Wert $max_{b}$ an. Die finale Marki
 p_a = \frac{p_b}{1-z p_b}
 \end{displaymath}
 
-Der Zähler wird für jedes einkommende Paket inkrementiert. Ein Paket wird mit der Wahrscheinlichkeit $p_{a}$ markiert. Ist dies der Fall, so wird der Zähler $z$ auf 0 gesetzt. Mithilfe des Zählers steigt die Wahrscheinlichkeit somit für jedes weitere Paket an.
-
-TODO!!!!!! "Ist dies der Fall" macht keinen Sinn
+Der Zähler wird für jedes einkommende Paket inkrementiert. Ein Paket wird mit der Wahrscheinlichkeit $p_{a}$ markiert. Sobald ein Paket tatsächlich markiert wird, wird der Zähler $z$ wieder zurück auf 0 gesetzt. Mithilfe des Zählers steigt die Wahrscheinlichkeit somit für jedes weitere Paket an.
 
 Damit ergibt sich als Algorithmus für RED:
 
 \begin{algorithm}
 	\For{jedes ankommende Paket}{
-		Berechne $Q_avg$
-		\eIf{$Q_min < Q_avg < Q_max$}{
+		Berechne $Q_{avg}$
+		\eIf{$Q_{min} < Q_{avg} < Q_{max}$}{
 			Berechne die Wahrscheinlichkeit $p_a = \frac{p_b}{1-z p_b}$ \;
 			Mit der Wahrscheinlichkeit $p_a$:
 			\Indp
 				Markiere das ankommende Paket \;}{
-			\If{$Q_max < Q_avg$}{
+			\If{$Q_{max} < Q_{avg}$}{
 				Markiere das ankommende Paket \;}
 			}
 		}
@@ -194,11 +192,11 @@ Der BLUE Algorithmus kennt nur eine Markierungswahrscheinlichkeit $p_m$; jedes e
 	\caption{BLUE} \label{alg:blue}
 \end{algorithm}
 
-Die beiden Parameter $d_1$ und $d_2$ geben an, um wie viel $p_m$ zu erhöhen beziehungsweise zu reduzieren ist. $d_1$ sollte deutlich größer sein als $d_2$, da BLUE somit auf Staus sehr viel schneller reagieren kann. Die Autoren geben weiterhin an, dass in ihren Experimenten die \textit{freeze\_time}, konstant gehalten wurde. Sie sagen aber auch, dass in einem Netz dieser Parameter zufällig für jeden Router gewählt werden sollte, um globale Synchronisation zu vermeiden. Dieser Algorithmus passt sich somit selbstständig an den aktuellen Bedarf des Netzes an und benötigt keine Router-abhängigen Parameter zur Konfiguration.
+Die beiden Parameter $d_1$ und $d_2$ geben an, um wie viel $p_m$ zu erhöhen beziehungsweise zu reduzieren ist. $d_1$ sollte deutlich größer sein als $d_2$, da BLUE somit auf Staus sehr viel schneller reagieren kann. Die Autoren geben weiterhin an, dass in ihren Experimenten die \textit{freeze\_time} konstant gehalten wurde. Sie sagen aber auch, dass in einem Netz dieser Parameter zufällig für jeden Router gewählt werden sollte, um globale Synchronisation zu vermeiden. Dieser Algorithmus passt sich somit selbstständig an den aktuellen Bedarf des Netzes an und benötigt keine Router-abhängigen Parameter zur Konfiguration.
 
 \subsection{AVQ: Adaptive Virtual Queue}
 
-Ein weiterer AQM-Algorithmus, der eine andere Idee verfolgt, ist der Adaptive Virtual Queue (AVQ) Algorithmus. Er wurde 2001 von Kunniyur und Srikant vorgestellt \cite{Kunniyur2001}. Wie bereits der Name andeutet, verwendet der Algorithmus auf einer virtuellen Queue. Für die Markierung beziehungsweise das Fallenlassen von Paketen wird die Kapazität dieser virtuellen Queue und keine Markierungswahrscheinlichkeit zu Rate gezogen.
+Ein weiterer AQM-Algorithmus, der eine andere Idee verfolgt, ist der Adaptive Virtual Queue (AVQ) Algorithmus. Er wurde 2001 von Kunniyur und Srikant vorgestellt \cite{Kunniyur2001}. Wie bereits der Name andeutet, verwendet der Algorithmus eine virtuelle Queue. Für die Markierung beziehungsweise das Fallenlassen von Paketen wird die Kapazität dieser virtuellen Queue und keine Markierungswahrscheinlichkeit zu Rate gezogen.
 
 Bei AVQ verwaltet der Router neben der echten Queue eine virtuelle Queue mit der Kapazität \(C_v \le C\), wobei $C$ die Kapazität der Verbindung und $C_v$ die der virtuellen ist. Zu Beginn ist \(C_v = C\). Bei jedem ankommenden Paket wird überprüft, ob der Puffer der virtuellen Queue das Paket aufnehmen könnte. Ist dem so, wird das echte Paket in die tatsächliche Queue eingereiht, ansonsten wird es markiert oder fallen gelassen. Die Kapazität der virtuellen Queue wird ebenfalls bei jedem ankommenden Paket angepasst gemäß der Differentialgleichung (siehe auch \autoref{fig:avq})
 
@@ -239,7 +237,19 @@ Nachdem wir im vorigen \autoref{sec:Algorithmen} die AQM Algorithmen RED, BLUE u
 
 In ihrer Arbeit zeigen Feng et al anhand einiger Versuche, dass BLUE im Vergleich zu RED deutlich weniger Pakete fallen lässt \cite{Feng1999}. Für ihren Versuch haben sie ein Netz mithilfe des LBNL Network Simulators \cite{McCanne} simuliert. Für alle Quellen wurde ECN aktiviert, was bedeutet, dass jedes verlorene Paket einen Pufferüberlauf der Queue darstellt. Die Sender wurden zufällig innerhalb der ersten Sekunde gestartet. Die Paketverluste wurden nach 100  Sekunden Simulation und weiteren 100 Sekunden, also insgesamt 200 Sekunden, für die gesamte Simulationszeit gemessen. Die Parameter für RED wurden experimentell bestimmt, $Q_{min}$ betrug immer 20\% der Queuelänge, $Q_{max}$ 80\%. Für BLUE wurde $d_1$ um eine Größenordnung höher als $d_2$ gesetzt. Insgesamt wurden vier Konfigurationen für RED und vier Konfigurationen für den BLUE Algorithmus angewandt und die Ergebnisse verglichen.
 
-Zwischen den Ergebnissen der einzelnen Konfigurationen sowohl bei RED als auch bei BLUE gab es nur minimale Unterschiede. Die Queuelänge für eine Engstelle des Netzes wurde von 100KB bis 1000KB gesetzt, was einer Verzögerung zwischen 17,8ms und 178ms entspricht. Bei 1000 Quellen die gleichzeitig senden, war sowohl bei RED als auch bei BLUE die Verbindung für alle Queuelängen zu 100\% ausgelastet. Die Paketverlustrate betrug bei BLUE für alle Verzögerungen 0\%. Der RED Algorithmus dagegen zeigt bei niedrigen Verzögerungen eine Paketverlusterate von bis zu über 15\%. Diese fällt mit größer werdenden Puffern auf knapp über 0\% bei einer Verzögerung von etwa 100ms, steigt dann aber wieder an auf etwa 5\%. Für das gleiche Experiment mit 4000 Quellen war die Auslastung ebenfalls bei beiden stets bei 100\%. Die Paketverlusterate von RED lag diesmal bei kleinen Verzögerungen bei über 30\%, was mit zunehmenden Queuelängen auf etwa 25\% abfiel. Bei BLUE lag die Verlustrate dagegen zu Beginn bei etwa 15\% und sank auf unter 10\% mit größer werdenden Queues. 
+\begin{figure}[h]
+	\includegraphics[width=0.5\textwidth]{figures/Blue1000.jpg}
+	\caption{Vergleich der Verlustraten von RED und BLUE bei 1000 Quellen \cite{Feng1999}.}
+	\label{fig:blue1000}
+\end{figure}
+
+\begin{figure}[h]
+	\includegraphics[width=0.5\textwidth]{figures/Blue4000.jpg}
+	\caption{Vergleich der Verlustraten von RED und BLUE bei 4000 Quellen \cite{Feng1999}.}
+	\label{fig:blue4000}
+\end{figure}
+
+Zwischen den Ergebnissen der einzelnen Konfigurationen sowohl bei RED als auch bei BLUE gab es nur minimale Unterschiede. Die Queuelänge für eine Engstelle des Netzes wurde von 100KB bis 1000KB gesetzt, was einer Verzögerung zwischen 17,8ms und 178ms entspricht. Bei 1000 Quellen, die gleichzeitig senden, war sowohl bei RED als auch bei BLUE die Verbindung für alle Queuelängen zu 100\% ausgelastet. Die Paketverlustraten sind in Abbildung \ref{fig:blue1000} dargestellt. Bei BLUE betrug sie für alle Verzögerungen 0\%. Der RED Algorithmus dagegen zeigt bei niedrigen Verzögerungen eine Paketverlusterate von bis zu über 15\%. Diese fällt mit größer werdenden Puffern auf knapp über 0\% bei einer Verzögerung von etwa 100ms, steigt dann aber wieder an auf etwa 5\%. Für das gleiche Experiment mit 4000 Quellen war die Auslastung ebenfalls bei beiden stets bei 100\%. Die Paketverlusterate von RED lag diesmal bei kleinen Verzögerungen bei über 30\%, was mit zunehmenden Queuelängen auf etwa 25\% abfiel. Bei BLUE lag die Verlustrate dagegen zu Beginn bei etwa 15\% und sank auf unter 10\% mit größer werdenden Queues (siehe Abbildung \ref{fig:blue4000}). 
 
 \subsection{Vergleich AVQ und RED}
 
@@ -247,12 +257,25 @@ Analog zu BLUE hat auch Kunniyar in seiner Arbeit zu AVQ Vergleiche des Verfahre
 
 Die beschriebenen Versuche wurden mit dem Simulator \textit{ns-2} durchgeführt. Der Parameter $\gamma$, die angestrebte Auslastung, wurde für AVQ auf den Wert 0,98 gesetzt; der Glättungsparameter $\alpha$ wurde auf 0,15 gesetzt. Die Konfiguration für RED wurde gemäß den Empfehlungen aus \cite{Floyd1997a} vorgenommen. Die Queuelänge an der engsten und somit relevanten Stelle der Verbindung betrug 100 Pakete bei einer Paketgröße von 1000 bytes. Für das erste Experiment wurde bei den TCP Verbindungen ECN aktiviert. Jedes verlorene Paket ist folglich ein Zeichen des Pufferüberlaufs. Die Grenzwerte für RED wurden auf \(Q_{min} = 0,37\) und \(Q_{max} = 0,75\) gesetzt. Die durchschnittliche Verzögerung betrug zwischen 30ms und 60ms. Beim Experiment wurde die Paketverlustrate sowie die Auslastung der Verbindung bei unterschiedlicher Anzahl von FTP Verbindungen gemessen, die Anzahl der Verbindungen lag zwischen 20 und 180.
 
-Die Auslastung der Verbindung lag bei RED bei 20 FTP Verbindungen bei knapp unter 90\%. Mit steigender Anzahl an Verbindungen sank diese leicht ab, bewegte sich aber stets zwischen 85\% und 90\%. Für AVQ lag die Auslastung bei 20 Verbindungen bei 95\%. Diese stieg kontinuierlich mit steigenden Verbindungen an und lag bei 180 Verbindungen etwa bei 98\%, der vorab festgelegten angestrebten Auslastung. Die Paketverluste von RED lagen bei 20 Verbindungen etwa bei 0. Mit steigenden FTP Verbindungen stiegen diese in etwa linear auf über 6.000 verlorene Pakete bei 180 Verbindungen. Bei AVQ lagen die Paketverluste für jede Anzahl an Verbindungen bei 0. Der AVQ Algorithmus zeigt für diesen Aufbau eine deutlich besser Leistung mit höherer Auslastung und ohne Paketverluste.
+\begin{figure}[h]
+	\includegraphics[width=0.5\textwidth]{figures/avq_mark.jpg}
+	\caption{Absolute Anzahl an Paketverlusten von verschiedenen AQM Verfahren bei steigender Anzahl an FTP-Verbindungen \cite{Kunniyur2001}.}
+	\label{fig:avq_mark}
+\end{figure}
 
-In einem zweiten Experiment wurde ECN deaktiviert. Das heißt, dass sowohl RED als auch AVQ Pakete fallen lassen, um auf einen Stau hinzuweisen. Der Versuchsaufbau ist gleich dem vorherigen mit der Ausnahme, dass für AVQ die angestrebte Auslastung $\gamma$ auf den Wert 1 gesetzt wurde, die Adaptive Virtual Queue also voll genutzt werden soll. Die Anzahl an FTP Verbindungen wurde fest auf 40 gesetzt; dafür wurden TCP short-flows mit 20 Paketen verwendet, deren Ankunftszeit an der kritischen Verbindungsstelle langsam gesteigert wurde. Die Auslastung der Verbindung für AVQ lag konstant bei den angestrebten 100\%. Bei RED lag diese bei 10 ankommenden short-flows pro Sekunde bei etwa 94\% und stieg auf über 99\% bei 50 ankommenden short-flows pro Sekunde. Der Anteil an korrekt zugestellten Paketen, ohne diese einmal fallen zu lassen, lag bei AVQ bei wenigen short-flows bei knapp unter 100\% und sank bis zu knapp unter 98\% bei 50 ankommenden short-flows pro Sekunde. Für RED lag diese Quote anfangs nur bei 87\%, stieg dann aber stark an auf 98\% bei 50 short-flows pro Sekunde und lag damit höher als bei AVQ.
+Die Auslastung der Verbindung lag bei RED bei 20 FTP Verbindungen bei knapp unter 90\%. Mit steigender Anzahl an Verbindungen sank diese leicht ab, bewegte sich aber stets zwischen 85\% und 90\%. Für AVQ lag die Auslastung bei 20 Verbindungen bei 95\%. Diese stieg kontinuierlich mit steigenden Verbindungen an und lag bei 180 Verbindungen etwa bei 98\%, der vorab festgelegten angestrebten Auslastung. Die Paketverluste von RED lagen bei 20 Verbindungen etwa bei 0. Mit steigenden FTP Verbindungen stiegen diese in etwa linear auf über 6.000 verlorene Pakete bei 180 Verbindungen (siehe Abbildung \ref{fig:avq_mark}, schwarz). Bei AVQ lagen die Paketverluste für jede Anzahl an Verbindungen bei 0 (siehe Abbildung \ref{fig:avq_mark}, blau). Der AVQ Algorithmus zeigt für diesen Aufbau eine deutlich besser Leistung mit höherer Auslastung und ohne Paketverluste.
+
+\begin{figure}[h]
+	\includegraphics[width=0.5\textwidth]{figures/avq_drop.jpg}
+	\caption{Anteil korrekt zugestellter Pakete von verschiedenen AQM Verfahren bei steigender Anzahl an short flows \cite{Kunniyur2001}.}
+	\label{fig:avq_drop}
+\end{figure}
+
+In einem zweiten Experiment wurde ECN deaktiviert. Das heißt, dass sowohl RED als auch AVQ Pakete fallen lassen, um auf einen Stau hinzuweisen. Der Versuchsaufbau ist gleich dem vorherigen mit der Ausnahme, dass für AVQ die angestrebte Auslastung $\gamma$ auf den Wert 1 gesetzt wurde, die Adaptive Virtual Queue also voll genutzt werden soll. Die Anzahl an FTP Verbindungen wurde fest auf 40 gesetzt; dafür wurden TCP short-flows mit 20 Paketen verwendet, deren Ankunftszeit an der kritischen Verbindungsstelle langsam gesteigert wurde. Die Auslastung der Verbindung für AVQ lag konstant bei den angestrebten 100\%. Bei RED lag diese bei 10 ankommenden short-flows pro Sekunde bei etwa 94\% und stieg auf über 99\% bei 50 ankommenden short-flows pro Sekunde. Der Anteil an korrekt zugestellten Paketen, ohne diese einmal fallen zu lassen, lag bei AVQ bei wenigen short-flows bei knapp unter 100\% und sank bis zu knapp unter 98\% bei 50 ankommenden short-flows pro Sekunde (siehe Abbildung \ref{fig:avq_drop}, rot). Für RED lag diese Quote anfangs nur bei 87\%, stieg dann aber stark an auf 98\% bei 50 short-flows pro Sekunde und lag damit höher als bei AVQ (siehe Abbildung \ref{fig:avq_drop}, schwarz).
 
 \subsection{Vergleich BLUE und AVQ}
-????
+
+In der zur Verfügung stehenden Literatur gab es keine Vegleiche zwischen den Algorithmen BLUE und AVQ, weshalb auch an dieser Stelle kein solcher Vergleich gemacht werden kann.
 
 \subsection{Zusammenfassung}
 
