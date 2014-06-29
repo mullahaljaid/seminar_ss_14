@@ -57,7 +57,7 @@ Die Internet Architektur nutzt größtenteils zum Weiterleiten das verbindungslose
 	\item Sorgfältiges Design ist von Nöten, um bei hoher Last einen guten Dienst zu leisten.
 	\item Mangelnde Aufmerksamkeit auf die Dynamik der Paketweiterleitung kann dazu führen, dass Dienste nicht mehr korrekt funktionieren und dass es schlimmstenfalls zu einem sogenannten "`internet meltdown"' kommt.
 \end{itemize}
-Das Phänomen eines solchen Internet-Zusammenbruchs wurde während der ersten Wachstumsphase des Internets in den 1980er Jahren festgestellt und wird "`congestion collapse"' \cite{Nagle1984} genannt. Bereits 1986 wurden von Jacobson entwickelte Stauverhinderungsmechanismen für Hosts entwickelt, die auch aktuell noch einen "`congestion collapse"' verhindern \cite{Braden1998}.
+Das Phänomen eines solchen Internet-Zusammenbruchs wurde während der ersten Wachstumsphase des Internets in den 1980er Jahren festgestellt und wird "`congestion collapse"' \cite{Nagle1984} genannt. Bereits 1986 wurden von Jacobson Stauverhinderungsmechanismen für Hosts entwickelt, die auch aktuell noch einen "`congestion collapse"' verhindern \cite{Braden1998}.
 
 Da das Internet seit dieser Zeit immer weiter wächst, wurde es offensichtlich, dass TCP Stauverhinderungsmechanismen \cite{Stevens1997} nicht unter allen Umständen ausreichend gute Dienste leisten. Das Hauptproblem liegt darin, dass von den Enden der Netze nur bedingt Kontrolle ausgeübt werden kann. Deshalb müssen auch in Routern Mechanismen angewendet werden, welche die Stauverhinderungsmechanismen der Endpunkte ergänzen. Hierbei muss man zwischen den folgenden zwei Klassen unterscheiden \cite{Braden1998}:
 \begin{description}
