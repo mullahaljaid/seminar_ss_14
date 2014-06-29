@@ -11,9 +11,7 @@
 
 \title{Staukontrolle durch Active Queue Management}
 \author{Thomas Fischer und Dominik Billing\\\smallskip\small{Betreuer: Martin Metzker\\Seminar Kommunikationssysteme im Sommersemester 2014\\Lehrstuhl f\"ur Kommunikationssysteme und Systemprogrammierung\\Ludwig-Maximilians-Universit\"at M\"unchen}}
-%\specialpapernotice{Masterseminar Kommunikationssysteme\\
-%Lehr- und Forschungseinheit für Kommunikationssysteme und Systemprogrammierung\\
-%Ludwig-Maximilians-Universität München}
+
 \pagestyle{empty}
 \begin{document}
 \maketitle
@@ -138,7 +136,7 @@ Dieser Wert wird mit zwei Parametern verglichen, der minimalen Queuelänge $Q_{mi
 Für die Berechnung der finalen Markierungswahrscheinlichkeit $p_{a}$ wird die Markierungswahrscheinlichkeit $p_{b}$ benötigt. Diese berechnet sich aus der minimalen und maximalen Queuelänge $Q_{min}$ und $Q_{max}$, der Durchschnittslänge $Q_{avg}$ und dem Maximum für $p_{b}$, $max_{b}$, wie folgt: 
 
 \begin{displaymath}
-p_b = max_p \frac{Q_{avg} - Q_{min}}{Q_{max} - Q_{min}}
+p_b = max_b \frac{Q_{avg} - Q_{min}}{Q_{max} - Q_{min}}
 \end{displaymath}
 
 $p_{b}$ steigt folglich linear von 0 bis zum Wert $max_{b}$ an. Die finale Markierungswahrscheinlichkeit wird mittels $p_{b}$ und eines Zählers $z$ berechnet:
@@ -233,6 +231,8 @@ Die Autoren erläutern, dass die algorithmische Komplexität von AVQ in etwa der v
 
 Nachdem wir im vorigen \autoref{sec:Algorithmen} die AQM Algorithmen RED, BLUE und AVQ vorgestellt haben, werden wir anschließend diese untereinander vergleichen.
 
+In der zur Verfügung stehenden Literatur lies sich kein Vergleich zwischen den Algorithmen BLUE und AVQ finden. Deshalb kann auch an dieser Stelle kein solcher Vergleich vorgenommen werden.
+
 \subsection{Vergleich BLUE und RED}
 
 In ihrer Arbeit zeigen Feng et al anhand einiger Versuche, dass BLUE im Vergleich zu RED deutlich weniger Pakete fallen lässt \cite{Feng1999}. Für ihren Versuch haben sie ein Netz mithilfe des LBNL Network Simulators \cite{McCanne} simuliert. Für alle Quellen wurde ECN aktiviert, was bedeutet, dass jedes verlorene Paket einen Pufferüberlauf der Queue darstellt. Die Sender wurden zufällig innerhalb der ersten Sekunde gestartet. Die Paketverluste wurden nach 100  Sekunden Simulation und weiteren 100 Sekunden, also insgesamt 200 Sekunden, für die gesamte Simulationszeit gemessen. Die Parameter für RED wurden experimentell bestimmt, $Q_{min}$ betrug immer 20\% der Queuelänge, $Q_{max}$ 80\%. Für BLUE wurde $d_1$ um eine Größenordnung höher als $d_2$ gesetzt. Insgesamt wurden vier Konfigurationen für RED und vier Konfigurationen für den BLUE Algorithmus angewandt und die Ergebnisse verglichen.
@@ -249,7 +249,7 @@ In ihrer Arbeit zeigen Feng et al anhand einiger Versuche, dass BLUE im Vergleic
 	\label{fig:blue4000}
 \end{figure}
 
-Zwischen den Ergebnissen der einzelnen Konfigurationen sowohl bei RED als auch bei BLUE gab es nur minimale Unterschiede. Die Queuelänge für eine Engstelle des Netzes wurde von 100KB bis 1000KB gesetzt, was einer Verzögerung zwischen 17,8ms und 178ms entspricht. Bei 1000 Quellen, die gleichzeitig senden, war sowohl bei RED als auch bei BLUE die Verbindung für alle Queuelängen zu 100\% ausgelastet. Die Paketverlustraten sind in Abbildung \ref{fig:blue1000} dargestellt. Bei BLUE betrug sie für alle Verzögerungen 0\%. Der RED Algorithmus dagegen zeigt bei niedrigen Verzögerungen eine Paketverlusterate von bis zu über 15\%. Diese fällt mit größer werdenden Puffern auf knapp über 0\% bei einer Verzögerung von etwa 100ms, steigt dann aber wieder an auf etwa 5\%. Für das gleiche Experiment mit 4000 Quellen war die Auslastung ebenfalls bei beiden stets bei 100\%. Die Paketverlusterate von RED lag diesmal bei kleinen Verzögerungen bei über 30\%, was mit zunehmenden Queuelängen auf etwa 25\% abfiel. Bei BLUE lag die Verlustrate dagegen zu Beginn bei etwa 15\% und sank auf unter 10\% mit größer werdenden Queues (siehe Abbildung \ref{fig:blue4000}). 
+Zwischen den Ergebnissen der einzelnen Konfigurationen sowohl bei RED als auch bei BLUE gab es nur minimale Unterschiede. Die Queuelänge für eine Engstelle des Netzes wurde von 100KB bis 1000KB gesetzt, was einer Verzögerung zwischen 17,8ms und 178ms entspricht. Bei 1000 Quellen, die gleichzeitig senden, war sowohl bei RED als auch bei BLUE die Verbindung für alle Queuelängen zu 100\% ausgelastet. Die Paketverlustraten sind in \autoref{fig:blue1000} dargestellt. Bei BLUE betrug sie für alle Verzögerungen 0\%. Der RED Algorithmus dagegen zeigt bei niedrigen Verzögerungen eine Paketverlusterate von bis zu über 15\%. Diese fällt mit größer werdenden Puffern auf knapp über 0\% bei einer Verzögerung von etwa 100ms, steigt dann aber wieder an auf etwa 5\%. Für das gleiche Experiment mit 4000 Quellen war die Auslastung ebenfalls bei beiden stets bei 100\%. Die Paketverlusterate von RED lag diesmal bei kleinen Verzögerungen bei über 30\%, was mit zunehmenden Queuelängen auf etwa 25\% abfiel. Bei BLUE lag die Verlustrate dagegen zu Beginn bei etwa 15\% und sank auf unter 10\% mit größer werdenden Queues (siehe \autoref{fig:blue4000}). 
 
 \subsection{Vergleich AVQ und RED}
 
@@ -263,7 +263,7 @@ Die beschriebenen Versuche wurden mit dem Simulator \textit{ns-2} durchgeführt. 
 	\label{fig:avq_mark}
 \end{figure}
 
-Die Auslastung der Verbindung lag bei RED bei 20 FTP Verbindungen bei knapp unter 90\%. Mit steigender Anzahl an Verbindungen sank diese leicht ab, bewegte sich aber stets zwischen 85\% und 90\%. Für AVQ lag die Auslastung bei 20 Verbindungen bei 95\%. Diese stieg kontinuierlich mit steigenden Verbindungen an und lag bei 180 Verbindungen etwa bei 98\%, der vorab festgelegten angestrebten Auslastung. Die Paketverluste von RED lagen bei 20 Verbindungen etwa bei 0. Mit steigenden FTP Verbindungen stiegen diese in etwa linear auf über 6.000 verlorene Pakete bei 180 Verbindungen (siehe Abbildung \ref{fig:avq_mark}, schwarz). Bei AVQ lagen die Paketverluste für jede Anzahl an Verbindungen bei 0 (siehe Abbildung \ref{fig:avq_mark}, blau). Der AVQ Algorithmus zeigt für diesen Aufbau eine deutlich besser Leistung mit höherer Auslastung und ohne Paketverluste.
+Die Auslastung der Verbindung lag bei RED bei 20 FTP Verbindungen bei knapp unter 90\%. Mit steigender Anzahl an Verbindungen sank diese leicht ab, bewegte sich aber stets zwischen 85\% und 90\%. Für AVQ lag die Auslastung bei 20 Verbindungen bei 95\%. Diese stieg kontinuierlich mit steigenden Verbindungen an und lag bei 180 Verbindungen etwa bei 98\%, der vorab festgelegten angestrebten Auslastung. Die Paketverluste von RED lagen bei 20 Verbindungen etwa bei 0. Mit steigenden FTP Verbindungen stiegen diese in etwa linear auf über 6.000 verlorene Pakete bei 180 Verbindungen (siehe \autoref{fig:avq_mark}, schwarz). Bei AVQ lagen die Paketverluste für jede Anzahl an Verbindungen bei 0 (siehe \autoref{fig:avq_mark}, blau). Der AVQ Algorithmus zeigt für diesen Aufbau eine deutlich besser Leistung mit höherer Auslastung und ohne Paketverluste.
 
 \begin{figure}[h]
 	\includegraphics[width=0.5\textwidth]{figures/avq_drop.jpg}
@@ -271,11 +271,7 @@ Die Auslastung der Verbindung lag bei RED bei 20 FTP Verbindungen bei knapp unte
 	\label{fig:avq_drop}
 \end{figure}
 
-In einem zweiten Experiment wurde ECN deaktiviert. Das heißt, dass sowohl RED als auch AVQ Pakete fallen lassen, um auf einen Stau hinzuweisen. Der Versuchsaufbau ist gleich dem vorherigen mit der Ausnahme, dass für AVQ die angestrebte Auslastung $\gamma$ auf den Wert 1 gesetzt wurde, die Adaptive Virtual Queue also voll genutzt werden soll. Die Anzahl an FTP Verbindungen wurde fest auf 40 gesetzt; dafür wurden TCP short-flows mit 20 Paketen verwendet, deren Ankunftszeit an der kritischen Verbindungsstelle langsam gesteigert wurde. Die Auslastung der Verbindung für AVQ lag konstant bei den angestrebten 100\%. Bei RED lag diese bei 10 ankommenden short-flows pro Sekunde bei etwa 94\% und stieg auf über 99\% bei 50 ankommenden short-flows pro Sekunde. Der Anteil an korrekt zugestellten Paketen, ohne diese einmal fallen zu lassen, lag bei AVQ bei wenigen short-flows bei knapp unter 100\% und sank bis zu knapp unter 98\% bei 50 ankommenden short-flows pro Sekunde (siehe Abbildung \ref{fig:avq_drop}, rot). Für RED lag diese Quote anfangs nur bei 87\%, stieg dann aber stark an auf 98\% bei 50 short-flows pro Sekunde und lag damit höher als bei AVQ (siehe Abbildung \ref{fig:avq_drop}, schwarz).
-
-\subsection{Vergleich BLUE und AVQ}
-
-In der zur Verfügung stehenden Literatur gab es keine Vegleiche zwischen den Algorithmen BLUE und AVQ, weshalb auch an dieser Stelle kein solcher Vergleich gemacht werden kann.
+In einem zweiten Experiment wurde ECN deaktiviert. Das heißt, dass sowohl RED als auch AVQ Pakete fallen lassen, um auf einen Stau hinzuweisen. Der Versuchsaufbau ist gleich dem vorherigen mit der Ausnahme, dass für AVQ die angestrebte Auslastung $\gamma$ auf den Wert 1 gesetzt wurde, die Adaptive Virtual Queue also voll genutzt werden soll. Die Anzahl an FTP Verbindungen wurde fest auf 40 gesetzt; dafür wurden TCP short-flows mit 20 Paketen verwendet, deren Ankunftszeit an der kritischen Verbindungsstelle langsam gesteigert wurde. Die Auslastung der Verbindung für AVQ lag konstant bei den angestrebten 100\%. Bei RED lag diese bei 10 ankommenden short-flows pro Sekunde bei etwa 94\% und stieg auf über 99\% bei 50 ankommenden short-flows pro Sekunde. Der Anteil an korrekt zugestellten Paketen, ohne diese einmal fallen zu lassen, lag bei AVQ bei wenigen short-flows bei knapp unter 100\% und sank bis zu knapp unter 98\% bei 50 ankommenden short-flows pro Sekunde (siehe \autoref{fig:avq_drop}, rot). Für RED lag diese Quote anfangs nur bei 87\%, stieg dann aber stark an auf 98\% bei 50 short-flows pro Sekunde und lag damit höher als bei AVQ (siehe \autoref{fig:avq_drop}, schwarz).
 
 \subsection{Zusammenfassung}
 
