@@ -54,7 +54,7 @@ Alle Staukontrollmechanismen müssen sich mit denen von TCP, als dem wichtigsten 
 \end{itemize}
 Um diese gleichmäßige Verteilung zu erreichen, ist TCP standardmäßig mit dem "`Drop Tail"' Prinzip nicht geeignet. Deshalb müssen Methoden entwickelt werden, die Puffer in Routern anders abarbeiten und dennoch einfach zu verwenden sind \cite{Suter1998}.
 
-Die Internet Architektur nutzt größtenteils ein verbindungsloses Transportsystem beschrieben durch das TCP Protokoll in der Transportschicht. Diese Architektur hat vor allem aufgrund des verbindungslosen Designs, der Flexibilität und der Robustheit viele Vorteile, allerdings auch folgende Nachteile \cite{Braden1998}:
+Die Internet Architektur nutzt größtenteils zum Weiterleiten das verbindungslose IP-Protokoll, auf dem dann verbindungslose (UDP) oder verbindungsorientierte (TCP) Dienste der Transportschicht aufsetzen. Diese Architektur hat vor allem aufgrund des verbindungslosen Designs, der Flexibilität und der Robustheit viele Vorteile, allerdings auch folgende Nachteile \cite{Braden1998}:
 \begin{itemize}
 	\item Sorgfältiges Design ist von Nöten, um bei hoher Last einen guten Dienst zu leisten.
 	\item Mangelnde Aufmerksamkeit auf die Dynamik der Paketweiterleitung kann dazu führen, dass Dienste nicht mehr korrekt funktionieren und dass es schlimmstenfalls zu einem sogenannten "`internet meltdown"' kommt.
