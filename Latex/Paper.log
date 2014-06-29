@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2012.9.24)  26 JUN 2014 21:33
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2012.9.24)  29 JUN 2014 10:03
 entering extended mode
 **G:/LMU/Seminar*AQM/seminar_ss_14/Latex/Paper.tex
 ("G:/LMU/Seminar AQM/seminar_ss_14/Latex/Paper.tex"
@@ -27,7 +27,7 @@ LaTeX Font Info:    Try loading font information for OT1+ptm on input line 368.
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\ot1ptm.fd"
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
--- Using 8.5in x 11in (letter) paper.
+-- Using 210mm x 297mm (a4) paper.
 -- Using PDF output.
 \@IEEEnormalsizeunitybaselineskip=\dimen104
 -- This is a 10 point document.
@@ -330,8 +330,6 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip61
 )
-** ATTENTION: \specialpapernotice is deprecated (line 14). Use \IEEEspecialpape
-rnotice instead.
 ("G:\LMU\Seminar AQM\seminar_ss_14\Latex\Paper.aux")
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 18.
 LaTeX Font Info:    ... okay on input line 18.
@@ -417,11 +415,7 @@ Underfull \hbox (badness 4582) in paragraph at lines 67--68
 []\OT1/ptm/m/n/10 Algorithmen le-gen fest, wel-che Pa-ke-te als
  []
 
-
-Underfull \vbox (badness 7685) has occurred while \output is active []
-
- [2]
-[3] [4] <figures/avq.png, id=170, 2552.03438pt x 1326.45563pt>
+[2] [3] [4] <figures/avq.png, id=170, 2552.03438pt x 1326.45563pt>
 File: figures/avq.png Graphic file (type png)
 
 <use figures/avq.png>
@@ -509,12 +503,12 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 298.
  ) 
 Here is how much of TeX's memory you used:
  7726 strings out of 494045
- 117230 string characters out of 3145966
- 243780 words of memory out of 3000000
- 10889 multiletter control sequences out of 15000+200000
- 39287 words of font info for 72 fonts, out of 3000000 for 9000
+ 117248 string characters out of 3145966
+ 244790 words of memory out of 3000000
+ 10890 multiletter control sequences out of 15000+200000
+ 38151 words of font info for 71 fonts, out of 3000000 for 9000
  715 hyphenation exceptions out of 8191
- 29i,15n,32p,1562b,393s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 29i,15n,32p,1562b,392s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Progra
 m Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program 
 Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Program Fil
@@ -527,7 +521,7 @@ TeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files (x86)/MiKTeX
 type1/urw/times/utmbi8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/
 times/utmr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmri
 8a.pfb>
-Output written on Paper.pdf (8 pages, 450802 bytes).
+Output written on Paper.pdf (8 pages, 449974 bytes).
 PDF statistics:
  286 PDF objects out of 1000 (max. 8388607)
  69 named destinations out of 1000 (max. 500000)

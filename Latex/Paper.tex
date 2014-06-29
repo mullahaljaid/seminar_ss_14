@@ -1,4 +1,4 @@
-\documentclass{IEEEtran}
+\documentclass[a4paper]{IEEEtran}
 \usepackage[latin1]{inputenc}
 \usepackage{graphicx}
 \usepackage{enumitem}
@@ -10,14 +10,14 @@
 \renewcommand\IEEEkeywordsname{Schlagwörter}
 
 \title{Staukontrolle durch Active Queue Management}
-\author{Thomas Fischer, Dominik Billing}
-\specialpapernotice{Masterseminar Kommunikationssysteme\\
-Lehr- und Forschungseinheit für Kommunikationssysteme und Systemprogrammierung\\
-Ludwig-Maximilians-Universität München}
-
+\author{Thomas Fischer und Dominik Billing\\\smallskip\small{Betreuer: Martin Metzker\\Seminar Kommunikationssysteme im Sommersemester 2014\\Lehrstuhl f\"ur Kommunikationssysteme und Systemprogrammierung\\Ludwig-Maximilians-Universit\"at M\"unchen}}
+%\specialpapernotice{Masterseminar Kommunikationssysteme\\
+%Lehr- und Forschungseinheit für Kommunikationssysteme und Systemprogrammierung\\
+%Ludwig-Maximilians-Universität München}
+\pagestyle{empty}
 \begin{document}
 \maketitle
-
+\thispagestyle{empty} 
 \begin{abstract}
 Bei konventioneller Staukontrolle in Routern werden Pakete nicht gleichmäßig fallengelassen, wodurch es zu einem großen Overhead kommt, der durch Flaschenhälse im Internet noch verstärkt wird. Zusätzlich können Datenströme, die besonders viele Daten übertragen, nicht sinnvoll begrenzt werden. Wir werden als Lösung für das Problem der Staukontrolle im Internet Active Queue Management herausarbeiten. Active Queue Management versucht Staus frühzeitig und zuverlässig zu erkennen und durch Fallenlassen oder Markieren von Paketen (ECN -- Explicit Congestion Notification) Staus zu verhindern. Dies wird von AQM-Algorithmen erreicht, indem die mittlere Pufferauslastung von Routern möglichst gering gehalten wird.
 
