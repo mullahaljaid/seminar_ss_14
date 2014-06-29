@@ -147,7 +147,7 @@ p_a = \frac{p_b}{1-z p_b}
 
 Der Zähler wird für jedes einkommende Paket inkrementiert. Ein Paket wird mit der Wahrscheinlichkeit $p_{a}$ markiert. Sobald ein Paket tatsächlich markiert wird, wird der Zähler $z$ wieder zurück auf 0 gesetzt. Mithilfe des Zählers steigt die Wahrscheinlichkeit somit für jedes weitere Paket an.
 
-Damit ergibt sich als Algorithmus für RED:
+Der Algorithmus für RED ist zusammengefasst in \autoref{alg:red} dargestellt.
 
 \begin{algorithm}
 	\For{jedes ankommende Paket}{
@@ -176,7 +176,7 @@ Dadurch werden große Pakete mit einer höheren Wahrscheinlichkeit markiert als kl
 
 Der BLUE Algorithmus wurde 1999 von Feng et.al. an der University of Michigan in Zusammenarbeit mit IBM vorgestellt \cite{Feng1999}. BLUE wurde entwickelt, um einige Schwachstellen von RED zu verbessern, ist aber ein völlig neuer Ansatz. RED verlässt sich auf die Queuelänge, um Staus zu erkennen, und benötigt viele Parameter, die konfiguriert werden müssen. Die Autoren von BLUE argumentieren, dass RED nur wenn diese richtig konfiguriert sind und wenn ausreichend Pufferplatz zur Verfügung steht optimal läuft. BLUE dagegen verlässt sich auf den Paketverlust und die Verbindungsauslastung um seine Markierungswahrscheinlichkeit zu berechnen. Genauso wie RED kann BLUE dann entweder Pakete fallen lassen oder mittels ECN markieren.
 
-Der BLUE Algorithmus kennt nur eine Markierungswahrscheinlichkeit $p_m$; jedes einzureihende Paket wird mit dieser Wahrscheinlichkeit markiert. Die Entscheidung für die Erhöhung oder Erniedrigung dieser Wahrscheinlichkeit wird auf Basis der verlorenen Pakete beziehungsweise auf Basis der ungenutzten Verbindungen getroffen: Erhält der Router die Information, dass ein Paket verloren gegangen ist, wird $p_m$ um den Wert $d_1$ erhöht. Erkennt er eine ungenutzte Verbindung, wird $p_m$ um $d_2$ reduziert. Ein weiterer Parameter ist hierbei noch wichtig: die \textit{freeze\_time}. Damit das Netz und die Sender Zeit haben, auf die Aktion des Routers zu reagieren, muss mindestens dieses Zeitintervall vergangen sein, bis die Markierungswahrscheinlichkeit wieder geändert wird. Formal läuft ein Schritt des Algorithmus folgendermaßen ab:
+Der BLUE Algorithmus kennt nur eine Markierungswahrscheinlichkeit $p_m$; jedes einzureihende Paket wird mit dieser Wahrscheinlichkeit markiert. Die Entscheidung für die Erhöhung oder Erniedrigung dieser Wahrscheinlichkeit wird auf Basis der verlorenen Pakete beziehungsweise auf Basis der ungenutzten Verbindungen getroffen: Erhält der Router die Information, dass ein Paket verloren gegangen ist, wird $p_m$ um den Wert $d_1$ erhöht. Erkennt er eine ungenutzte Verbindung, wird $p_m$ um $d_2$ reduziert. Ein weiterer Parameter ist hierbei noch wichtig: die \textit{freeze\_time}. Damit das Netz und die Sender Zeit haben, auf die Aktion des Routers zu reagieren, muss mindestens dieses Zeitintervall vergangen sein, bis die Markierungswahrscheinlichkeit wieder geändert wird. Formal läuft ein Schritt des Algorithmus wie in \autoref{alg:blue} dargestellt ab.
 
 \begin{algorithm}
 	\For{jedes ankommende Paket}{
@@ -210,7 +210,7 @@ Bei AVQ verwaltet der Router neben der echten Queue eine virtuelle Queue mit der
 
 Hierbei ist $\alpha$ ein Glättungsparameter, $\gamma$ die angestrebte Auslastung der Verbindung und $\lambda$ die Ankunftsrate der Verbindung. Das Markieren passiert auf diese Weise aggressiver, also häufiger, wenn die Verbindung ihre gewünschte Übertragungsrate überschreitet und weniger aggressiv, wenn nicht.
 
-Es ist klar, dass in der virtuellen Queue keine Pakete eingereiht werden müssen, lediglich die Länge, also die Kapazität der virtuellen Queue muss ermittelt werden. Die Autoren geben in ihrer Arbeit auch an, wie dieses Verfahren implementiert wird:
+Es ist klar, dass in der virtuellen Queue keine Pakete eingereiht werden müssen, lediglich die Länge, also die Kapazität der virtuellen Queue muss ermittelt werden. Die Autoren geben in ihrer Arbeit auch an, wie dieses Verfahren implementiert wird (siehe \autoref{alq:AVQ}).
 
 \begin{algorithm}
 	\For{jedes ankommende Paket}{

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2012.9.24)  29 JUN 2014 11:21
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2012.9.24)  29 JUN 2014 11:46
 entering extended mode
 **G:/LMU/Seminar*AQM/seminar_ss_14/Latex/Paper.tex
 ("G:/LMU/Seminar AQM/seminar_ss_14/Latex/Paper.tex"
@@ -415,7 +415,7 @@ Underfull \hbox (badness 4582) in paragraph at lines 65--66
 []\OT1/ptm/m/n/10 Algorithmen le-gen fest, wel-che Pa-ke-te als
  []
 
-[2] [3] [4] <figures/avq.png, id=166, 2552.03438pt x 1326.45563pt>
+[2] [3] [4] <figures/avq.png, id=170, 2552.03438pt x 1326.45563pt>
 File: figures/avq.png Graphic file (type png)
 
 <use figures/avq.png>
@@ -426,7 +426,8 @@ Overfull \hbox (6.0pt too wide) in paragraph at lines 206--207
 [][] 
  []
 
-<figures/Blue1000.jpg, id=173, 408.77719pt x 325.96782pt>
+[5 <G:/LMU/Seminar AQM/seminar_ss_14/Latex/figures/avq.png>]
+<figures/Blue1000.jpg, id=188, 408.77719pt x 325.96782pt>
 File: figures/Blue1000.jpg Graphic file (type jpg)
 
 <use figures/Blue1000.jpg>
@@ -437,8 +438,7 @@ Overfull \hbox (6.0pt too wide) in paragraph at lines 241--242
 [][] 
  []
 
-[5 <G:/LMU/Seminar AQM/seminar_ss_14/Latex/figures/avq.png>]
-<figures/Blue4000.jpg, id=187, 405.01312pt x 319.94531pt>
+<figures/Blue4000.jpg, id=191, 405.01312pt x 319.94531pt>
 File: figures/Blue4000.jpg Graphic file (type jpg)
 
 <use figures/Blue4000.jpg>
@@ -449,7 +449,7 @@ Overfull \hbox (6.0pt too wide) in paragraph at lines 247--248
 [][] 
  []
 
-<figures/avq_mark.jpg, id=194, 392.96812pt x 390.70969pt>
+<figures/avq_mark.jpg, id=198, 392.96812pt x 390.70969pt>
 File: figures/avq_mark.jpg Graphic file (type jpg)
 
 <use figures/avq_mark.jpg>
@@ -463,7 +463,7 @@ Overfull \hbox (6.0pt too wide) in paragraph at lines 261--262
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<figures/avq_drop.jpg, id=199, 393.72093pt x 377.91188pt>
+<figures/avq_drop.jpg, id=203, 393.72093pt x 377.91188pt>
 File: figures/avq_drop.jpg Graphic file (type jpg)
 
 <use figures/avq_drop.jpg>
@@ -500,7 +500,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 294.
 Here is how much of TeX's memory you used:
  7724 strings out of 494045
  117218 string characters out of 3145966
- 244790 words of memory out of 3000000
+ 243790 words of memory out of 3000000
  10889 multiletter control sequences out of 15000+200000
  38151 words of font info for 71 fonts, out of 3000000 for 9000
  715 hyphenation exceptions out of 8191
@@ -517,9 +517,9 @@ TeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files (x86)/MiKTeX
 type1/urw/times/utmbi8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/
 times/utmr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmri
 8a.pfb>
-Output written on Paper.pdf (8 pages, 449498 bytes).
+Output written on Paper.pdf (8 pages, 450419 bytes).
 PDF statistics:
- 282 PDF objects out of 1000 (max. 8388607)
+ 286 PDF objects out of 1000 (max. 8388607)
  68 named destinations out of 1000 (max. 500000)
  135 words of extra memory for PDF output out of 10000 (max. 10000000)
 
