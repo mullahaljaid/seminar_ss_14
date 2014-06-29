@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2012.9.24)  29 JUN 2014 10:51
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2012.9.24)  29 JUN 2014 11:18
 entering extended mode
 **G:/LMU/Seminar*AQM/seminar_ss_14/Latex/Paper.tex
 ("G:/LMU/Seminar AQM/seminar_ss_14/Latex/Paper.tex"
@@ -331,20 +331,20 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 \Hy@SectionHShift=\skip61
 )
 ("G:\LMU\Seminar AQM\seminar_ss_14\Latex\Paper.aux")
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
 
 (C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\context\base\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -361,7 +361,7 @@ LaTeX Font Info:    ... okay on input line 18.
 \everyMPtoPDFconversion=\toks20
 )
 \AtBeginShipoutBox=\box37
-Package hyperref Info: Link coloring OFF on input line 18.
+Package hyperref Info: Link coloring OFF on input line 16.
  ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
 Package: nameref 2010/04/30 v2.40 Cross-referencing by name of section
 
@@ -370,63 +370,135 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count115
 )
-LaTeX Info: Redefining \ref on input line 18.
-LaTeX Info: Redefining \pageref on input line 18.
-LaTeX Info: Redefining \nameref on input line 18.
+LaTeX Info: Redefining \ref on input line 16.
+LaTeX Info: Redefining \pageref on input line 16.
+LaTeX Info: Redefining \nameref on input line 16.
 
 ("G:\LMU\Seminar AQM\seminar_ss_14\Latex\Paper.out")
 ("G:\LMU\Seminar AQM\seminar_ss_14\Latex\Paper.out")
 \@outlinefile=\write3
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <9> on input line 20.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 20.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 20.
 
-<figures/droptail.png, id=62, 3432.07219pt x 1011.02719pt>
-File: figures/droptail.png Graphic file (type png)
-
-<use figures/droptail.png>
-Package pdftex.def Info: figures/droptail.png used on input line 36.
-(pdftex.def)             Requested size: 258.0pt x 75.99345pt.
-
-Overfull \hbox (6.0pt too wide) in paragraph at lines 36--37
-[][] 
+Underfull \hbox (badness 4060) in paragraph at lines 19--21
+\OT1/ptm/b/n/9 tern wer-den Pa-ke-te nicht gleichm[]?`$[]$[]?`$[]$ig fal-len-
+ge-las-sen,
  []
 
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+Underfull \hbox (badness 4660) in paragraph at lines 19--21
+\OT1/ptm/b/n/9 wo-durch es zu ei-nem gro[]?`$[]$en Over-head kommt, der
+ []
+
+
+Underfull \hbox (badness 1394) in paragraph at lines 19--21
+\OT1/ptm/b/n/9 durch Fla-schenh[]?`$[]$lse im In-ter-net noch verst[]?`$[]$rk
+t wird.
+ []
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 28.
+<figures/droptail.png, id=58, 3432.07219pt x 1011.02719pt>
+File: figures/droptail.png Graphic file (type png)
+
+<use figures/droptail.png>
+Package pdftex.def Info: figures/droptail.png used on input line 34.
+(pdftex.def)             Requested size: 258.0pt x 75.99345pt.
+
+Overfull \hbox (6.0pt too wide) in paragraph at lines 34--35
+[][] 
+ []
 
 [1{C:/Users/Thomas/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
 
 
  <G:/LMU/Seminar AQM/seminar_ss_14/Latex/figures/droptail.png>]
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 51.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 51.
+Underfull \hbox (badness 10000) in paragraph at lines 51--52
+[]\OT1/ptm/m/n/10 Die zur Verf[]?`$[]$gung ste-hen-de []?`$[]$bertragungsrate
 
-Underfull \hbox (badness 4266) in paragraph at lines 53--54
-[]\OT1/ptm/m/n/10 Die zur Verf[]ugung ste-hen-de []Ubertragungsrate soll
  []
 
 
-Underfull \hbox (badness 2277) in paragraph at lines 53--54
-\OT1/ptm/m/n/10 gleichm[]aig zwi-schen kon-kur-rie-ren-den Da-ten-str[]omen
+Underfull \hbox (badness 10000) in paragraph at lines 51--52
+\OT1/ptm/m/n/10 soll gleichm[]?`$[]$[]?`$[]$ig zwi-schen kon-kur-rie-ren-den
  []
 
 
-Underfull \hbox (badness 4582) in paragraph at lines 67--68
+Underfull \hbox (badness 1389) in paragraph at lines 60--61
+\OT1/ptm/m/n/10 Das Ph[]?`$[]$nomen ei-nes sol-chen Internet-Zusammenbruchs
+ []
+
+
+Underfull \hbox (badness 1990) in paragraph at lines 64--65
+[]\OT1/ptm/m/n/10 Algorithmen ver-wal-ten die L[]?`$[]$nge
+ []
+
+
+Underfull \hbox (badness 4582) in paragraph at lines 65--66
 []\OT1/ptm/m/n/10 Algorithmen le-gen fest, wel-che Pa-ke-te als
  []
 
-[2] [3] [4] <figures/avq.png, id=170, 2552.03438pt x 1326.45563pt>
+
+Underfull \hbox (badness 6445) in paragraph at lines 65--66
+\OT1/ptm/m/n/10 n[]?`$[]$chstes ge-sen-det wer-den sol-len und k[]?`$[]$nnen
+ []
+
+[2]
+Underfull \hbox (badness 1635) in paragraph at lines 84--86
+[]\OT1/ptm/m/n/10 TCP ist ein E2E Pro-to-koll, das zu-sam-men mit dem
+ []
+
+
+Underfull \hbox (badness 6859) in paragraph at lines 88--89
+[]\OT1/ptm/m/n/10 Das Win-dow bis an das En-de des l[]?`$[]$ckenlos
+ []
+
+[3]
+Underfull \hbox (badness 3271) in paragraph at lines 128--129
+[]\OT1/ptm/m/n/10 Als Mess-gr[]?`$[]$[]?`$[]$e wird die durch-schnitt-li-che 
+Queue
+ []
+
+
+Underfull \hbox (badness 4846) in paragraph at lines 136--137
+[]\OT1/ptm/m/n/10 F[]?`$[]$r die Be-rech-nung der fi-na-len Mar-kie-rungs-wahr
+-
+ []
+
+
+Underfull \hbox (badness 1755) in paragraph at lines 136--137
+\OT1/ptm/m/n/10 ma-xi-ma-len Queu-el[]?`$[]$nge $\OML/cmm/m/it/10 Q[]$ \OT1/pt
+m/m/n/10 und $\OML/cmm/m/it/10 Q[]$\OT1/ptm/m/n/10 , der Durch-
+ []
+
+[4] <figures/avq.png, id=166, 2552.03438pt x 1326.45563pt>
 File: figures/avq.png Graphic file (type png)
 
 <use figures/avq.png>
-Package pdftex.def Info: figures/avq.png used on input line 208.
+Package pdftex.def Info: figures/avq.png used on input line 206.
 (pdftex.def)             Requested size: 258.0pt x 134.09038pt.
 
-Overfull \hbox (6.0pt too wide) in paragraph at lines 208--209
+Overfull \hbox (6.0pt too wide) in paragraph at lines 206--207
 [][] 
  []
 
-<figures/Blue1000.jpg, id=177, 408.77719pt x 325.96782pt>
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 207.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \hbox (badness 1675) in paragraph at lines 211--212
+[]\OT1/ptm/m/n/10 ?`$[]$bertragungsrate []?`$[]$berschreitet und we-ni-ger ag
+-gres-siv,
+ []
+
+[5 <G:/LMU/Seminar AQM/seminar_ss_14/Latex/figures/avq.png>]
+<figures/Blue1000.jpg, id=184, 408.77719pt x 325.96782pt>
 File: figures/Blue1000.jpg Graphic file (type jpg)
 
 <use figures/Blue1000.jpg>
@@ -437,10 +509,7 @@ Overfull \hbox (6.0pt too wide) in paragraph at lines 241--242
 [][] 
  []
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<figures/Blue4000.jpg, id=180, 405.01312pt x 319.94531pt>
+<figures/Blue4000.jpg, id=187, 405.01312pt x 319.94531pt>
 File: figures/Blue4000.jpg Graphic file (type jpg)
 
 <use figures/Blue4000.jpg>
@@ -454,8 +523,7 @@ Overfull \hbox (6.0pt too wide) in paragraph at lines 247--248
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[5 <G:/LMU/Seminar AQM/seminar_ss_14/Latex/figures/avq.png>]
-<figures/avq_mark.jpg, id=198, 392.96812pt x 390.70969pt>
+<figures/avq_mark.jpg, id=194, 392.96812pt x 390.70969pt>
 File: figures/avq_mark.jpg Graphic file (type jpg)
 
 <use figures/avq_mark.jpg>
@@ -466,10 +534,12 @@ Overfull \hbox (6.0pt too wide) in paragraph at lines 261--262
 [][] 
  []
 
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 [6 <G:/LMU/Seminar AQM/seminar_ss_14/Latex/figures/Blue1000.jpg> <G:/LMU/Semina
-r AQM/seminar_ss_14/Latex/figures/Blue4000.jpg> <G:/LMU/Seminar AQM/seminar_ss_
-14/Latex/figures/avq_mark.jpg>]
-<figures/avq_drop.jpg, id=211, 393.72093pt x 377.91188pt>
+r AQM/seminar_ss_14/Latex/figures/Blue4000.jpg>]
+<figures/avq_drop.jpg, id=207, 393.72093pt x 377.91188pt>
 File: figures/avq_drop.jpg Graphic file (type jpg)
 
 <use figures/avq_drop.jpg>
@@ -481,49 +551,46 @@ Overfull \hbox (6.0pt too wide) in paragraph at lines 269--270
  []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 2591) has occurred while \output is active []
 
- [7 <G:/LMU/Seminar AQM/seminar_ss_14/Latex/figures/avq_drop.jpg>]
-("G:\LMU\Seminar AQM\seminar_ss_14\Latex\Paper.bbl"
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 157.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 157.
-)
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 298.
+ [7 <G:/LMU/Seminar AQM/seminar_ss_14/Latex/figures/avq_mark.jpg> <G:/LMU/Semin
+ar AQM/seminar_ss_14/Latex/figures/avq_drop.jpg>]
+("G:\LMU\Seminar AQM\seminar_ss_14\Latex\Paper.bbl")
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 294.
  [8]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 298.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 294.
 
 ("G:\LMU\Seminar AQM\seminar_ss_14\Latex\Paper.aux")
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 298.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 298.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 294.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 294.
 Package rerunfilecheck Info: File `Paper.out' has not changed.
-(rerunfilecheck)             Checksum: 3CC990B6C177B715AA17AAEC6967130E;984.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 298.
+(rerunfilecheck)             Checksum: C518A9B029E1D51EB48E5E92590DC192;935.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 294.
  ) 
 Here is how much of TeX's memory you used:
- 7726 strings out of 494045
- 117248 string characters out of 3145966
- 244790 words of memory out of 3000000
- 10890 multiletter control sequences out of 15000+200000
- 38151 words of font info for 71 fonts, out of 3000000 for 9000
+ 7732 strings out of 494045
+ 117302 string characters out of 3145966
+ 259802 words of memory out of 3000000
+ 10894 multiletter control sequences out of 15000+200000
+ 39063 words of font info for 74 fonts, out of 3000000 for 9000
  715 hyphenation exceptions out of 8191
- 29i,15n,32p,1562b,392s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 29i,15n,32p,1588b,392s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Progra
 m Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program 
 Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Program Fil
 es (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files 
 (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files (x8
-6)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files (x86)/M
-iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiK
-TeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files (x86)/MiKTeX
- 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/
-type1/urw/times/utmbi8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/
-times/utmr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmri
-8a.pfb>
-Output written on Paper.pdf (8 pages, 449996 bytes).
+6)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files (x86)/M
+iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files (x86)/MiKTe
+X 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeX 
+2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files (x86)/MiKTeX 2.9
+/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type
+1/urw/times/utmbi8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/time
+s/utmr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.p
+fb>
+Output written on Paper.pdf (8 pages, 466982 bytes).
 PDF statistics:
  286 PDF objects out of 1000 (max. 8388607)
- 69 named destinations out of 1000 (max. 500000)
- 143 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 68 named destinations out of 1000 (max. 500000)
+ 135 words of extra memory for PDF output out of 10000 (max. 10000000)
 
